@@ -12,6 +12,7 @@ import {
   InputLabel,
 } from "@mui/material";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
+import Navbar from "../../admin/Navbar";
 
 const Login = () => {
   let navigate = useNavigate();
@@ -88,13 +89,14 @@ const Login = () => {
   });
 
   return (
-    <div className="login">
-      <section className="login1">
+    <div className="">
+      <section className="login-form">
         <div className="wrapper-unsplashlpbydenbqqg">
           <img
             className="unsplashlpbydenbqqg-icon"
             alt="FPT"
             src="https://i.imgur.com/WErp8xb.jpeg"
+            style={{ width: "100%", height: "100%" }}
           />
         </div>
         <form className="content" onSubmit={formik.handleSubmit}>
@@ -105,7 +107,6 @@ const Login = () => {
           )}
           <h1 className="login2">Login</h1>
           <div className="content1">
-            <div className="headline-and-subhead" />
             <div className="input-field">
               <div className="email">
                 <div className="text-field">
@@ -122,75 +123,49 @@ const Login = () => {
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                   />
-                  {formik.errors.username && formik.touched.username && (
-                    <div className="text mt-1 text-red-600 font-semibold">
-                      {formik.errors.username}
-                    </div>
-                  )}
                 </div>
               </div>
             </div>
-            <FormControl
-              error={
-                formik.touched.password && formik.errors.password
-                  ? true
-                  : undefined
-              }
-              // className="w-full"
-              // variant="outlined"
-            >
-              {/* <InputLabel htmlFor="outlined-adornment-password">
-                Password
-              </InputLabel> */}
-
-              <div className="text-field">
-                <input
-                  className="inputs"
-                  placeholder="Enter your password"
-                  name="password"
-                  id="outlined-adornment-password"
-                  type={showPassword ? "text" : "password"}
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  endAdornment={
-                    <InputAdornment position="end">
-                      <IconButton
-                        aria-label="toggle password visibility"
-                        onClick={handleClickShowPassword}
-                        onMouseDown={handleMouseDownPassword}
-                        edge="end"
-                      >
-                        {showPassword ? <VisibilityOff /> : <Visibility />}
-                      </IconButton>
-                    </InputAdornment>
-                  }
-                />
-              </div>
-            </FormControl>
+            {formik.errors.username && formik.touched.username && (
+              <div className="Fail">{formik.errors.username}</div>
+            )}
+            <div className="input-field">
+              <FormControl
+                error={
+                  formik.touched.password && formik.errors.password
+                    ? true
+                    : undefined
+                }
+              >
+                <div className="text-field">
+                  <input
+                    className="inputs"
+                    placeholder="Enter your password"
+                    name="password"
+                    id="outlined-adornment-password"
+                    type={showPassword ? "text" : "password"}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    endAdornment={
+                      <InputAdornment position="end">
+                        <IconButton
+                          aria-label="toggle password visibility"
+                          onClick={handleClickShowPassword}
+                          onMouseDown={handleMouseDownPassword}
+                          edge="end"
+                        >
+                          {showPassword ? <VisibilityOff /> : <Visibility />}
+                        </IconButton>
+                      </InputAdornment>
+                    }
+                  />
+                </div>
+              </FormControl>
+            </div>
             {formik.errors.password && formik.touched.password && (
-              <div className="text mt-1 text-red-600 font-semibold">
-                {formik.errors.password}
-              </div>
+              <div className="Fail ">{formik.errors.password}</div>
             )}
 
-            {/* <div className="email1">
-              <div className="label-group">
-                <div className="label1">Email address</div>
-                <div className="password-hide-see1">
-                  <img className="icon1" alt="" src="/icon-1.svg" />
-                  <div className="hide1">Hide</div>
-                </div>
-              </div>
-              <div className="text-field1">
-                <input
-                  className="inputs1"
-                  placeholder="Enter your email address"
-                  type="text"
-                />
-                <img className="icons1" alt="" src="/icons.svg" />
-              </div>
-              <div className="error-message1">Error message</div>
-            </div> */}
             <h1 className="welcome-to-event">
               Welcome to EVENT PAYMENT IMMEDIATE SYSTEM
             </h1>
