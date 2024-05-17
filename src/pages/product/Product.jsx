@@ -383,6 +383,7 @@
 // }
 
 // export default Product;
+
 import React from "react";
 import "./product.scss";
 import Coca from "../../assets/images/Coca.png";
@@ -391,6 +392,12 @@ import noodle from "../../assets/images/noodle.png";
 import nuggets from "../../assets/images/nuggets.png";
 import tiramisu from "../../assets/images/tiramisu.png";
 import combo from "../../assets/images/combo.png";
+// import Hero from "../hero/Hero";
+import Footer from "../Footer";
+import Logo from "../../assets/images/logo_EIPS.png";
+import LogoutIcon from "@mui/icons-material/Logout";
+import PersonIcon from "@mui/icons-material/Person";
+import PizzaHeader from "../../assets/images/margherita-pizza_3.png"
 
 const products = [
   {
@@ -446,60 +453,162 @@ const products = [
 
 const SalesShopOrder = () => {
   return (
-    <div className="salesshop-order">
-      {/* other components */}
-      <div className="product-list-wrapper">
-        <div className="product-list">
-          <h3 className="mb-4 text-2xl font-bold">PRODUCT</h3>
-          <div className="grid grid-cols-3 gap-4">
-            {products.map((product) => (
-              <div
-                className="product-card bg-white  rounded-lg p-4"  
-                key={product.id}
-              >
-                <div className="card-content-parent flex flex-col">
-                  <div className="card-content">
-                    <div className="wrapper-mask-group mb-3">
-                      <img
-                        className="mask-group-icon w-full h-40 object-cover rounded-md"
-                        loading="lazy"
-                        alt={product.name}
-                        src={product.image}
-                      />
-                    </div>
-                    <div className="product-details">
-                      <div className="margherita-pizza font-bold text-lg mb-1">
-                        {product.name}
-                      </div>
-                      <div className="made-with-san text-sm mb-3">
-                        {product.description}
-                      </div>
-                    </div>
-                    <div className="vnd text-lg font-semibold">
-                      {product.price}
-                    </div>
-                    <div className="category-parent mt-3">
-                      <div className="category flex justify-between items-center">
-                        <div className="food text-sm">{product.category}</div>
+    <div>
+      {/* <div className="homepage">
+        <div className="h-top">
+          <img
+            className="first-fold-child"
+            loading="lazy"
+            alt=""
+            src="/group-38@2x.png"
+          />
+
+          <b className="product">Product</b>
+          <b className="shop-order">Shop Order</b>
+          <b className="order">Order</b>
+          <b className="setting1">Setting</b>
+          <div className="avatar">
+            <img
+              className="aspect-ratio-keeper-addition"
+              loading="lazy"
+              alt=""
+              src="/aspect-ratio-keeper--additionally-45-rotated-auto-layout@2x.png"
+            />
+          </div>
+          <img
+            className="logout-icon"
+            loading="lazy"
+            alt=""
+            src="/logout.svg"
+          />
+        </div>
+        <div className="h-bot">
+          <h1 className="welcome-to-fev-container">
+            <span className="welcome-to-fev-container1">
+              <p className="welcome-to">{`Welcome to `}</p>
+              <p className="fev-shop">FEV - SHOP</p>
+            </span>
+          </h1>
+          <h3 className="time-to-enjoy">Time to enjoy our delicious food.</h3>
+          <button className="button">
+            <div className="order-now">ORDER NOW</div>
+          </button>
+          <img
+            className="margherita-pizza-3-icon"
+            loading="lazy"
+            alt=""
+            src="/margheritapizza-3@2x.png"
+          />
+          <div className="image" />
+        </div>
+      </div> */}
+
+      <div className="header ">
+        <div className="navbar flex flex-row justify-between items-center px-20 py-4">
+          <div className="nav-logo flex flex-row items-center gap-x-4"
+          style={{width:"100px"}}>
+            <img className="object-cover" loading="lazy" alt="" src={Logo} />
+          </div>
+
+          <div className="flex flex-row justify-between items-center gap-x-10 h-menu"
+          style={{  fontFamily: "Fira Sans", fontSize:"20px"
+        }}
+          >
+            <a href="#">
+              <button className="font-semibold">Product</button>
+            </a>
+            <a href="#">
+              <button className="font-semibold">Shop Order</button>
+            </a>
+            <a href="#">
+              <button className="font-semibold">Order</button>
+            </a>
+            <a href="#">
+              <button className="font-semibold">Setting</button>
+            </a>
+            <LogoutIcon />
+            <PersonIcon />
+          </div>
+        </div>
+        <div className="flex flex-row py-4 justify-between relative">
+          <div className="h-bot flex flex-row items-center px-20 ">
+        <h1 className="" >
+          <span className="h-title">
+            <p className="">{`Welcome to `}</p>
+            <p className="">FEV - SHOP</p>
+          </span>
+        </h1>
+        <h3 className="h-content">Time to enjoy our delicious food.</h3>
+        <button className="">
+          <div className="order-now">ORDER NOW</div>
+        </button>
+        <button className="bg-[#0adc5d] hover:bg-[#40b36e] text-white py-5 px-10 rounded-full tracking-widest	"
+        style={{fontSize:"24px"}}>
+                <b>ORDER NOW</b>
+        </button>
+
+        </div>
+<div className="flex relative" >
+<div className="white-blur"></div>
+  <img style={{width:"800px"}} loading="lazy" alt="" src={PizzaHeader} />
+</div>
+          </div>
+      </div>
+
+      <div className="salesshop-order">
+        {/* other components */}
+        <div className="product-list-wrapper">
+          <div className="product-list">
+            <h3 className="mb-4 text-2xl font-bold">PRODUCT</h3>
+            <div className="grid grid-cols-3 gap-4">
+              {products.map((product) => (
+                <div
+                  className="product-card bg-white  rounded-lg p-4"
+                  key={product.id}
+                >
+                  <div className="card-content-parent flex flex-col">
+                    <div className="card-content">
+                      <div className="wrapper-mask-group mb-3">
                         <img
-                          className="noun-arrow-2333164-1-icon w-6 h-6"
-                          alt=""
-                          src="/noun-arrow-2333164-1.svg"
+                          className="mask-group-icon w-full h-40 object-cover rounded-md"
+                          loading="lazy"
+                          alt={product.name}
+                          src={product.image}
                         />
                       </div>
-                      <button className="add-to-cart-wrapper mt-2 bg-blue-500 text-white text-sm p-2 rounded hover:bg-blue-600 transition duration-300">
-                        <div className="add-to-cart">Add to cart</div>
-                      </button>
+                      <div className="product-details">
+                        <div className="margherita-pizza font-bold text-lg mb-1">
+                          {product.name}
+                        </div>
+                        <div className="made-with-san text-sm mb-3">
+                          {product.description}
+                        </div>
+                      </div>
+                      <div className="vnd text-lg font-semibold">
+                        {product.price}
+                      </div>
+                      <div className="category-parent mt-3">
+                        <div className="category flex justify-between items-center">
+                          <div className="food text-sm">{product.category}</div>
+                          <img
+                            className="noun-arrow-2333164-1-icon w-6 h-6"
+                            alt=""
+                            src="/noun-arrow-2333164-1.svg"
+                          />
+                        </div>
+                        <button className="add-to-cart-wrapper mt-2 bg-blue-500 text-white text-sm p-2 rounded hover:bg-blue-600 transition duration-300">
+                          <div className="add-to-cart">Add to cart</div>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
-
-      {/* footer */}
+      <Footer />
     </div>
   );
 };
