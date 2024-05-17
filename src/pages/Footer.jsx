@@ -14,7 +14,7 @@ function Footer() {
                 alt="FPT Logo"
                 className="self-center aspect-[2.7] w-[250px]"
               />
-              <div className="mt-6">Power by Project @EIPS</div>
+              <div className="mt-6">Power by Project @ESMS</div>
             </div>
           </div>
           <div className="flex flex-col ml-5 w-[47%] max-md:ml-0 max-md:w-full">
@@ -28,7 +28,7 @@ function Footer() {
                 <br />
                 Phone: 0399997857
                 <br />
-                Email: exe101_EIPS@fpt.edu.vn
+                Email: exe201_ESMS@fpt.edu.vn
               </div>
             </div>
           </div>

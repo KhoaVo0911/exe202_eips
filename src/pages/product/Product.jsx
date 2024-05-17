@@ -394,7 +394,7 @@ import tiramisu from "../../assets/images/tiramisu.png";
 import combo from "../../assets/images/combo.png";
 // import Hero from "../hero/Hero";
 import Footer from "../Footer";
-import Logo from "../../assets/images/logo_EIPS.png";
+import Logo from "../../assets/images/esms 4.png";
 import LogoutIcon from "@mui/icons-material/Logout";
 import PersonIcon from "@mui/icons-material/Person";
 import PizzaHeader from "../../assets/images/margherita-pizza_3.png"
