@@ -249,7 +249,7 @@ const CreateProduct = () => {
                             name="category"
                             value={category}
                             onChange={(e) => setCategory(e.target.value)}
-                            className="mt-1 p-2 border border-gray-300 rounded-md w-full"
+                            className="mt-1 p-2 border border-gray-300 rounded-md w-full text-sm"
                             required
                           >
                             <option value="">Select a category</option>
@@ -271,7 +271,7 @@ const CreateProduct = () => {
                             name="status"
                             value={status}
                             onChange={(e) => setStatus(e.target.value)}
-                            className="mt-1 p-2 border border-gray-300 rounded-md w-full"
+                            className="mt-1 p-2 border border-gray-300 rounded-md w-full text-sm"
                             required
                           >
                             <option value="">Select a status</option>
@@ -283,7 +283,7 @@ const CreateProduct = () => {
                         <div className="mb-4 flex gap-5">
                           <label
                             htmlFor="description"
-                            className="flex items-center text-sm font-medium text-gray-700 w-1/4"
+                            className="flex items-center text-sm font-medium text-gray-700 w-1/4 "
                           >
                             Description
                           </label>
@@ -292,7 +292,7 @@ const CreateProduct = () => {
                             name="description"
                             value={description}
                             onChange={(e) => setDescription(e.target.value)}
-                            className="mt-1 p-2 border border-gray-300 rounded-md w-full h-24 resize-none"
+                            className="mt-1 text-sm p-2 border border-gray-300 rounded-md w-full h-24 resize-none"
                             required
                           ></textarea>
                         </div>
