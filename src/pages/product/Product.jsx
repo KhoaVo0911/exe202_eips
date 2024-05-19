@@ -397,7 +397,7 @@ import Footer from "../Footer";
 import Logo from "../../assets/images/esms 4.png";
 import LogoutIcon from "@mui/icons-material/Logout";
 import PersonIcon from "@mui/icons-material/Person";
-import PizzaHeader from "../../assets/images/margherita-pizza_3.png"
+import PizzaHeader from "../../assets/images/margherita-pizza_3.png";
 
 const products = [
   {
@@ -505,14 +505,16 @@ const SalesShopOrder = () => {
 
       <div className="header ">
         <div className="navbar flex flex-row justify-between items-center px-20 py-4">
-          <div className="nav-logo flex flex-row items-center gap-x-4"
-          style={{width:"100px"}}>
+          <div
+            className="nav-logo flex flex-row items-center gap-x-4"
+            style={{ width: "100px" }}
+          >
             <img className="object-cover" loading="lazy" alt="" src={Logo} />
           </div>
 
-          <div className="flex flex-row justify-between items-center gap-x-10 h-menu"
-          style={{  fontFamily: "Fira Sans", fontSize:"20px"
-        }}
+          <div
+            className="flex flex-row justify-between items-center gap-x-10 h-menu"
+            style={{ fontFamily: "Fira Sans", fontSize: "20px" }}
           >
             <a href="#">
               <button className="font-semibold">Product</button>
@@ -532,34 +534,40 @@ const SalesShopOrder = () => {
         </div>
         <div className="flex flex-row py-4 justify-between relative">
           <div className="h-bot flex flex-row items-center px-20 ">
-        <h1 className="" >
-          <span className="h-title">
-            <p className="">{`Welcome to `}</p>
-            <p className="">FEV - SHOP</p>
-          </span>
-        </h1>
-        <h3 className="h-content">Time to enjoy our delicious food.</h3>
-        <button className="">
-          <div className="order-now">ORDER NOW</div>
-        </button>
-        <button className="bg-[#0adc5d] hover:bg-[#40b36e] text-white py-5 px-10 rounded-full tracking-widest	"
-        style={{fontSize:"24px"}}>
-                <b>ORDER NOW</b>
-        </button>
-
-        </div>
-<div className="flex relative" >
-<div className="white-blur"></div>
-  <img style={{width:"800px"}} loading="lazy" alt="" src={PizzaHeader} />
-</div>
+            <h1 className="">
+              <span className="h-title">
+                <p className="">{`Welcome to `}</p>
+                <p className="">FEV - SHOP</p>
+              </span>
+            </h1>
+            <h3 className="h-content">Time to enjoy our delicious food.</h3>
+            <button className="">
+              <div className="order-now">ORDER NOW</div>
+            </button>
+            <button
+              className="bg-[#0adc5d] hover:bg-[#40b36e] text-white py-5 px-10 rounded-full tracking-widest	"
+              style={{ fontSize: "24px" }}
+            >
+              <b>ORDER NOW</b>
+            </button>
           </div>
+          <div className="flex relative">
+            <div className="white-blur"></div>
+            <img
+              style={{ width: "800px" }}
+              loading="lazy"
+              alt=""
+              src={PizzaHeader}
+            />
+          </div>
+        </div>
       </div>
 
       <div className="salesshop-order">
         {/* other components */}
         <div className="product-list-wrapper">
-          <div className="product-list">
-            <h3 className="mb-4 text-2xl font-bold">PRODUCT</h3>
+          <div className="product-list ">
+            <h3 className="mb-4 text-2xl font-bold product-name ">PRODUCT</h3>
             <div className="grid grid-cols-3 gap-4">
               {products.map((product) => (
                 <div
