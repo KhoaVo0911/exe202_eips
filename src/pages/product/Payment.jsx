@@ -130,7 +130,7 @@ const PaymentOrder = () => {
           </ul>
         </div>
 
-        <div className="p-6 rounded-3xl max-h-11 ">
+        <div className="p-20 rounded-3xl max-h-11 ">
           <div class="p-6 rounded-lg shadow-md bg-[#0adc5d] text-white">
             <h1 class="text-5xl font-semibold mb-4 text-white">Card Details</h1>
             <form class="flex flex-col space-y-2 text-xl">

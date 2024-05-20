@@ -232,6 +232,48 @@ h-menu{
   z-index: 2;
 }
 
+.custom-date-picker {
+  border: 3px solid #05a84a;
+  /* Change color and size as needed */
+  border-radius: 4px;
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: medium;
+
+}
+.product-list-wrapper {
+  position: relative;
+  overflow: visible;
+  /* Đảm bảo rằng overflow không cắt bớt DatePicker */
+}
+
+.product-list {
+  position: relative;
+  overflow: visible;
+  /* Đảm bảo rằng overflow không cắt bớt DatePicker */
+}
+
+.custom-date-picker {
+  z-index: 1000;
+  /* Đảm bảo rằng DatePicker có z-index đủ cao */
+}
+.custom-date-picker:focus {
+  border-color: #05a84a;
+  /* Change the border color when focused */
+  // box-shadow: 0 0 0 4px #05a84a;
+  /* Add a custom box shadow if needed */
+  outline: none;
+  /* Remove the default outline */
+}
+
+.date-picker-container {
+  display: flex;
+  gap: 10px;
+
+  /* Adjust spacing between date pickers if needed */
+}
+
 .button:hover {
   background-color: #00c245;
 }
@@ -1778,4 +1820,44 @@ border: 1px solid #3b82f6;
   .salesshop-order {
     gap: 19px;
   }
+}
+.content-container {
+  position: relative;
+}
+
+/* CSS cho cửa sổ popup */
+
+.product-table {
+  width: 80%;
+  border-collapse: collapse;
+
+}
+
+.product-table th,
+.product-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.product-table th {
+  background-color: #f2f2f2;
+}
+
+.product-table img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.product-table input[type="checkbox"] {
+  margin: 0;
+  padding: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.table-container {
+  margin-bottom: 20px;
+ 
 }
