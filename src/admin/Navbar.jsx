@@ -1,59 +1,48 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import Logo from "../assets/images/esms 4.png";
+import LogoutIcon from "@mui/icons-material/Logout";
+import PersonIcon from "@mui/icons-material/Person";
 
 export default function Navbar() {
-  const handleOut = () => {
-    localStorage.clear();
+  const [isSideMenuOpen, setMenu] = useState(false);
+
+  const handleLogout = () => {
+    console.log("User logged out"); // Here you can add your logout functionality
   };
-  const userString = localStorage.getItem("user");
-  const userObject = JSON.parse(userString);
+
+  // Giả sử bạn lưu URL avatar của người dùng trong localStorage
+  const userAvatar = localStorage.getItem("userAvatar");
 
   return (
-    <div>
-      <nav className="bg-[#A8DADC] border-gray-200 px-2 sm:px-4 rounded dark:bg-gray-900 shadow-md">
-        <div className="max-w-[1500px] flex flex-wrap items-center justify-between mx-auto">
-          <Link to="/" className="flex items-center">
-            {/* Your logo here */}
-          </Link>
-          <div className="flex items-center">
-            <NavLink
-              style={({ isActive }) =>
-                isActive ? { color: "#60a5fa" } : undefined
-              }
-              to="/Admin"
-              className="text-black mr-4"
-            >
-              <h6>Events</h6>
-            </NavLink>
-            <NavLink
-              style={({ isActive }) =>
-                isActive ? { color: "#60a5fa" } : undefined
-              }
-              to="/AccountAdmin"
-              className="text-black mr-4"
-            >
-              <h6>Accounts</h6>
-            </NavLink>
-            <NavLink
-              style={({ isActive }) =>
-                isActive ? { color: "#60a5fa" } : undefined
-              }
-              to="/SettingAdmin"
-              className="text-black"
-            >
-              <h6>Settings</h6>
-            </NavLink>
-          </div>
-          <div className="hidden w-full lg:block md:w-auto" id="navbar-default">
-            <ul className="flex mt-4">
-              <div className="ml-4">
-                <p className="font-bold text-2xl"></p>
-              </div>
-            </ul>
-          </div>
+    <div className="header ">
+      <div className="navbar flex flex-row justify-between items-center px-20 py-4">
+        <div
+          className="nav-logo flex flex-row items-center gap-x-4"
+          style={{ width: "100px" }}
+        >
+          <img className="object-cover" loading="lazy" alt="" src={Logo} />
         </div>
-      </nav>
+
+        <div
+          className="flex flex-row justify-between items-center gap-x-10 h-menu"
+          style={{ fontFamily: "Fira Sans", fontSize: "20px" }}
+        >
+          <a href="#">
+            <button className="font-semibold">Product</button>
+          </a>
+          <a href="#">
+            <button className="font-semibold">Shop Order</button>
+          </a>
+          <a href="#">
+            <button className="font-semibold">Order</button>
+          </a>
+          <a href="#">
+            <button className="font-semibold">Setting</button>
+          </a>
+          <LogoutIcon />
+          <PersonIcon />
+        </div>
+      </div>
     </div>
   );
 }

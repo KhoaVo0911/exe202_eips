@@ -1,0 +1,121 @@
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .card-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns grid */
+    margin-top: 30px;
+    gap: 30px; /* Adjusted gap */
+    column-gap: 5px; /* Adjusted row gap */
+  }
+  
+  .card-item {
+    width: 400px; /* Adjusted width */
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 50px rgba(61, 55, 241, 0.25); /* Corrected box-shadow */
+    transition: 0.3s;
+    animation: fadeIn 1s;
+  }
+  
+  .card-item-image {
+    width: 400px; /* Fixed width */
+    height: 220px; /* Fixed height */
+    object-fit: cover; /* Ensures the image covers the area */
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .card-item-info {
+    padding: 10px; /* Adjusted padding to fit within the card */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-item-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .card-item-startdate {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    text-align: center;
+    color: #3D37F1;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 5px 10px;
+    margin-right: 10px;
+  }
+  
+  .card-item-button {
+    background-color: #F2F4FF;
+    border-radius: 5px;
+    color: #0adc5d;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .card-item-name {
+    flex-grow: 1;
+  }
+  
+  .card-item-desc {
+    color: #6a6a6a;
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .card-item-desc p {
+    color: #6a6a6a;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+  }
+  
+  .card-item-name p {
+    color: #000000;
+    text-align: left;
+    font-family: "DmSans-Bold", sans-serif;
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 700;
+  }
+
+  .btn-load-more {
+    border-radius: 50px;
+    border-style: solid;
+    border-color: #242565;
+    border-width: 1.5px;
+    width: 182px;
+    height: 60px;
+    box-shadow: 0px 10px 50px 0px rgba(61, 55, 241, 0.25);
+    background-color: white; /* Thêm nền trắng cho nút */
+    color: #242565;
+    text-align: center;
+    font-family: "DmSans-Bold", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-load-more:hover {
+    background-color: #f0f0f0;
+  }
+  
