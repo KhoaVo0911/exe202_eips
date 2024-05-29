@@ -20,27 +20,34 @@ export default function Navbar() {
           className="nav-logo flex flex-row items-center gap-x-4"
           style={{ width: "100px" }}
         >
-          <img className="object-cover" loading="lazy" alt="" src={Logo} />
+          <a href="/Home">
+            <img className="object-cover" loading="lazy" alt="" src={Logo} />
+          </a>
         </div>
 
         <div
           className="flex flex-row justify-between items-center gap-x-10 h-menu"
           style={{ fontFamily: "Fira Sans", fontSize: "20px" }}
         >
-          <a href="#">
+          <a href="/Product">
             <button className="font-semibold">Product</button>
           </a>
-          <a href="#">
-            <button className="font-semibold">Shop Order</button>
+          <a href="/ListShop">
+            <button className="font-semibold">Shop</button>
           </a>
-          <a href="#">
-            <button className="font-semibold">Order</button>
+          <a href="/Cart">
+            <button className="font-semibold">Cart</button>
           </a>
-          <a href="#">
-            <button className="font-semibold">Setting</button>
+          <a href="/ListAccounts">
+            <button className="font-semibold">Account</button>
           </a>
-          <LogoutIcon />
-          <PersonIcon />
+          <a href="/Payment">
+            {" "}
+            <LogoutIcon />
+          </a>
+          <a href="/Create">
+            <PersonIcon />
+          </a>
         </div>
       </div>
     </div>

@@ -13,6 +13,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import PizzaHeader from "../../assets/images/margherita-pizza_3.png";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import Navbar from "../../admin/Navbar";
 
 const products = [
   {
@@ -73,7 +74,7 @@ const CartProduct = () => {
   return (
     <div>
       <div className="header ">
-        <div className="navbar flex flex-row justify-between items-center px-20 py-4">
+        {/* <div className="navbar flex flex-row justify-between items-center px-20 py-4">
           <div
             className="nav-logo flex flex-row items-center gap-x-4"
             style={{ width: "100px" }}
@@ -100,7 +101,8 @@ const CartProduct = () => {
             <LogoutIcon />
             <PersonIcon />
           </div>
-        </div>
+        </div> */}
+        <Navbar />
         <div className="flex flex-row py-4 justify-between relative">
           <div className="h-bot flex flex-row items-center px-20 ">
             <h1 className="">
@@ -110,14 +112,16 @@ const CartProduct = () => {
               </span>
             </h1>
             <h3 className="h-content">Time to enjoy our delicious food.</h3>
+            <a href="/ListOrdered">
+              <button
+                className="bg-[#0adc5d] hover:bg-[#40b36e] text-white py-5 px-10 rounded-full tracking-widest"
+                style={{ fontSize: "24px" }}
+              >
+                <b>LIST ORDERED</b>
+              </button>
+            </a>
             <button className="">
               <div className="order-now">ORDER NOW</div>
-            </button>
-            <button
-              className="bg-[#0adc5d] hover:bg-[#40b36e] text-white py-5 px-10 rounded-full tracking-widest"
-              style={{ fontSize: "24px" }}
-            >
-              <b>ORDER NOW</b>
             </button>
           </div>
           <div className="flex relative">
