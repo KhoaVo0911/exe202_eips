@@ -1,3 +1,4 @@
+import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/login/login";
@@ -7,13 +8,15 @@ import Create from "./pages/product/Create";
 import Cart from "./pages/product/Cart";
 import ListOrdered from "./pages/product/ListOrdered";
 import Homepage from "./admin/home/Homepage";
-import CardList from "./admin/Card/CardList";
+import OwnerPage from './owner/OwnerPage'
+
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/owner" element={<OwnerPage />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Homepage />} />
 
         <Route path="/Product" element={<Product />} />
