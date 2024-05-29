@@ -302,9 +302,9 @@ const ListCards = () => {
       <CreateEventSection onCreateEventClick={handleCreateEventClick} />
       <div className=" bg-slate-100 p-10 mt-10">
         <div className="flex space-x-10 ml-10 font-bold">
-          <a href="">SHOP</a>
-          <a href="">CARD</a>
-          <a href="">ORDER</a>
+          <a href="/ListShop">SHOP</a>
+          <a href="/ListCards">CARD</a>
+          <a href="/ListOrders">ORDER</a>
         </div>
       </div>
       <div className="relative w-full mt-10 flex items-center mb-10">
