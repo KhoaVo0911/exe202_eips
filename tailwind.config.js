@@ -11,6 +11,7 @@ module.exports = {
           "linear-gradient(rgba(0,0,0, 0.75), rgba(0,0,0, 0.75)), url('https://i.imgur.com/WErp8xb.jpeg')",
       }),
       colors: {
+        "customHoverBg": '#d7f4e2',
         "custom-color": "#1d275f",
         "brandPrimary": "#4CAF4F",
         "neutralDGrey": "#4D4D4D",

@@ -8,7 +8,7 @@ import Create from "./pages/product/Create";
 import Cart from "./pages/product/Cart";
 import ListOrdered from "./pages/product/ListOrdered";
 import Homepage from "./admin/home/Homepage";
-
+import OwnerPage from "./owner/OwnerPage"
 import ListShop from "./admin/home/ListShop";
 import ListAccounts from "./admin/home/ListAccounts";
 import ListCards from "./admin/home/ListCards";

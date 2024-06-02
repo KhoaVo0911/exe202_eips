@@ -34,12 +34,12 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    {link: "Home", path: "home" },
-    {link: "Service", path: "service" },
-    {link: "About", path: "about" },
-    {link: "Product", path: "product" },
-    {link: "Testimonial", path: "testimonial" },
-    {link: "FAQ", path: "faq" },
+    {link: "TRANG CHỦ", path: "home" },
+    {link: "VỀ CHÚNG TÔI", path: "about" },
+    {link: "DỊCH VỤ", path: "service" },
+    {link: "LIÊN HỆ", path: "product" },
+    // {link: "Testimonial", path: "testimonial" },
+    // {link: "FAQ", path: "faq" },
   ];
   return (
     <header className=" bg-white md:bg-transparent fixed top-0 left-0 right-0">
@@ -59,8 +59,8 @@ const Navbar = () => {
           </ul>
 
           <div className="space-x-12 hidden lg:flex items-center">
-            <a href="/" className="hidden lg:flex items-center text-brandPrimary hover:text-gray900">Login</a>
-            <button className="bg-brandPrimary text-white  py-2 px-4 transition-all duration-300 rounded hover:bg-neutralDGrey">Sign up</button>
+            <a href="/" className="hidden lg:flex items-center text-brandPrimary hover:text-gray900">Đăng nhập</a>
+            <button className="bg-brandPrimary text-white  py-2 px-4 transition-all duration-300 rounded hover:bg-neutralDGrey">Đăng ký</button>
           </div>
 
           {/* menu btn, visible on mobile screen */}

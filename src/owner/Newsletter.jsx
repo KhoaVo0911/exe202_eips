@@ -17,11 +17,11 @@ const Newsletter = () => {
       className="flex items-center justify-center lg:w-2/5 mx-auto">
         <div className="text-center">
           <h2 className="lg:text-5xl text-3xl text-neutralBlack font-semibold mb-6 lg:leading-snug">
-            Pellentesque suscipit fringilla libero eu.
+            Khám phá ESMS ngay hôm nay!!
           </h2>
           <div className="flex gap-8 items-center justify-center">
             <button className="btn-primary text-white">
-            Get a Demo
+            TRẢI NGHIỆM NGAY
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="14"

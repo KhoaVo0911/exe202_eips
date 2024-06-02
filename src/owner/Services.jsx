@@ -1,111 +1,267 @@
+// import React from "react";
+// // import t1 from "../assets/images/t1.webp";
+// // import t2 from "../assets/images/t2.webp";
+// // import t3 from "../assets/images/t3.webp";
+// import CampaignIcon from "@mui/icons-material/Campaign";
+// import { alpha, styled } from "@mui/material/styles";
+// import PropTypes from 'prop-types';
+
+// const StyledIcon = styled("div")(({ theme }) => ({
+//   margin: "auto",
+//   display: "flex",
+//   borderRadius: "50%",
+//   alignItems: "center",
+//   width: theme.spacing(8),
+//   height: theme.spacing(8),
+//   justifyContent: "center",
+//   marginBottom: theme.spacing(3),
+// }));
+
+// const testimonialData = [
+//   {
+//     id: 1,
+//     name: "QUẢN LÝ SẢN PHẨM HIỆU QUẢ",
+//     post: "MARKETING MANAGER",
+//     desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+//     icon: <CampaignIcon fontSize="large" />,
+//   },
+//   {
+//     id: 2,
+//     name: "Thanh toán nhanh chóng, tiện lợi",
+//     post: "MARKETING MANAGER",
+//     desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+//     icon: <CampaignIcon fontSize="large" />,
+//   },
+//   {
+//     id: 3,
+//     name: "Mã QR theo từng đơn hàng",
+//     post: "MARKETING MANAGER",
+//     desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+//     icon: <CampaignIcon fontSize="large" />,
+//   },
+//   {
+//     id: 4,
+//     name: "Quản lý đơn hàng tập trung",
+//     post: "MARKETING MANAGER",
+//     desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+//     icon: <CampaignIcon fontSize="large" />,
+//   },
+//   {
+//     id: 5,
+//     name: "Quản lý khách hàng chuyên nghiệp",
+//     post: "MARKETING MANAGER",
+//     desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+//     icon: <CampaignIcon fontSize="large" />,
+//   },
+//   {
+//     id: 6,
+//     name: "Dễ dàng sử dụng",
+//     post: "MARKETING MANAGER",
+//     desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+//     icon: <CampaignIcon fontSize="large" />,
+//   },
+// ];
+
+// // ----------------------------------------------------------------------
+
+// Testimonial.propTypes = {
+//   color: PropTypes.string,
+//   icon: PropTypes.string,
+//   title: PropTypes.string.isRequired,
+//   total: PropTypes.number.isRequired,
+//   sx: PropTypes.object,
+// };
+
+// const Heading = ({ subtitle, title }) => {
+//   return (
+//     <div className="text-center mb-10">
+//       <h2 className="text-2xl font-semibold text-gray-600">{subtitle}</h2>
+//       <h1 className="text-4xl font-bold text-brandPrimary">{title}</h1>
+//     </div>
+//   );
+// };
+
+// const Testimonial = ({ title, total, icon, color = 'primary', sx, ...other }) => {
+//   return (
+//     <section className="py-12" id="service">
+//       <div className="container mx-auto">
+//         <Heading
+//           subtitle="VÌ SAO NÊN ĐĂNG KÝ?"
+//           title="ESMS - HỆ THỐNG QUẢN LÝ VÀ BÁN HÀNG TRONG SỰ KIỆN"
+//         />
+//         <div className="grid grid-cols-1 md:grid-cols-3 gap-6" id="service">
+//           {testimonialData.map((val) => (
+//             <div
+//               key={val.id}
+//               className="bg-white shadow-lg p-8 transition duration-500 hover:bg-brandPrimary hover:text-white cursor-pointer"
+//             >
+//               <div className="flex items-center mb-6">
+//                 <div className="relative mr-4">
+//                   <StyledIcon
+//                     sx={{
+//                       color: (theme) => theme.palette[color].dark,
+//                       backgroundImage: (theme) =>
+//                         `linear-gradient(135deg, ${alpha(
+//                           theme.palette[color].dark,
+//                           0
+//                         )} 0%, ${alpha(theme.palette[color].dark, 0.24)} 100%)`,
+//                     }}
+//                   >
+//                     {icon}
+//                   </StyledIcon>
+//                 </div>
+
+//                 <div className="ml-6">
+//                   <h2 className="text-xl font-semibold">{val.name}</h2>
+//                   <span className="text-brandPrimary transition duration-500 hover:text-white">
+//                     {val.post}
+//                   </span>
+//                 </div>
+//               </div>
+//               <p className="text-gray-600 transition duration-500 hover:text-white">
+//                 {val.desc}
+//               </p>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Testimonial;
+
 import React from "react";
-// motion
-import { motion } from "framer-motion";
-// variants
-import { fadeIn } from "./variants";
-import company1 from '../assets/images/company1.png'
-import company2 from '../assets/images/company2.png'
-import company3 from '../assets/images/company3.png'
-import company4 from '../assets/images/company4.png'
-import company5 from '../assets/images/company5.png'
-import company6 from '../assets/images/company6.png'
-import company7 from '../assets/images/company7.png'
-import membership from "../assets/images/membership.png"
-import association from "../assets/images/association.png"
-import groupclub from "../assets/images/group-club.png"
+import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import Inventory2Icon from "@mui/icons-material/Inventory2";
+import PaidIcon from "@mui/icons-material/Paid";
+import QrCode2Icon from "@mui/icons-material/QrCode2";
+import ManageSearchIcon from "@mui/icons-material/ManageSearch";
+import SupportAgentIcon from "@mui/icons-material/SupportAgent";
+import { alpha, styled } from "@mui/material/styles";
+import PropTypes from "prop-types";
 
-const Services = () => {
-  const services = [
-    {
-      id: 1,
-      title: "Membership Organisations",
-      decription:
-        "Our membership management software provides full automation of membership renewals and payments",
-      image: membership,
-    },
-    {
-      id: 2,
-      title: "National Associations",
-      decription:
-        "Our membership management software provides full automation of membership renewals and payments",
-      image: association,
-    },
-    {
-      id: 3,
-      title: "Clubs And Groups",
-      decription:
-        "Our membership management software provides full automation of membership renewals and payments",
-      image: groupclub,
-    },
-  ];
+const StyledIcon = styled("div")(({ theme }) => ({
+  margin: "auto",
+  display: "flex",
+  borderRadius: "50%",
+  alignItems: "center",
+  width: theme.spacing(8),
+  height: theme.spacing(8),
+  justifyContent: "center",
+  marginBottom: theme.spacing(3),
+}));
+
+const testimonialData = [
+  {
+    id: 1,
+    name: "QUẢN LÝ SẢN PHẨM HIỆU QUẢ",
+    post: "MARKETING MANAGER",
+    desc: "Phần mềm ESMS giúp bạn quản lý toàn bộ sản phẩm một cách hiệu quả, từ việc nhập hàng, theo dõi tồn kho, đến việc cập nhật thông tin sản phẩm.",
+    icon: <Inventory2Icon fontSize="large" />,
+  },
+  {
+    id: 2,
+    name: "THANH TOÁN NHANH CHÓNG, TIỆN LỢI",
+    post: "MARKETING MANAGER",
+    desc: "ESMS tích hợp nhiều phương thức thanh toán hiện đại, giúp giao dịch diễn ra nhanh chóng và tiện lợi.",
+    icon: <PaidIcon fontSize="large" />,
+  },
+  {
+    id: 3,
+    name: "MÃ QR THEO TỪNG ĐƠN HÀNG",
+    post: "MARKETING MANAGER",
+    desc: "Với tính năng mã QR độc đáo cho từng đơn hàng, ESMS giúp bạn quản lý và truy xuất thông tin đơn hàng một cách nhanh chóng và chính xác.",
+    icon: <QrCode2Icon fontSize="large" />,
+  },
+  {
+    id: 4,
+    name: "QUẢN LÝ ĐƠN HÀNG TẬP TRUNG",
+    post: "MARKETING MANAGER",
+    desc: "Hệ thống thông báo theo thời gian thực giúp bạn kiểm soát chặt chẽ và xử lý kịp thời các đơn hàng.",
+    icon: <ManageSearchIcon fontSize="large" />,
+  },
+  {
+    id: 5,
+    name: "QUẢN LÝ KHÁCH HÀNG CHUYÊN NGHIỆP",
+    post: "MARKETING MANAGER",
+    desc: "Dễ dàng quản lý thông tin liên hệ, lịch sử mua sắm và phản hồi của khách hàng.",
+    icon: <SupportAgentIcon fontSize="large" />,
+  },
+  {
+    id: 6,
+    name: "DỄ DÀNG SỬ DỤNG",
+    post: "MARKETING MANAGER",
+    desc: "ESMS được thiết kế với giao diện thân thiện và dễ sử dụng, phù hợp cho mọi đối tượng người dùng.",
+    icon: <CheckCircleOutlineIcon fontSize="large" />,
+  },
+];
+
+const Heading = ({ subtitle, title }) => {
   return (
-    <div className="md:px-14 px-4 py-16 max-w-screen-2xl mx-auto" id="service">
-      <motion.div
-        variants={fadeIn("up", 0.2)}
-        initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: false, amount: 0.7 }}
-        className="text-center my-8"
-      >
-        <h2 className="text-4xl text-neutralDGrey font-semibold mb-2">
-          Our Clients
-        </h2>
-        <p className="text-neutralGrey">
-          We have been working with some Fortune 500+ clients
-        </p>
-        <div className="my-12 flex flex-wrap justify-between items-center gap-8 ">
-          <img src={company1} alt="" />
-          <img src={company2} alt="" />
-          <img src={company3} alt="" />
-          <img src={company4} alt="" />
-          <img src={company5} alt="" />
-          <img src={company6} alt="" />
-          <img src={company7} alt="" />
-        </div>
-      </motion.div>
-
-      {/* service cards */}
-      <motion.div
-        variants={fadeIn("left", 0.2)}
-        initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: false, amount: 0.7 }}
-        className="mt-20 text-center md:w-1/2 mx-auto"
-      >
-        <h2 className="text-4xl text-neutralDGrey font-semibold mb-3">
-          Manage your entire community in a single system
-        </h2>
-        <p className="text-neutralGrey">
-          We have been working with some Fortune 500+ clients
-        </p>
-      </motion.div>
-
-      <motion.div
-        variants={fadeIn("up", 0.2)}
-        initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: false, amount: 0.7 }}
-        className="mt-14 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:w-11/12 mx-auto gap-12"
-      >
-        {services.map((service) => (
-          <div
-            key={service.id}
-            className="px-4 py-8 text-center md:w-[300px] mx-auto md:h-80 rounded-md shadow cursor-pointer hover:-translate-y-5 hover:border-b-4 hover:border-indigo-700 transition-all duration-300 flex items-center justify-center h-full"
-          >
-            <div className="">
-              <div className="bg-[#E8F5E9] w-14 h-14 mx-auto mb-4 rounded-tl-3xl rounded-br-3xl">
-                <img src={service.image} alt="" className="-ml-5" />
-              </div>
-              <h4 className="text-2xl font-bold text-neutralDGrey mb-2 px-2">
-                {service.title}
-              </h4>
-              <p className="text-sm text-neutralGrey">{service.decription}</p>
-            </div>
-          </div>
-        ))}
-      </motion.div>
+    <div className="text-center mb-10">
+      <h2 className="text-2xl font-semibold text-gray-600">{subtitle}</h2>
+      <h1 className="text-4xl font-bold text-brandPrimary">{title}</h1>
     </div>
   );
 };
 
-export default Services;
+const Testimonial = () => {
+  return (
+    <section className="py-12" id="service">
+      <div className="container mx-auto">
+        <Heading
+          subtitle="VÌ SAO NÊN ĐĂNG KÝ?"
+          title="ESMS - HỆ THỐNG QUẢN LÝ VÀ BÁN HÀNG TRONG SỰ KIỆN"
+        />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 border-radius" id="service">
+          {testimonialData.map((val) => (
+            <div
+              key={val.id}
+              className="bg-customHoverBg shadow-lg p-8 transition duration-500 hover:bg-brandPrimary hover:text-white cursor-pointer group rounded-lg"
+            >
+              <div className="flex items-center mb-6">
+                <div className="relative mr-5">
+                  <StyledIcon
+                    sx={{
+                      color: (theme) => theme.palette.success.dark,
+                      backgroundImage: (theme) =>
+                        `linear-gradient(135deg, ${alpha(
+                          theme.palette.success.dark,
+                          0
+                        )} 0%, ${alpha(theme.palette.info.dark, 0.24)} 100%)`,
+                    }}
+                  >
+                    {val.icon}
+                  </StyledIcon>
+                </div>
+
+                <div className="ml-6">
+                  <h2 className="text-brandPrimary text-xl font-semibold group-hover:text-white">
+                    {val.name}
+                  </h2>
+                  {/* <span className="text-brandPrimary transition duration-500 hover:text-white">
+                    {val.post}
+                  </span> */}
+                </div>
+              </div>
+              <p className="text-gray-600 transition duration-500 group-hover:text-white">
+                {val.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+Testimonial.propTypes = {
+  color: PropTypes.string,
+  icon: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  total: PropTypes.number.isRequired,
+  sx: PropTypes.object,
+};
+
+export default Testimonial;

@@ -14,8 +14,8 @@ const Home = () => {
       <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto min-h-screen h-screen flex justify-center items-center">
         <Swiper
           navigation={{
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
           }}
           autoplay={{
             delay: 3000,
@@ -29,19 +29,29 @@ const Home = () => {
               <div>
                 <img src={banner} alt="" />
               </div>
-              <div className="md:w-1/2">
+              <div className="md:w-1/2 ml-14">
                 <h1 className="text-5xl mb-4 font-semibold text-neutralDGrey md:w-3/4 leading-snug">
-                  Lessons and insights{" "}
+                  HỆ THỐNG{" "}
                   <span className="text-brandPrimary leading-snug">
-                    from 8 years
+                    QUẢN LÝ{" "}
+                  </span>
+                  <span className="text-neutralDGrey leading-snug">VÀ </span>
+                  <span className="text-brandPrimary leading-snug">
+                    BÁN HÀNG
+                  </span>
+                  <span className="text-neutralDGrey leading-snug">
+                    {" "}
+                    TẠI SỰ KIỆN
                   </span>
                 </h1>
-                <p className="text-neutralGrey text-base mb-8">
-                  Where to grow your business as a photographer: site or social
-                  media?
+                <p className="text-neutralGrey text-base mb-2">
+                  ESMS mang đến các nhà bán hàng trải nghiệm
                 </p>
-                <button className="px-7 py-2 bg-brandPrimary text-white rounded hover:bg-neutralDGrey">
-                  Register
+                <p className="text-black font-bold text-2xl mb-0">
+                  NHANH CHÓNG, DỄ DÀNG, HIỆU QUẢ!
+                </p>
+                <button className="px-9 py-4 bg-brandPrimary text-white rounded hover:bg-neutralDGrey mt-6">
+                  TRẢI NGHIỆM NGAY
                 </button>
               </div>
             </div>
@@ -51,41 +61,54 @@ const Home = () => {
               <div>
                 <img src={banner2} alt="" />
               </div>
-              <div className="md:w-1/2">
+              <div className="md:w-1/2 ml-14">
                 <h1 className="text-5xl mb-4 font-semibold text-neutralDGrey md:w-3/4 leading-snug">
-                  Learn Design and Illustration{" "}
+                  ESMS - "CHÌA KHÓA" NÂNG CAO{" "}
                   <span className="text-brandPrimary leading-snug">
-                    in 4 months
+                    HIỆU QUẢ KINH DOANH
                   </span>
                 </h1>
-                <p className="text-neutralGrey text-base mb-8">
-                  Where to grow your business as a photographer: site or social
-                  media?
+                <p className="text-neutralGrey text-base mb-2">
+                  Giải pháp toàn diện cho việc quản lý và bán hàng
                 </p>
-                <button className="px-7 py-2 bg-brandPrimary text-white rounded hover:bg-neutralDGrey">
-                  Register
+                <p className="text-neutralGrey text-base mb-0">
+                  tại các sự kiện với nhiều tiện ích.
+                </p>
+                <button className="px-9 py-4 bg-brandPrimary text-white rounded hover:bg-neutralDGrey mt-6">
+                  TRẢI NGHIỆM NGAY
                 </button>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="my-28 md:my-8 py-12 flex flex-col w-full mx-auto md:flex-row-reverse items-center justify-between gap-12">
+          <div className="my-28 md:my-8 py-12 flex flex-col w-full mx-auto md:flex-row-reverse items-center justify-between gap-12">
               <div>
                 <img src={banner3} alt="" />
               </div>
-              <div className="md:w-1/2">
+              <div className="md:w-1/2 ml-14">
                 <h1 className="text-5xl mb-4 font-semibold text-neutralDGrey md:w-3/4 leading-snug">
-                  Grow Business Fast{" "}
+                  QUẢN LÝ BÁN HÀNG{" "}
                   <span className="text-brandPrimary leading-snug">
-                    for free of cost
+                    MANG LẠI LỢI ÍCH GÌ?
                   </span>
                 </h1>
-                <p className="text-neutralGrey text-base mb-8">
-                  Where to grow your business as a photographer: site or social
-                  media?
+                <p className="text-neutralGrey text-base mb-1.5">
+                  Quản lý hàng hóa hiệu quả
                 </p>
-                <button className="px-7 py-2 bg-brandPrimary text-white rounded hover:bg-neutralDGrey">
-                  Register
+                <p className="text-neutralGrey text-base mb-1.5">
+                  Giao dịch nhanh chóng và an toàn
+                </p>
+                <p className="text-neutralGrey text-base mb-1.5">
+                  Theo dõi doanh thu chính xác
+                </p>
+                <p className="text-neutralGrey text-base mb-1.5">
+                  Nâng cao trải nghiệm khách hàng
+                </p>
+                <p className="text-neutralGrey text-base mb-1.5">
+                  Tối ưu hóa hiệu suất kinh doanh
+                </p>
+                <button className="px-9 py-4 bg-brandPrimary text-white rounded hover:bg-neutralDGrey mt-6">
+                  TRẢI NGHIỆM NGAY
                 </button>
               </div>
             </div>
@@ -101,7 +124,7 @@ const Home = () => {
 export default Home;
 
 // Custom CSS for Swiper navigation buttons
-const style = document.createElement('style');
+const style = document.createElement("style");
 style.textContent = `
   .swiper-button-next,
   .swiper-button-prev {
