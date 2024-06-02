@@ -9,7 +9,7 @@ const FAQ = () => {
     {
       id: "1",
       question:
-        "Hệ thống quản lý ESMS mang lại lợi ích gì cho các doanh nghiệp?",
+        "Hệ thống quản lý ESMS mang lại lợi ích gì cho các doanh nghiệp????????",
       answer: [
         "Phần mềm quản lý ESMS hỗ trợ chủ gian hàng quản lý sản phẩm, đơn hàng và khách hàng một cách hiệu quả và chuyên nghiệp. Hệ thống cho phép chủ gian hàng theo dõi tiến độ bán hàng, quản lý lịch đặt hàng và kiểm tra trạng thái tồn kho.",
         "Điều này giúp giảm thiểu sai sót trong việc quản lý và đảm bảo rằng mọi hoạt động kinh doanh diễn ra một cách suôn sẻ và chính xác.",
