@@ -8,11 +8,12 @@ import Create from "./pages/product/Create";
 import Cart from "./pages/product/Cart";
 import ListOrdered from "./pages/product/ListOrdered";
 import Homepage from "./admin/home/Homepage";
-import OwnerPage from "./owner/OwnerPage"
+import OwnerPage from "./owner/OwnerPage";
 import ListShop from "./admin/home/ListShop";
 import ListAccounts from "./admin/home/ListAccounts";
 import ListCards from "./admin/home/ListCards";
 import ListOrders from "./admin/home/ListOrders";
+import Dashboard from "./pages/Dashboard/dashboard";
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
         <Route path="/ListShop" element={<ListShop />} />
         <Route path="/ListAccounts" element={<ListAccounts />} />
         <Route path="/ListCards" element={<ListCards />} />
-        <Route path="/ListOrders" element={<ListOrders/>} />
+        <Route path="/ListOrders" element={<ListOrders />} />
+        <Route path="/Dashboard" element={<Dashboard />} />
 
         <Route path="/Product" element={<Product />} />
         <Route path="/Payment" element={<Payment />} />
