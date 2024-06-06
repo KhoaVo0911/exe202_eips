@@ -1,5 +1,5 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
-import loginReducer from "./login/loginSlice";
+import authReducer from "./auth/authSlice";
 // import eventReducer from "./event/eventSlice";
 // import shopReducer from "./shop/shopSlice";
 // import productReducer from "./product/productSlice";
@@ -8,7 +8,7 @@ import loginReducer from "./login/loginSlice";
 // import cartReducer from "./cart/cartSlice";
 export const store = configureStore({
   reducer: {
-    login: loginReducer,
+    auth: authReducer,
     // event: eventReducer,
     // shop: shopReducer,
     // product: productReducer,
@@ -17,12 +17,3 @@ export const store = configureStore({
     // cart: cartReducer,
   },
 });
-export type RootState = ReturnType<typeof store.getState>;
-
-export type DispatchType = typeof store.dispatch;
-export type AppThunk<ReturnType = void> = ThunkAction<
-  ReturnType,
-  RootState,
-  unknown,
-  Action<string>
->;

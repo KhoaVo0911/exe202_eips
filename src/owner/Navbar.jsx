@@ -53,7 +53,7 @@ const Navbar = () => {
             
             {
                 navItems.map(({link, path}) => <Link to={path} spy={true} smooth={true} offset={-100} key={link} href={path} className="block text-base text-gray900 hover:text-brandPrimary first:font-medium">
-                {link}
+                {link} 
               </Link> )
             }
           </ul>
