@@ -281,21 +281,11 @@
 // export default Login;
 
 import React, { useState } from "react";
-import { useSpring, animated } from "@react-spring/web";
+import { motion } from "framer-motion";
 import "./login.scss";
 
 const Login = () => {
   const [isHost, setIsHost] = useState(true);
-
-  const hostProps = useSpring({
-    transform: isHost ? "translateX(0%)" : "translateX(-100%)",
-    opacity: isHost ? 1 : 0,
-  });
-
-  const vendorProps = useSpring({
-    transform: isHost ? "translateX(100%)" : "translateX(0%)",
-    opacity: isHost ? 0 : 1,
-  });
 
   const handleToggle = () => {
     setIsHost(!isHost);
@@ -304,11 +294,16 @@ const Login = () => {
   return (
     <div
       style={{ maxWidth: "1920px" }}
-      className={`container ${!isHost ? "sign-up-mode" : ""}`}
+      className={`container1 ${!isHost ? "sign-up-mode" : ""}`}
     >
-      <div className="forms-container">
+      <div className="forms-container1">
         <div className="signin-signup">
-          <animated.form className="sign-in-form" style={hostProps}>
+          <motion.form
+            className="sign-in-form"
+            initial={{ x: isHost ? "0%" : "-100%", opacity: isHost ? 1 : 0 }}
+            animate={{ x: isHost ? "0%" : "-100%", opacity: isHost ? 1 : 0 }}
+            transition={{ duration: 0.5 }}
+          >
             <h2 className="title">Host Login</h2>
             <div className="input-field">
               <i className="fas fa-user"></i>
@@ -319,8 +314,13 @@ const Login = () => {
               <input type="password" placeholder="Password" />
             </div>
             <input type="submit" value="Login" className="btn solid" />
-          </animated.form>
-          <animated.form className="sign-up-form" style={vendorProps}>
+          </motion.form>
+          <motion.form
+            className="sign-up-form"
+            initial={{ x: isHost ? "100%" : "0%", opacity: isHost ? 0 : 1 }}
+            animate={{ x: isHost ? "100%" : "0%", opacity: isHost ? 0 : 1 }}
+            transition={{ duration: 0.5 }}
+          >
             <h2 className="title">Vendor Login</h2>
             <div className="input-field">
               <i className="fas fa-user"></i>
@@ -331,10 +331,10 @@ const Login = () => {
               <input type="password" placeholder="Password" />
             </div>
             <input type="submit" value="Login" className="btn solid" />
-          </animated.form>
+          </motion.form>
         </div>
       </div>
-      <div className="panels-container">
+      <div className="panels-container1">
         <div className="panel left-panel">
           <div className="content">
             <h3>Host Login</h3>
