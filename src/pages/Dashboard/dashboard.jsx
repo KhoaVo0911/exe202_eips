@@ -2,10 +2,40 @@ import React, { useState } from "react";
 import ModalComponent from "./ModalComponent";
 import Navbar from "../../admin/Navbar";
 import Footer from "../Footer";
-import Card from "../../admin/Card/Card";
 import CardList from "../../admin/Card/CardList";
+import Sidebar from "./Sidebar";
+import SalesOverview from "./SaleOverview";
 
 const Dashboard = () => {
+  const [activeComponent, setActiveComponent] = useState("SalesOverview");
+
+  const renderComponent = () => {
+    switch (activeComponent) {
+      case "SalesOverview":
+        return <SalesOverview />;
+      // case "InventoryManagement":
+      //   return <InventoryManagement />;
+      // case "OrderManagement":
+      //   return <OrderManagement />;
+      // case "CustomerAnalysis":
+      //   return <CustomerAnalysis />;
+      // case "SalesPerformance":
+      //   return <SalesPerformance />;
+      // case "SupplierManagement":
+      //   return <SupplierManagement />;
+      // case "FinancialManagement":
+      //   return <FinancialManagement />;
+      // case "ReportsAndAnalytics":
+      //   return <ReportsAndAnalytics />;
+      // case "AlertsAndNotifications":
+      //   return <AlertsAndNotifications />;
+      // case "StaffManagement":
+      //   return <StaffManagement />;
+      default:
+        return <SalesOverview />;
+    }
+  };
+
   const [modalData, setModalData] = useState({
     isOpen: false,
     title: "",
@@ -30,9 +60,14 @@ const Dashboard = () => {
 
   return (
     <div className="">
-      <Navbar />
+      <div className="flex gap-5">
+        <Sidebar setActiveComponent={setActiveComponent} />
+        <div className="w-3/4 border shadow-lg rounded-xl  bg-slate-300 my-10">
+          {renderComponent()}
+        </div>
+      </div>
 
-      <div className="p-10 text-center  ">
+      {/* <div className="p-10 text-center  ">
         <h1 className="text-8xl font-bold mb-4  ">Dashboard</h1>
         <div className="space-x-4">
           <button
@@ -61,7 +96,7 @@ const Dashboard = () => {
           </button>
         </div>
         <CardList />
-      </div>
+      </div> */}
 
       <ModalComponent
         isOpen={modalData.isOpen}
