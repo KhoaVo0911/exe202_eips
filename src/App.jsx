@@ -13,7 +13,8 @@ import ListShop from "./admin/home/ListShop";
 import ListAccounts from "./admin/home/ListAccounts";
 import ListCards from "./admin/home/ListCards";
 import ListOrders from "./admin/home/ListOrders";
-import Dashboard from "./pages/Dashboard/dashboard";
+import loginApi from "./api/LoginApi";
+=======
 
 function App() {
   return (
@@ -26,7 +27,6 @@ function App() {
         <Route path="/ListAccounts" element={<ListAccounts />} />
         <Route path="/ListCards" element={<ListCards />} />
         <Route path="/ListOrders" element={<ListOrders />} />
-        <Route path="/Dashboard" element={<Dashboard />} />
 
         <Route path="/Product" element={<Product />} />
         <Route path="/Payment" element={<Payment />} />
