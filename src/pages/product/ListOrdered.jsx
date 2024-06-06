@@ -201,7 +201,7 @@ const ListOrdered = () => {
                       <th>Image</th>
                       <th>Description</th>
                       <th>Category</th>
-                      <th>Action</th>
+                      {/* <th>Action</th> */}
                     </tr>
                   </thead>
                   <tbody>
@@ -217,11 +217,11 @@ const ListOrdered = () => {
                         </td>
                         <td>{product.description}</td>
                         <td>{product.category}</td>
-                        <td>
+                        {/* <td>
                           <button onClick={handleCreateProductClick}>
                             View
                           </button>
-                        </td>
+                        </td> */}
 
                         {/* Nút View */}
                       </tr>
