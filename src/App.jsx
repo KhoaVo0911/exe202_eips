@@ -17,7 +17,7 @@ import ListOrders from "./admin/home/ListOrders";
 import Dashboard from "./pages/Dashboard/dashboard";
 
 import loginApi from "./api/LoginApi";
-import Login from "./pages/login/Login";
+import Login from "./pages/login/login";
 
 
 function App() {
