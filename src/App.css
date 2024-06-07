@@ -40,6 +40,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
 
 body {
+  margin: 0;
+  line-height: normal;
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
     font-family: 'DM Sans', sans-serif;
     scroll-behavior: smooth;
 }

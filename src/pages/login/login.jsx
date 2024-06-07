@@ -282,7 +282,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import "./login.scss";
+import styles from "./login.module.scss";
 
 const Login = () => {
   const [isHost, setIsHost] = useState(true);
@@ -294,56 +294,66 @@ const Login = () => {
   return (
     <div
       style={{ maxWidth: "1920px" }}
-      className={`container1 ${!isHost ? "sign-up-mode" : ""}`}
+      className={`${styles.container1} ${
+        !isHost ? styles["sign-up-mode"] : ""
+      }`}
     >
-      <div className="forms-container1">
-        <div className="signin-signup">
+      <div className={styles.formsContainer1}>
+        <div className={styles.signinSignup}>
           <motion.form
-            className="sign-in-form"
+            className={`${styles.loginForm} ${styles.signInForm}`}
             initial={{ x: isHost ? "0%" : "-100%", opacity: isHost ? 1 : 0 }}
             animate={{ x: isHost ? "0%" : "-100%", opacity: isHost ? 1 : 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="title">Host Login</h2>
-            <div className="input-field">
+            <h2 className={styles.title}>Host Login</h2>
+            <div className={styles.inputField}>
               <i className="fas fa-user"></i>
               <input type="text" placeholder="Username" />
             </div>
-            <div className="input-field">
+            <div className={styles.inputField}>
               <i className="fas fa-lock"></i>
               <input type="password" placeholder="Password" />
             </div>
-            <input type="submit" value="Login" className="btn solid" />
+            <input
+              type="submit"
+              value="Login"
+              className={`${styles.btn} ${styles.solid}`}
+            />
           </motion.form>
           <motion.form
-            className="sign-up-form"
+            className={`${styles.loginForm} ${styles.signUpForm}`}
             initial={{ x: isHost ? "100%" : "0%", opacity: isHost ? 0 : 1 }}
             animate={{ x: isHost ? "100%" : "0%", opacity: isHost ? 0 : 1 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="title">Vendor Login</h2>
-            <div className="input-field">
+            <h2 className={styles.title}>Vendor Login</h2>
+            <div className={styles.inputField}>
               <i className="fas fa-user"></i>
               <input type="text" placeholder="Username" />
             </div>
-            <div className="input-field">
+            <div className={styles.inputField}>
               <i className="fas fa-lock"></i>
               <input type="password" placeholder="Password" />
             </div>
-            <input type="submit" value="Login" className="btn solid" />
+            <input
+              type="submit"
+              value="Login"
+              className={`${styles.btn} ${styles.solid}`}
+            />
           </motion.form>
         </div>
       </div>
-      <div className="panels-container1">
-        <div className="panel left-panel">
-          <div className="content">
+      <div className={styles.panelsContainer1}>
+        <div className={`${styles.panel} ${styles.leftPanel}`}>
+          <div className={styles.content}>
             <h3>Host Login</h3>
             <p>
               This is a host login section. You can manage your host account
               from here.
             </p>
             <button
-              className="btn transparent"
+              className={`${styles.btn} ${styles.transparent}`}
               id="sign-up-btn"
               onClick={handleToggle}
             >
@@ -351,15 +361,15 @@ const Login = () => {
             </button>
           </div>
         </div>
-        <div className="panel right-panel">
-          <div className="content">
+        <div className={`${styles.panel} ${styles.rightPanel}`}>
+          <div className={styles.content}>
             <h3>Vendor Login</h3>
             <p>
               This is a vendor login section. You can manage your vendor account
               from here.
             </p>
             <button
-              className="btn transparent"
+              className={`${styles.btn} ${styles.transparent}`}
               id="sign-in-btn"
               onClick={handleToggle}
             >
