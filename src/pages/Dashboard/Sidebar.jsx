@@ -1,90 +1,110 @@
-import { Divider } from "@mui/material";
 import React from "react";
-import Logo from "../../assets/images/esms 4.png";
+import Box from "@mui/material/Box";
+import Drawer from "@mui/material/Drawer";
+import List from "@mui/material/List";
+import Divider from "@mui/material/Divider";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
+import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import DraftsIcon from "@mui/icons-material/Drafts";
+import SendIcon from "@mui/icons-material/Send";
+import EventIcon from "@mui/icons-material/Event";
+import InventoryIcon from "@mui/icons-material/Inventory";
+import "./sidebar.scss";
 
-const Sidebar = ({ setActiveComponent }) => {
-  return (
-    <div className="w-1/5  p-4 border shadow-lg rounded-xl ml-10 bg-white my-10 flex flex-col">
+export default function Sidebar({ setActiveComponent }) {
+  const icons = [
+    AttachMoneyIcon,
+    InventoryIcon,
+    EventIcon,
+    DraftsIcon,
+    SendIcon,
+  ];
+  const menuItems = [
+    { text: "Thống kê doanh thu", component: "SalesOverview" },
+    { text: "Tổng đơn hàng", component: "InventoryManagement" },
+    { text: "Sự kiện", component: "EventsManagement" },
+  ];
+
+  const DrawerList = (
+    <Box
+      sx={{
+        width: 300,
+        background: "#1e2d48",
+        color: "white",
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        border: "none",
+      }}
+      role="presentation"
+    >
       <div
-        className="nav-logo flex  items-center gap-x-4"
-        style={{ width: "100px" }}
+        className="nav-logo flex justify-center p-6"
+        style={{ width: "100%" }}
       >
-        <img className="object-cover" loading="lazy" alt="" src={Logo} />
-        <h1 className="text-2xl font-bold text-center">Dashboard</h1>
+        <h1 className="text-xl font-bold">Dashboard</h1>
       </div>
-      <Divider />
-      <div className="my-10 gap-y-20 flex justify-center flex-grow">
-        <ul>
-          <li
-            onClick={() => setActiveComponent("SalesOverview")}
-            className="cursor-pointer mb-2 hover:bg-green-300 p-2 rounded"
-          >
-            Tổng Quan Bán Hàng
-          </li>
-          <li
-            onClick={() => setActiveComponent("InventoryManagement")}
-            className="cursor-pointer mb-2 hover:bg-green-300 p-2 rounded"
-          >
-            Quản Lý Hàng Hóa
-          </li>
-          <li
-            onClick={() => setActiveComponent("OrderManagement")}
-            className="cursor-pointer mb-2 hover:bg-green-300 p-2 rounded"
-          >
-            Quản Lý Đơn Hàng
-          </li>
-          <li
-            onClick={() => setActiveComponent("CustomerAnalysis")}
-            className="cursor-pointer mb-2 hover:bg-green-300 p-2 rounded"
-          >
-            Phân Tích Khách Hàng
-          </li>
-          <li
-            onClick={() => setActiveComponent("SalesPerformance")}
-            className="cursor-pointer mb-2 hover:bg-green-300 p-2 rounded"
-          >
-            Hiệu Suất Bán Hàng
-          </li>
-          <li
-            onClick={() => setActiveComponent("SupplierManagement")}
-            className="cursor-pointer mb-2 hover:bg-green-300 p-2 rounded"
-          >
-            Quản Lý Nhà Cung Cấp
-          </li>
-          <li
-            onClick={() => setActiveComponent("FinancialManagement")}
-            className="cursor-pointer mb-2 hover:bg-green-300 p-2 rounded"
-          >
-            Quản Lý Tài Chính
-          </li>
-          <li
-            onClick={() => setActiveComponent("ReportsAndAnalytics")}
-            className="cursor-pointer mb-2 hover:bg-green-300 p-2 rounded"
-          >
-            Báo Cáo và Phân Tích
-          </li>
-          <li
-            onClick={() => setActiveComponent("AlertsAndNotifications")}
-            className="cursor-pointer mb-2 hover:bg-green-300 p-2 rounded"
-          >
-            Cảnh Báo và Thông Báo
-          </li>
-          <li
-            onClick={() => setActiveComponent("StaffManagement")}
-            className="cursor-pointer mb-2 hover:bg-green-300 p-2 rounded"
-          >
-            Quản Lý Nhân Viên
-          </li>
-        </ul>
-      </div>
-      <Divider />
-      <div className="flex gap-8 justify-center text-center my-5">
-        <AccountCircleIcon sx={{ fontSize: 40 }} />
-        <h1 className="text-lg">Admin</h1>
-      </div>
-    </div>
-  );
-};
 
-export default Sidebar;
+      <List sx={{ flexGrow: 1 }}>
+        {menuItems.map(({ text, component }, index) => {
+          const IconComponent = icons[index % icons.length];
+          return (
+            <ListItem key={text} disablePadding>
+              <ListItemButton
+                onClick={() => setActiveComponent(component)}
+                sx={{
+                  "&:hover": {
+                    backgroundColor: "#2c394f",
+                    "& .MuiListItemIcon-root, & .MuiListItemText-primary": {
+                      color: "white",
+                    },
+                  },
+                }}
+              >
+                <ListItemIcon sx={{ color: "white" }}>
+                  <IconComponent />
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+          );
+        })}
+      </List>
+
+      <div className="flex justify-between text-end my-5 p-2">
+        <div className="flex gap-3 justify-center items-center">
+          <AccountCircleIcon sx={{ fontSize: 40 }} />
+          <h1 className="">Admin</h1>
+        </div>
+
+        <MoreHorizIcon sx={{ fontSize: 40 }} />
+      </div>
+    </Box>
+  );
+
+  return (
+    <Box
+      sx={{
+        "&:hover": {
+          backgroundColor: "#1e293b",
+        },
+        transition: "background-color 0.3s",
+      }}
+    >
+      <Drawer
+        variant="permanent"
+        sx={{
+          width: 300,
+          flexShrink: 0,
+        }}
+      >
+        {DrawerList}
+      </Drawer>
+    </Box>
+  );
+}
