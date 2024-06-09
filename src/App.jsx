@@ -16,8 +16,7 @@ import ListOrders from "./admin/home/ListOrders";
 
 import Dashboard from "./pages/Dashboard/dashboard";
 
-import loginApi from "./api/LoginApi";
-import Login from "./pages/login/Login";
+import Login from "./pages/login/login";
 
 
 function App() {
@@ -31,7 +30,7 @@ function App() {
         <Route path="/ListAccounts" element={<ListAccounts />} />
         <Route path="/ListCards" element={<ListCards />} />
         <Route path="/ListOrders" element={<ListOrders />} />
-      <Route path="/Dashboard" element={<Dashboard />} />
+        <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/Product" element={<Product />} />
         <Route path="/Payment" element={<Payment />} />
         <Route path="/Create" element={<Create />} />
@@ -39,6 +38,7 @@ function App() {
         <Route path="/ListOrdered" element={<ListOrdered />} />
       </Routes>
       {/* <CardList /> */}
+   
     </Router>
   );
 }
