@@ -18,7 +18,6 @@ import Dashboard from "./pages/Dashboard/dashboard";
 
 import Login from "./pages/login/login";
 
-
 function App() {
   return (
     <Router>
@@ -38,7 +37,6 @@ function App() {
         <Route path="/ListOrdered" element={<ListOrdered />} />
       </Routes>
       {/* <CardList /> */}
-   
     </Router>
   );
 }
