@@ -13,6 +13,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import PizzaHeader from "../../assets/images/margherita-pizza_3.png";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import Navbar from "../../admin/Navbar";
 
 const products = [
   {
@@ -73,34 +74,7 @@ const CartProduct = () => {
   return (
     <div>
       <div className="header ">
-        <div className="navbar flex flex-row justify-between items-center px-20 py-4">
-          <div
-            className="nav-logo flex flex-row items-center gap-x-4"
-            style={{ width: "100px" }}
-          >
-            <img className="object-cover" loading="lazy" alt="" src={Logo} />
-          </div>
-
-          <div
-            className="flex flex-row justify-between items-center gap-x-10 h-menu"
-            style={{ fontFamily: "Fira Sans", fontSize: "20px" }}
-          >
-            <a href="#">
-              <button className="font-semibold">Product</button>
-            </a>
-            <a href="#">
-              <button className="font-semibold">Shop Order</button>
-            </a>
-            <a href="#">
-              <button className="font-semibold">Order</button>
-            </a>
-            <a href="#">
-              <button className="font-semibold">Setting</button>
-            </a>
-            <LogoutIcon />
-            <PersonIcon />
-          </div>
-        </div>
+        <Navbar />
         <div className="flex flex-row py-4 justify-between relative">
           <div className="h-bot flex flex-row items-center px-20 ">
             <h1 className="">

@@ -1,6 +1,6 @@
 import React from "react";
-import RevenueTable from "./Inventory/RevenueTable";
-import RevenueChart from "./Inventory/RevenueChart";
+import RevenueTable from "./RevenueTable";
+import RevenueChart from "./RevenueChart";
 
 const sampleData = [
   { month: "Tháng 1", revenue: 50000 },

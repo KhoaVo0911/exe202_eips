@@ -22,146 +22,44 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "react-datepicker/dist/react-datepicker.css";
 import CardList from "../Card/CardList";
 
-const ListCards = () => {
-  const data = [
-    {
-      id: 1,
-      username: "john_doe",
-      phone: "0123456789",
-      cardId: "1234",
-      balance: 5000000,
-      status: true,
-    },
-    {
-      id: 2,
-      username: "jane_smith",
-      phone: "0987654321",
-      cardId: "5678",
-      balance: 1500000,
-      status: false,
-    },
-    {
-      id: 3,
-      username: "sam_green",
-      phone: "0123456780",
-      cardId: "9101",
-      balance: 2500000,
-      status: true,
-    },
-    {
-      id: 4,
-      username: "alice_jones",
-      phone: "0987654320",
-      cardId: "1121",
-      balance: 7500000,
-      status: false,
-    },
-    {
-      id: 5,
-      username: "michael_brown",
-      phone: "0123456781",
-      cardId: "3141",
-      balance: 9500000,
-      status: true,
-    },
-    {
-      id: 6,
-      username: "linda_white",
-      phone: "0987654322",
-      cardId: "5161",
-      balance: 8500000,
-      status: false,
-    },
-    {
-      id: 7,
-      username: "robert_black",
-      phone: "0123456782",
-      cardId: "7181",
-      balance: 3500000,
-      status: true,
-    },
-    {
-      id: 8,
-      username: "patricia_wilson",
-      phone: "0987654323",
-      cardId: "9202",
-      balance: 4500000,
-      status: false,
-    },
-    {
-      id: 9,
-      username: "james_clark",
-      phone: "0123456783",
-      cardId: "2232",
-      balance: 6500000,
-      status: true,
-    },
-    {
-      id: 10,
-      username: "mary_lewis",
-      phone: "0987654324",
-      cardId: "4252",
-      balance: 5500000,
-      status: false,
-    },
-    {
-      id: 11,
-      username: "david_harris",
-      phone: "0123456784",
-      cardId: "6272",
-      balance: 10000000,
-      status: true,
-    },
-    {
-      id: 12,
-      username: "susan_martin",
-      phone: "0987654325",
-      cardId: "8292",
-      balance: 2000000,
-      status: false,
-    },
-  ];
+const ListShop = () => {
   const [startDate, setStartDate] = useState(null);
   const [place, setPlace] = useState("");
-  const [weekday, setWeekday] = useState("");
-  const [eventType, setEventType] = useState("");
+  const [shopType, setShopType] = useState("");
   const [category, setCategory] = useState("");
   const [showForm, setShowForm] = useState(false);
-  const [eventImage, setEventImage] = useState(null);
-  const [eventTitle, setEventTitle] = useState("");
-  const [eventDescription, setEventDescription] = useState("");
-  const [eventStartDate, setEventStartDate] = useState(null);
+  const [shopImage, setShopImage] = useState(null);
+  const [shopName, setShopName] = useState("");
+  const [shopDescription, setShopDescription] = useState("");
+  const [shopStartDate, setShopStartDate] = useState(null);
 
   const handlePlaceChange = (event) => {
     setPlace(event.target.value);
   };
 
-  const handleWeekdayChange = (event) => {
-    setWeekday(event.target.value);
-  };
-
-  const handleEventTypeChange = (event) => {
-    setEventType(event.target.value);
+  const handleShopTypeChange = (event) => {
+    setShopType(event.target.value);
   };
 
   const handleCategoryChange = (event) => {
     setCategory(event.target.value);
   };
 
-  const handleCreateEventClick = () => {
+  const handleCreateShopClick = () => {
     setShowForm(true);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Xử lý logic thêm sự kiện ở đây
+    // Handle logic for adding a shop here
     console.log("Form submitted!");
-    console.log("Event Image:", eventImage);
-    console.log("Event Title:", eventTitle);
-    console.log("Event Description:", eventDescription);
-    console.log("Event Start Date:", eventStartDate);
+    console.log("Shop Image:", shopImage);
+    console.log("Shop Name:", shopName);
+    console.log("Shop Description:", shopDescription);
+    console.log("Shop Start Date:", shopStartDate);
     setShowForm(false);
   };
+
   const defaultTheme = createTheme({
     components: {
       MuiSelect: {
@@ -299,8 +197,8 @@ const ListCards = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-      <CreateEventSection onCreateEventClick={handleCreateEventClick} />
-      <div className=" bg-slate-100 p-10 mt-10">
+      <CreateShopSection onCreateShopClick={handleCreateShopClick} />
+      <div className="bg-slate-100 p-10 mt-10">
         <div className="flex space-x-10 ml-10 font-bold">
           <a href="/ListShop">SHOP</a>
           <a href="/ListCards">CARD</a>
@@ -309,118 +207,99 @@ const ListCards = () => {
       </div>
       <div className="relative w-full mt-10 flex items-center mb-10">
         <div className="text-[#242565] text-left font-dmSansBold text-[40px] font-bold absolute left-[80px]  ">
-          List Accounts
+          LIST SHOP
+        </div>
+        <div className="flex ml-[900px] space-x-16">
+          <ThemeProvider theme={customTheme}>
+            <Box sx={{ minWidth: 140 }}>
+              <FormControl fullWidth>
+                <InputLabel id="shop-type-select-label">Shop Type</InputLabel>
+                <Select
+                  labelId="shop-type-select-label"
+                  id="shop-type-select"
+                  value={shopType}
+                  onChange={handleShopTypeChange}
+                  label="Shop Type"
+                >
+                  <MenuItem value={"Clothing"}>Clothing</MenuItem>
+                  <MenuItem value={"Electronics"}>Electronics</MenuItem>
+                  <MenuItem value={"Food"}>Food</MenuItem>
+                  <MenuItem value={"Books"}>Books</MenuItem>
+                </Select>
+              </FormControl>
+            </Box>
+          </ThemeProvider>
+          <ThemeProvider theme={customTheme}>
+            <Box sx={{ minWidth: 150 }}>
+              <FormControl fullWidth>
+                <InputLabel id="category-select-label">Category</InputLabel>
+                <Select
+                  labelId="category-select-label"
+                  id="category-select"
+                  value={category}
+                  onChange={handleCategoryChange}
+                  label="Category"
+                >
+                  <MenuItem value={"Tech"}>Tech</MenuItem>
+                  <MenuItem value={"Business"}>Business</MenuItem>
+                  <MenuItem value={"Education"}>Education</MenuItem>
+                  <MenuItem value={"Health"}>Health</MenuItem>
+                </Select>
+              </FormControl>
+            </Box>
+          </ThemeProvider>
         </div>
       </div>
-      <div className="mx-auto p-4 flex  justify-center items-center">
-        <table className="w-4/5 divide-y divide-gray-200">
-          <thead className="bg-gray-50">
-            <tr>
-              <th className="py-2 px-4 border border-gray-200 text-center">
-                <input type="checkbox" />
-              </th>
-              <th className="py-2 px-4 border border-gray-200 text-center">
-                #
-              </th>
-              <th className="py-2 px-4 border border-gray-200 text-center">
-                Username
-              </th>
-              <th className="py-2 px-4 border border-gray-200 text-center">
-                Phone Number
-              </th>
-              <th className="py-2 px-4 border border-gray-200 text-center">
-                Card ID
-              </th>
-              <th className="py-2 px-4 border border-gray-200 text-center">
-                Balance (VNĐ)
-              </th>
-              <th className="py-2 px-4 border border-gray-200 text-center">
-                Status
-              </th>
-            </tr>
-          </thead>
-          <tbody className="bg-white divide-y divide-gray-200">
-            {data.map((row) => (
-              <tr key={row.id} className="text-center">
-                <td className="py-2 px-4 border border-gray-200">
-                  <input type="checkbox" />
-                </td>
-                <td className="py-2 px-4 border border-gray-200">{row.id}</td>
-                <td className="py-2 px-4 border border-gray-200">
-                  {row.username}
-                </td>
-                <td className="py-2 px-4 border border-gray-200">
-                  {row.phone}
-                </td>
-                <td className="py-2 px-4 border border-gray-200">
-                  <span className="bg-green-500 text-white px-2 py-1 rounded-full">
-                    {row.cardId}
-                  </span>
-                </td>
-                <td className="py-2 px-4 border border-gray-200">
-                  {row.balance.toLocaleString("vi-VN", {
-                    style: "currency",
-                    currency: "VND",
-                  })}
-                </td>
-                <td className="py-2 px-4 border border-gray-200">
-                  {row.status ? "✔️" : "❌"}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-
+      <CardList />
       {showForm && (
         <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50">
           <div className="bg-white p-6 rounded-lg shadow-lg w-1/3">
             <div className="p-6">
-              <h2 className="text-2xl font-semibold mb-4">Create Event</h2>
+              <h2 className="text-2xl font-semibold mb-4">Create Shop</h2>
               <form onSubmit={handleSubmit}>
                 <div className="mb-4 flex gap-5">
                   <label
-                    htmlFor="eventTitle"
+                    htmlFor="shopName"
                     className="flex items-center text-sm font-medium text-gray-700 w-1/4"
                   >
-                    Event Title
+                    Shop Name
                   </label>
                   <input
                     type="text"
-                    id="eventTitle"
-                    name="eventTitle"
-                    value={eventTitle}
-                    onChange={(e) => setEventTitle(e.target.value)}
+                    id="shopName"
+                    name="shopName"
+                    value={shopName}
+                    onChange={(e) => setShopName(e.target.value)}
                     className="mt-1 border border-gray-300 rounded-md w-full"
                     required
                   />
                 </div>
                 <div className="mb-4 flex gap-5">
                   <label
-                    htmlFor="eventDescription"
+                    htmlFor="shopDescription"
                     className="flex items-center text-sm font-medium text-gray-700 w-1/4"
                   >
-                    Event Description
+                    Shop Description
                   </label>
                   <textarea
-                    id="eventDescription"
-                    name="eventDescription"
-                    value={eventDescription}
-                    onChange={(e) => setEventDescription(e.target.value)}
+                    id="shopDescription"
+                    name="shopDescription"
+                    value={shopDescription}
+                    onChange={(e) => setShopDescription(e.target.value)}
                     className="mt-1 text-sm p-2 border border-gray-300 rounded-md w-full h-24 resize-none"
                     required
                   ></textarea>
                 </div>
                 <div className="mb-4 flex gap-5">
                   <label
-                    htmlFor="eventStartDate"
+                    htmlFor="shopStartDate"
                     className="flex items-center text-sm font-medium text-gray-700 w-1/4"
                   >
-                    Event Start Date
+                    Shop Start Date
                   </label>
                   <DatePicker
-                    selected={eventStartDate}
-                    onChange={(date) => setEventStartDate(date)}
+                    selected={shopStartDate}
+                    onChange={(date) => setShopStartDate(date)}
                     placeholderText="Select a date"
                     className="bg-transparent border-b border-[#000] text-black text-left font-DmSans font-bold text-[16px] w-full outline-none"
                     required
@@ -428,22 +307,22 @@ const ListCards = () => {
                 </div>
                 <div className="mb-4 flex gap-5">
                   <label
-                    htmlFor="eventImage"
+                    htmlFor="shopImage"
                     className="flex items-center text-sm font-medium text-gray-700 w-1/4"
                   >
-                    Event Image
+                    Shop Image
                   </label>
                   <input
                     type="file"
-                    id="eventImage"
-                    name="eventImage"
-                    onChange={(e) => setEventImage(e.target.files[0])}
+                    id="shopImage"
+                    name="shopImage"
+                    onChange={(e) => setShopImage(e.target.files[0])}
                     className="hidden"
                     accept="image/*"
                     required
                   />
                   <label
-                    htmlFor="eventImage"
+                    htmlFor="shopImage"
                     className="cursor-pointer p-2 border border-gray-300 rounded-md w-1/5"
                   >
                     <AddPhotoAlternateIcon />
@@ -474,33 +353,27 @@ const ListCards = () => {
     </div>
   );
 };
-const CreateEventSection = ({ onCreateEventClick }) => {
+
+const CreateShopSection = ({ onCreateShopClick }) => {
   return (
     <div className="flex justify-center items-center bg-purple-100 p-10 mt-10 space-x-10">
       <img className="h-64 w-80" src={a_1} alt="People sitting on a sofa" />
       <div>
         <h2 className="text-4xl font-bold font-DmSans text-gray-900 mb-4">
-          Make your Card
+          Make your own Shop
         </h2>
         <p className="text-xl text-gray-600 font-DmSans mb-6">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
-        <div className="gap-5 flex">
-          <button
-            className="bg-[#000080] text-white font-bold py-2 px-4 w-[182px] h-[60px] text-[16px] cursor-pointer rounded-full shadow-[0_10px_50px_rgba(61,55,241,0.25)] font-DmSans"
-            onClick={onCreateEventClick}
-          >
-            Create Card
-          </button>
-          <button
-            className="bg-[#000080] text-white font-bold py-2 px-4 w-[182px] h-[60px] text-[16px] cursor-pointer rounded-full shadow-[0_10px_50px_rgba(61,55,241,0.25)] font-DmSans"
-            onClick={onCreateEventClick}
-          >
-            Create 50 Cards
-          </button>
-        </div>
+        <button
+          className="bg-[#000080] text-white font-bold py-2 px-4 w-[182px] h-[60px] text-[16px] cursor-pointer rounded-full shadow-[0_10px_50px_rgba(61,55,241,0.25)] font-DmSans"
+          onClick={onCreateShopClick}
+        >
+          Create Shop
+        </button>
       </div>
     </div>
   );
 };
-export default ListCards;
+
+export default ListShop;
