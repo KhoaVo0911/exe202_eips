@@ -1,6 +1,11 @@
 import "./App.css";
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 
 import Product from "./pages/product/Product";
 import Payment from "./pages/product/Payment";
@@ -22,6 +27,9 @@ function App() {
   return (
     <Router>
       <Routes>
+        {/* Redirect from root path to /owner */}
+        <Route path="/" element={<Navigate to="/owner" />} />
+
         <Route path="/owner" element={<OwnerPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Homepage />} />
