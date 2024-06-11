@@ -9,7 +9,7 @@ const FAQ = () => {
     {
       id: "1",
       question:
-        "Hệ thống quản lý ESMS mang lại lợi ích gì cho các doanh nghiệp????????",
+        "Hệ thống quản lý ESMS mang lại lợi ích gì cho các doanh nghiệp?",
       answer: [
         "Phần mềm quản lý ESMS hỗ trợ chủ gian hàng quản lý sản phẩm, đơn hàng và khách hàng một cách hiệu quả và chuyên nghiệp. Hệ thống cho phép chủ gian hàng theo dõi tiến độ bán hàng, quản lý lịch đặt hàng và kiểm tra trạng thái tồn kho.",
         "Điều này giúp giảm thiểu sai sót trong việc quản lý và đảm bảo rằng mọi hoạt động kinh doanh diễn ra một cách suôn sẻ và chính xác.",
@@ -52,9 +52,9 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="w-screen h-screen bg-white flex justify-center items-center">
+    <div className="w-screen h-screen bg-white flex justify-center items-center0" id="faq" >
       <div className="w-[89%] m-auto max-w-[1440px] bg-customHoverBg p-8 rounded-lg shadow-md">
-        <h2 className="text-2xl mb-6 font-semibold">Câu hỏi thường gặp</h2>
+        <h2 className="text-3xl mb-6 font-semibold">CÂU HỎI THƯỜNG GẶP</h2>
         {questions.map((q) => (
           <div key={q.id} className="mb-4 last:mb-0">
             <button

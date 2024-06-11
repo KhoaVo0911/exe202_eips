@@ -9,7 +9,6 @@ import Cart from "./pages/product/Cart";
 import ListOrdered from "./pages/product/ListOrdered";
 import Homepage from "./admin/home/Homepage";
 import OwnerPage from "./owner/OwnerPage";
-import ListShop from "./admin/home/ListShop";
 import ListAccounts from "./admin/home/ListAccounts";
 import ListCards from "./admin/home/ListCards";
 import ListOrders from "./admin/home/ListOrders";
@@ -17,6 +16,7 @@ import ListOrders from "./admin/home/ListOrders";
 import Dashboard from "./pages/Dashboard/dashboard";
 
 import Login from "./pages/login/login";
+import Shop from "./admin/home/Shop/Shop";
 
 
 function App() {
@@ -26,7 +26,8 @@ function App() {
         <Route path="/owner" element={<OwnerPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Homepage />} />
-        <Route path="/ListShop" element={<ListShop />} />
+        <Route path="/shop" element={<Shop />} />
+
         <Route path="/ListAccounts" element={<ListAccounts />} />
         <Route path="/ListCards" element={<ListCards />} />
         <Route path="/ListOrders" element={<ListOrders />} />
