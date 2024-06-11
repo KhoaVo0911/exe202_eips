@@ -8,7 +8,7 @@ import "./Homepage.scss";
 import slider from "../../assets/images/slider.png";
 import Navbar from "../Navbar";
 import SearchBar from "../Search";
-import Footer from "../../pages/Footer";
+import Footer from "../Footer";
 import a_1 from "../../assets/images/a_1.png";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";

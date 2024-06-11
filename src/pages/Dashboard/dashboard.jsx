@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Sidebar from "./Sidebar";
-import SalesOverview from "./SaleOverview";
+import SalesOverview from "./SalesOverview/SaleOverview";
 import InventoryManagement from "./Inventory/InventoryManagement";
 import EventsManagement from "./EventsManagement";
 
