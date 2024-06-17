@@ -286,7 +286,7 @@ import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import slider from "../../../assets/images/slider.png";
 import Navbar from "../../Navbar";
-import Footer from "../../Footer";
+import Footer from "../../../components/Footer";
 import a_1 from "../../../assets/images/a_1.png";
 import "react-datepicker/dist/react-datepicker.css";
 import { MdOutlineAddPhotoAlternate } from "react-icons/md";
@@ -538,7 +538,7 @@ const ShopForm = ({ item, onSave, onCancel }) => {
 
 const CreateShopSection = ({ onCreateShopClick }) => {
   return (
-    <div className="flex justify-center items-center bg-purple-100 p-10 mt-10 space-x-10">
+    <div className="flex justify-center items-center bg-[#C5E3FF] p-10 mt-10 space-x-10">
       <img className="h-64 w-80" src={a_1} alt="People sitting on a sofa" />
       <div>
         <h2 className="text-4xl font-bold font-DmSans text-gray-900 mb-4">

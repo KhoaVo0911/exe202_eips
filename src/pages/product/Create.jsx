@@ -6,21 +6,17 @@ import noodle from "../../assets/images/noodle.png";
 import nuggets from "../../assets/images/nuggets.png";
 import tiramisu from "../../assets/images/tiramisu.png";
 import combo from "../../assets/images/combo.png";
-// import Hero from "../hero/Hero";
-import Footer from "../../admin/Footer";
+import Footer from "../../components/Footer";
 import Navbar from "../../admin/Navbar";
-import Logo from "../../assets/images/esms 4.png";
-import LogoutIcon from "@mui/icons-material/Logout";
-import PersonIcon from "@mui/icons-material/Person";
 import PizzaHeader from "../../assets/images/margherita-pizza_3.png";
 import AddPhotoAlternateIcon from "@mui/icons-material/AddPhotoAlternate";
+import { RiEditCircleFill } from "react-icons/ri";
 
 const products = [
   {
     id: 1,
     name: "Margherita Pizza",
-    description:
-      "Made with San Marzano tomatoes, mozzarella cheese, and fresh basil.",
+    description: "Pizza",
     price: "49.000 VND",
     image: Pizza,
     category: "Food",
@@ -95,22 +91,28 @@ const CreateProduct = () => {
       <div className="header ">
         <Navbar />
         <div className="flex flex-row py-4 justify-between relative">
-          <div className="h-bot flex flex-row items-center px-20 ">
-            <h1 className="">
+          <div className="h-bot flex flex-col items-start px-20">
+            <h1>
               <span className="h-title">
-                <p className="">{`Welcome to `}</p>
-                <p className="">FEV - SHOP</p>
+                <p
+                  style={{ fontFamily: "Poppins, sans-serif" }}
+                >{`Chào mừng đến với `}</p>
+                <p className="mt-1" style={{ color: "#0adc5d" }}>
+                  FEV - SHOP
+                </p>
               </span>
             </h1>
-            <h3 className="h-content">Time to enjoy our delicious food.</h3>
-            <button className="">
-              <div className="order-now">ORDER NOW</div>
-            </button>
-            <button
-              className="bg-[#0adc5d] hover:bg-[#40b36e] text-white py-5 px-10 rounded-full tracking-widest	"
-              style={{ fontSize: "24px" }}
+            <h3
+              className="h-content mt-3"
+              style={{ fontFamily: "Poppins, sans-serif" }}
             >
-              <b>ORDER NOW</b>
+              Vị ngon trên từng hương vị.
+            </h3>
+            <button
+              className="bg-[#0adc5d] hover:bg-[#40b36e] text-white py-5 px-10 rounded-full tracking-widest mt-8"
+              style={{ fontSize: "24px", marginRight: "420px" }}
+            >
+              <b>TẠO ĐƠN HÀNG</b>
             </button>
           </div>
           <div className="flex relative">
@@ -130,18 +132,18 @@ const CreateProduct = () => {
         <div className="product-list-wrapper">
           <div className="product-list ">
             <div className="flex justify-between w-full">
-              <h3 className="mb-4 text-2xl font-bold product-name ">PRODUCT</h3>
-              {/* your existing code */}
-
+              <h3 className="mb-4 text-2xl font-bold product-name ">
+                SẢN PHẨM
+              </h3>
               <div className="flex gap-5">
                 <button
                   className="add-to-cart-wrapper mt-2 bg-blue-500 text-white text-sm p-2 rounded hover:bg-blue-600 transition duration-300"
                   onClick={handleCreateProductClick}
                 >
-                  <div className="add-to-cart">Create Product</div>
+                  <div className="add-to-cart">Tạo mới sản phẩm</div>
                 </button>
                 <button className="add-to-cart-wrapper mt-2 bg-blue-500 text-white text-sm p-2 rounded hover:bg-blue-600 transition duration-300">
-                  <div className="add-to-cart">Create Combo</div>
+                  <div className="add-to-cart">Tạo mới combo</div>
                 </button>
               </div>
               {showForm && (
@@ -149,7 +151,7 @@ const CreateProduct = () => {
                   <div className="bg-white p-6 rounded-lg shadow-lg">
                     <div className="p-6">
                       <h2 className="text-2xl font-semibold mb-4">
-                        Create Product
+                        Tạo mới sản phẩm
                       </h2>
                       <form onSubmit={handleSubmit}>
                         <div className="mb-4 flex gap-5">
@@ -157,7 +159,7 @@ const CreateProduct = () => {
                             htmlFor="productName"
                             className="flex items-center text-sm font-medium text-gray-700 w-1/4"
                           >
-                            Product Name
+                            Tên sản phẩm
                           </label>
                           <input
                             type="text"
@@ -174,7 +176,7 @@ const CreateProduct = () => {
                             htmlFor="price"
                             className="flex items-center text-sm font-medium text-gray-700 w-1/4"
                           >
-                            Price
+                            Giá cả
                           </label>
                           <input
                             type="text"
@@ -182,7 +184,7 @@ const CreateProduct = () => {
                             name="price"
                             value={price}
                             onChange={(e) => setPrice(e.target.value)}
-                            className="mt-1  border border-gray-300 rounded-md w-full "
+                            className="mt-1 border border-gray-300 rounded-md w-full "
                             required
                           />
                         </div>
@@ -192,7 +194,7 @@ const CreateProduct = () => {
                             htmlFor="productImage"
                             className="flex items-center text-sm font-medium text-gray-700 w-1/4"
                           >
-                            Product Image
+                            Hình ảnh sản phẩm
                           </label>
                           <input
                             type="file"
@@ -216,7 +218,7 @@ const CreateProduct = () => {
                             htmlFor="category"
                             className=" flex items-center text-sm font-medium text-gray-700 w-1/4"
                           >
-                            Category
+                            Loại sản phẩm
                           </label>
                           <select
                             id="category"
@@ -238,7 +240,7 @@ const CreateProduct = () => {
                             htmlFor="status"
                             className="flex items-center text-sm font-medium text-gray-700 w-1/4"
                           >
-                            Status
+                            Trạng thái
                           </label>
                           <select
                             id="status"
@@ -248,9 +250,9 @@ const CreateProduct = () => {
                             className="mt-1 p-2 border border-gray-300 rounded-md w-full text-sm"
                             required
                           >
-                            <option value="">Select a status</option>
-                            <option value="Active">Active</option>
-                            <option value="Inactive">Inactive</option>
+                            <option value="">Chọn trạng thái</option>
+                            <option value="Active">Còn hàng</option>
+                            <option value="Inactive">Hết hàng</option>
                             {/* Thêm các option khác nếu cần */}
                           </select>
                         </div>
@@ -259,7 +261,7 @@ const CreateProduct = () => {
                             htmlFor="description"
                             className="flex items-center text-sm font-medium text-gray-700 w-1/4 "
                           >
-                            Description
+                            Thông tin sản phẩm
                           </label>
                           <textarea
                             id="description"
@@ -280,13 +282,13 @@ const CreateProduct = () => {
                         className=" w-full text-[#0adc5d] border  rounded-lg text-xl"
                         onClick={() => setShowForm(false)}
                       >
-                        Cancel
+                        Hủy bỏ
                       </button>
                       <button
                         type="submit"
                         className=" w-full bg-[#0adc5d] text-white p-2  rounded-lg text-xl"
                       >
-                        Submit
+                        Xác nhận
                       </button>
                     </div>
                   </div>
@@ -294,53 +296,35 @@ const CreateProduct = () => {
               )}
             </div>
 
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4">
               {products.map((product) => (
                 <div
-                  className="product-card bg-white  rounded-lg p-4"
+                  className="bg-white p-5 rounded-xl m-2"
+                  style={{ boxShadow: "0 10px 50px rgba(181, 179, 255, 0.25)" }}
                   key={product.id}
                 >
-                  <div className="card-content-parent flex flex-col">
-                    <div className="card-content">
-                      <div className="wrapper-mask-group mb-3">
-                        <img
-                          className="mask-group-icon w-full h-40 object-cover rounded-md"
-                          loading="lazy"
-                          alt={product.name}
-                          src={product.image}
-                        />
-                      </div>
-                      <div className="product-details">
-                        <div className="margherita-pizza font-bold text-lg mb-1">
-                          {product.name}
-                        </div>
-                        <div className="made-with-san text-sm mb-3">
-                          {product.description}
-                        </div>
-                      </div>
-                      <div className="vnd text-lg font-semibold">
-                        {product.price}
-                      </div>
-                      <div className="category-parent mt-3">
-                        <div className="category flex justify-between items-center">
-                          <div className="food text-sm">{product.category}</div>
-                          <img
-                            className="noun-arrow-2333164-1-icon w-6 h-6"
-                            alt=""
-                            src="/noun-arrow-2333164-1.svg"
-                          />
-                        </div>
-                        <button className="add-to-cart-wrapper mt-2 bg-blue-500 text-white text-sm p-2 rounded hover:bg-blue-600 transition duration-300">
-                          <div className="add-to-cart">Edit Product</div>
-                        </button>
-                      </div>
-                    </div>
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-72 object-cover object-top drop-shadow-[0_10px_15px_rgba(0,0,0,0.3)] rounded-md"
+                  />
+                  <h3 className="text-xl py-3 text-center font-medium mt-6">
+                    {product.name}
+                  </h3>
+                  <div className="flex justify-between items-center">
+                    <p className="text-lg font-semibold mt-3">{product.price}</p>
+                    <button className=" p-2 rounded-md text-sm hover:bg-gray-300 flex items-center justify-center">
+                      <span className="text-2xl font-medium">
+                        <RiEditCircleFill />
+                      </span>
+                    </button>
                   </div>
                 </div>
               ))}
             </div>
+
             <button className="add-to-cart-wrapperr mt-2 flex items-center justify-center border text-sm p-2 rounded ">
-              <div className="add-to-cartt">Load More</div>
+              <div className="add-to-cartt">TẢI THÊM</div>
             </button>
           </div>
         </div>

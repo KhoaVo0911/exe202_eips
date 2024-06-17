@@ -8,7 +8,7 @@ import tiramisu from "../../assets/images/tiramisu.png";
 import combo from "../../assets/images/combo.png";
 import qr_code from "../../assets/images/qr_code.png";
 // import Hero from "../hero/Hero";
-import Footer from "../../admin/Footer";
+import Footer from "../../components/Footer";
 import Logo from "../../assets/images/esms 4.png";
 import LogoutIcon from "@mui/icons-material/Logout";
 import PersonIcon from "@mui/icons-material/Person";
@@ -32,24 +32,31 @@ const PaymentOrder = () => {
       <div className="header ">
         <Navbar />
         <div className="flex flex-row py-4 justify-between relative">
-          <div className="h-bot flex flex-row items-center px-20 ">
-            <h1 className="">
+          <div className="h-bot flex flex-col items-start px-20">
+            <h1>
               <span className="h-title">
-                <p className="">{`Welcome to `}</p>
-                <p className="">FEV - SHOP</p>
+                <p
+                  style={{ fontFamily: "Poppins, sans-serif" }}
+                >{`Chào mừng đến với `}</p>
+                <p className="mt-1" style={{ color: "#0adc5d" }}>
+                  FEV - SHOP
+                </p>
               </span>
             </h1>
-            <h3 className="h-content">Time to enjoy our delicious food.</h3>
-            <button className="">
-              <div className="order-now">ORDER NOW</div>
-            </button>
-            <button
-              className="bg-[#0adc5d] hover:bg-[#40b36e] text-white py-5 px-10 rounded-full tracking-widest"
-              style={{ fontSize: "24px" }}
+            <h3
+              className="h-content mt-3"
+              style={{ fontFamily: "Poppins, sans-serif" }}
             >
-              <b>ORDER NOW</b>
+              Vị ngon trên từng hương vị.
+            </h3>
+            <button
+              className="bg-[#0adc5d] hover:bg-[#40b36e] text-white py-5 px-10 rounded-full tracking-widest mt-8"
+              style={{ fontSize: "24px", marginRight: "420px" }}
+            >
+              <b>TẠO ĐƠN HÀNG</b>
             </button>
           </div>
+
           <div className="flex relative">
             <div className="white-blur"></div>
             <img
@@ -64,8 +71,11 @@ const PaymentOrder = () => {
 
       <div className=" grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="bg-white p-6 ">
-          <h2 className="text-2xl font-semibold mb-4">Shopping Cart</h2>
-          <h3>You have 3 item in your cart</h3>
+          <h2 className="text-2xl font-semibold mb-4">Đơn hàng của bạn</h2>
+          <h3>
+            Bạn có <span style={{ color: "#0adc5d" }}>3</span> sản phẩm trong
+            giỏ hàng
+          </h3>
           <ul>
             <div className="card-product flex justify-between items-center p-10 gap-10 rounded-lg  bg-white shadow">
               <img src={Pizza} alt="" className="w-32" />
@@ -75,8 +85,7 @@ const PaymentOrder = () => {
               </div>
               <span className="text-lg">1</span>
               <div className="flex flex-col items-end">
-                <span className="text-base">49.000</span>
-                <span className="text-sm">VND</span>
+                <span className="text-base">49.000 VND</span>
               </div>
               <span>
                 <DeleteIcon />
@@ -90,8 +99,7 @@ const PaymentOrder = () => {
               </div>
               <span className="text-lg">1</span>
               <div className="flex flex-col items-end">
-                <span className="text-base">49.000</span>
-                <span className="text-sm">VND</span>
+                <span className="text-base">49.000 VND</span>
               </div>
               <span>
                 <DeleteIcon />
@@ -105,8 +113,7 @@ const PaymentOrder = () => {
               </div>
               <span className="text-lg">1</span>
               <div className="flex flex-col items-end">
-                <span className="text-base">49.000</span>
-                <span className="text-sm">VND</span>
+                <span className="text-base">49.000 VND</span>
               </div>
               <span>
                 <DeleteIcon />
@@ -115,54 +122,43 @@ const PaymentOrder = () => {
           </ul>
         </div>
 
-        <div className="p-20 rounded-3xl max-h-11 ">
-          <div className="p-6 rounded-lg shadow-md bg-[#0adc5d] text-white">
-            <h1 className="text-5xl font-semibold mb-4 text-white">
-              Card Details
+        <div className="p-20 rounded-3xl max-h-20 ">
+          <div className="p-6 rounded-lg shadow-md bg-[#00AEFF] text-white font-semibold">
+            <h1 className="text-5xl font-semibold mb-6 text-white">
+              Thông tin đơn hàng
             </h1>
-            <form className="flex flex-col space-y-2 text-xl">
-              <div className="flex flex-col text-white">
-                <label htmlFor="card-number" className="font-medium text-white">
-                  Card Number
-                </label>
-                <input
-                  type="text"
-                  id="card-number"
-                  name="card-number"
-                  placeholder="Enter your card number"
-                  className="mt-1 p-2 border border-gray-300 rounded-md"
-                />
-              </div>
-
-              <div className="flex flex-col">
-                <label htmlFor="username" className="text-white font-medium">
-                  Username
+            <form className="flex flex-col space-y-4 text-xl">
+              {" "}
+              {/* Thay đổi từ space-y-2 thành space-y-4 */}
+              
+              <div className="flex flex-col mb-4">
+                <label htmlFor="username" className="text-white font-medium ">
+                  Tên khách hàng
                 </label>
                 <input
                   type="text"
                   id="username"
                   name="username"
-                  placeholder="Enter your username"
-                  className="mt-1 p-2 border border-gray-300 rounded-md"
+                  placeholder="Thông tin khách hàng"
+                  className="mt-1 p-2 border bg-[#C5E3FF] rounded-md font-semibold text-black"
                 />
               </div>
-
-              <div className="flex flex-col">
+              <div className="flex flex-col mb-4">
                 <label
                   htmlFor="phone-number"
                   className="font-medium text-white"
                 >
-                  Phone Number
+                  Số điện thoại
                 </label>
                 <input
                   type="text"
                   id="phone-number"
                   name="phone-number"
-                  placeholder="Enter your phone number"
-                  className="mt-1 p-2 border border-gray-300 rounded-md"
+                  placeholder="Số điện thoại"
+                  className="mt-1 p-2 border bg-[#C5E3FF] rounded-md font-semibold text-black"
                 />
               </div>
-              <div className="flex flex-col">
+              {/* <div className="flex flex-col mb-4">
                 <label htmlFor="balance" className="font-medium text-white">
                   Balance
                 </label>
@@ -171,29 +167,31 @@ const PaymentOrder = () => {
                   id="balance"
                   name="balance"
                   placeholder="Enter your balance"
-                  className="mt-1 p-2 border border-gray-300 rounded-md"
+                  className="mt-1 p-2 border bg-[#C5E3FF] rounded-md font-semibold text-black"
                 />
-              </div>
-
-              <div className="border-b border-gray-300"></div>
-
-              <div className="flex justify-between ">
-                <p>3 Items</p>
+              </div> */}
+              <div className="border-b border-gray-300 mb-4"></div>{" "}
+              {/* Thêm margin-bottom */}
+              <div className="flex justify-between mb-4">
+                {" "}
+                {/* Thêm margin-bottom */}
+                <p>3 sản phẩm</p>
                 <p> 119.000 VNĐ </p>
               </div>
-
-              <div className="flex justify-between ">
-                <p>Total</p>
+              <div className="flex justify-between mb-4">
+                {" "}
+                {/* Thêm margin-bottom */}
+                <p>Tổng cộng</p>
                 <p> 119.000 VNĐ </p>
               </div>
-
-              <div className="flex justify-between">
+              <div className="flex justify-between mb-4">
                 <button
                   type="button"
                   onClick={handleCheckoutClick}
                   className="w-full bg-white text-[#0adc5d] py-2 px-4 rounded-md text-4xl font-bold"
+                  style={{ backgroundColor: "white", color: "black" }}
                 >
-                  CHECKOUT
+                  THANH TOÁN
                 </button>
               </div>
             </form>

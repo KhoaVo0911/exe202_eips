@@ -8,7 +8,7 @@ import "./Homepage.scss";
 import slider from "../../assets/images/slider.png";
 import Navbar from "../Navbar";
 import SearchBar from "../Search";
-import Footer from "../Footer";
+import Footer from "../../components/Footer";
 import a_1 from "../../assets/images/a_1.png";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -304,14 +304,14 @@ const ListOrders = () => {
       <CreateEventSection onCreateEventClick={handleCreateEventClick} />
       <div className=" bg-slate-100 p-10 mt-10">
         <div className="flex space-x-10 ml-10 font-bold">
-          <a href="/ListShop">SHOP</a>
-          <a href="/ListCards">CARD</a>
-          <a href="/ListOrders">ORDER</a>
+          <a href="/ListShop">CỬA HÀNG</a>
+          <a href="/ListCards">THẺ</a>
+          <a href="/ListOrders">ĐẶT HÀNG</a>
         </div>
       </div>
       <div className="relative w-full mt-10 flex items-center mb-10">
         <div className="text-[#242565] text-left font-dmSansBold text-[40px] font-bold absolute left-[80px]  ">
-          List Order
+          Danh sách mua hàng
         </div>
       </div>
       <div className="flex justify-center  mx-auto p-4">
@@ -325,19 +325,19 @@ const ListOrders = () => {
                 #
               </th>
               <th className="py-2 px-4 border border-gray-200 text-center">
-                ID Number
+                Tên khách hàng
               </th>
               <th className="py-2 px-4 border border-gray-200 text-center">
-                Card ID
+                Thẻ
               </th>
               <th className="py-2 px-4 border border-gray-200 text-center">
-                Shop ID
+                Tên Shop
               </th>
               <th className="py-2 px-4 border border-gray-200 text-center">
-                Time
+                Thời gian
               </th>
               <th className="py-2 px-4 border border-gray-200 text-center">
-                Total (VNĐ)
+                Tổng (VNĐ)
               </th>
             </tr>
           </thead>
@@ -480,11 +480,11 @@ const ListOrders = () => {
 };
 const CreateEventSection = ({ onCreateEventClick }) => {
   return (
-    <div className="flex justify-center items-center bg-purple-100 p-10 mt-10 space-x-10">
+    <div className="flex justify-center items-center bg-[#C5E3FF] p-10 mt-10 space-x-10">
       <img className="h-64 w-80" src={a_1} alt="People sitting on a sofa" />
       <div>
         <h2 className="text-4xl font-bold font-DmSans text-gray-900 mb-4">
-          List Order
+          Danh sách mua hàng
         </h2>
         <p className="text-xl text-gray-600 font-DmSans mb-6">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.

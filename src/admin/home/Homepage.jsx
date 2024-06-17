@@ -8,7 +8,7 @@ import "./Homepage.scss";
 import slider from "../../assets/images/slider.png";
 import Navbar from "../Navbar";
 import SearchBar from "../Search";
-import Footer from "../Footer";
+import Footer from "../../components/Footer";
 
 const Homepage = () => {
   return (

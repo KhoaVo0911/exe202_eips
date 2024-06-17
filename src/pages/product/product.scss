@@ -13,7 +13,7 @@ h-menu{
   font-size: 20px;
   line-height: 74px;
   font-weight: 700;
-  font-family: "Fira Sans" ;
+  font-family: "Poppins" ;
 
   align-items: center;
 
@@ -41,7 +41,7 @@ h-menu{
   line-height: 74px;
   font-weight: 700;
   font-family: inherit;
-
+  margin-left: 12px;
   align-items: center;
 
 }
@@ -52,6 +52,7 @@ h-menu{
   font-weight: 500;
   width: 574px;
   height: 84px;
+  margin-right: 145px;
 }
 
 
@@ -212,7 +213,7 @@ h-menu{
   position: relative;
   font-size: 24px;
   font-weight: 500;
-  font-family: "Fira Sans";
+  font-family: "Poppins";
   color: #fff;
   text-align: center;
 }
@@ -230,6 +231,7 @@ h-menu{
   flex-direction: row;
   white-space: nowrap;
   z-index: 2;
+  
 }
 
 .custom-date-picker {
@@ -326,7 +328,7 @@ h-menu{
   position: relative;
   font-size: 20px;
   color: #00240f;
-  font-family: "Fira Sans";
+  font-family: "Poppins";
 }
 
 .h-top, .h-bot {
@@ -430,9 +432,13 @@ h-menu{
   flex-shrink: 0;
 }
 
-.product-name{
+.product-name {
   color: #0adc5d;
-
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .card-product{
@@ -476,19 +482,20 @@ h-menu{
   position: relative;
   font-size: 16px;
   text-transform: uppercase;
-  font-weight: 500;
-  font-family: "Fira Sans";
-  color: #fff;
+  font-family: "Poppins";
+  color: #000;
   text-align: center;
   display: inline-block;
   min-width: 94px;
+  font-weight: bold;
 }
 
 .add-to-cart-wrapper {
   cursor: pointer;
   border: 0;
   padding: 10px 74.5px 11px;
-  background-color: #1d275f;
+  background-color: #C5E3FF;
+  // background-color: #1d275f;
   border-radius: 25px;
   display: flex;
   flex-direction: row;
@@ -499,7 +506,7 @@ h-menu{
 
 .add-to-cart-wrapperr{
   cursor: pointer;
-border: 1px solid #3b82f6;
+border: 1px solid #1d275f;
   padding: 10px 74.5px 11px;
  border-color: #000;
   border-radius: 25px;
@@ -515,13 +522,12 @@ border: 1px solid #3b82f6;
   position: relative;
   font-size: 16px;
   text-transform: uppercase;
-  font-weight: 500;
-  font-family: "Fira Sans";
-  color: #3b82f6;
+  font-weight: bold;
+  font-family: "Poppins";
+  color: #1d275f;
   text-align: center;
   display: inline-block;
   min-width: 94px;
-  
 }
 
 .card-content,
@@ -664,7 +670,7 @@ border: 1px solid #3b82f6;
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 500;
-  font-family: "Fira Sans";
+  font-family: "Poppins";
   color: #fff;
   text-align: center;
   display: inline-block;
@@ -819,7 +825,7 @@ border: 1px solid #3b82f6;
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 500;
-  font-family: "Fira Sans";
+  font-family: "Poppins";
   color: #fff;
   text-align: center;
   display: inline-block;
@@ -964,7 +970,7 @@ border: 1px solid #3b82f6;
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 500;
-  font-family: "Fira Sans";
+  font-family: "Poppins";
   color: #fff;
   text-align: center;
   display: inline-block;
@@ -1118,7 +1124,7 @@ border: 1px solid #3b82f6;
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 500;
-  font-family: "Fira Sans";
+  font-family: "Poppins";
   color: #fff;
   text-align: center;
   display: inline-block;
@@ -1265,7 +1271,7 @@ border: 1px solid #3b82f6;
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 500;
-  font-family: "Fira Sans";
+  font-family: "Poppins";
   color: #fff;
   text-align: center;
   display: inline-block;
@@ -1429,7 +1435,7 @@ border: 1px solid #3b82f6;
   text-align: center;
   font-size: 36px;
   color: #1d275f;
-  font-family: "Fira Sans";
+  font-family: "Poppins";
 }
 
 .frame-item {
@@ -1866,11 +1872,19 @@ border: 1px solid #3b82f6;
 .product-table td {
   border: 1px solid #ddd;
   padding: 8px;
-  text-align: left;
+
 }
 
 .product-table th {
   background-color: #f2f2f2;
+}
+
+.product-table .centered-column {
+  text-align: center;
+}
+.product-table .centered-column,
+.product-table td:nth-child(6) {
+  text-align: center;
 }
 
 .product-table img {
@@ -1887,6 +1901,6 @@ border: 1px solid #3b82f6;
 }
 
 .table-container {
-  margin-bottom: 20px;
- 
+  margin-bottom: 40px;
+
 }
