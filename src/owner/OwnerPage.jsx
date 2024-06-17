@@ -7,8 +7,8 @@ import MyFooter from "./Footer";
 import Home from "./Home";
 import Navbar from "./Navbar";
 import Newsletter from "./Newsletter";
-import Product from "./Product";
 import Services from "./About";
+import Blog from "./Blog";
 
 
 function OwenrPage() {
@@ -20,7 +20,7 @@ function OwenrPage() {
       <Home/>
       <Services/>
       <About/>
-      <Product/>
+      <Blog/>
       <FAQ/>
       <Newsletter/>
       <MyFooter/>
