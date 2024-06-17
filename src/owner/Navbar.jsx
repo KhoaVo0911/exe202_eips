@@ -33,6 +33,7 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
+
     { link: "TRANG CHỦ", path: "home" },
     { link: "VỀ CHÚNG TÔI", path: "about" },
     { link: "DỊCH VỤ", path: "service" },
@@ -42,6 +43,12 @@ const Navbar = () => {
     { link: "VỀ CHÚNG TÔI", path: "about" },
     { link: "DỊCH VỤ", path: "service" },
     { link: "LIÊN HỆ", path: "faq" },
+
+
+    {link: "TRANG CHỦ", path: "home" },
+    {link: "VỀ CHÚNG TÔI", path: "about" },
+    {link: "DỊCH VỤ", path: "service" },
+    {link: "LIÊN HỆ", path: "faq" },
 
     // {link: "Testimonial", path: "testimonial" },
     // {link: "FAQ", path: "faq" },
