@@ -5,7 +5,7 @@ import Pizza from "../../assets/images/Pizza.png";
 import noodle from "../../assets/images/noodle.png";
 import nuggets from "../../assets/images/nuggets.png";
 import tiramisu from "../../assets/images/tiramisu.png";
-import combo from "../../assets/images/combo.png";
+import gimbap from "../../assets/images/gimbap.png";
 import Footer from "../../components/Footer";
 import Logo from "../../assets/images/esms 4.png";
 import LogoutIcon from "@mui/icons-material/Logout";
@@ -23,7 +23,7 @@ const products = [
       "Made with San Marzano tomatoes, mozzarella cheese, and fresh basil.",
     price: "49.000 VND",
     image: Pizza,
-    category: "Food",
+    category: "Thực phẩm",
   },
   {
     id: 2,
@@ -31,23 +31,23 @@ const products = [
     description: "The Origin of Coca-Cola",
     price: "15.000 VND",
     image: Coca,
-    category: "Food",
+    category: "Nước giải khát",
   },
   {
     id: 3,
     name: "Chicken Nuggets",
-    description: "Fast Food",
+    description: "Fast Thực phẩm",
     price: "39.000 VND",
     image: nuggets,
-    category: "Food",
+    category: "Thực phẩm",
   },
   {
     id: 4,
     name: "Noodle",
-    description: "A food in the form of long",
+    description: "A Thực phẩm in the form of long",
     price: "29.000 VND",
     image: noodle,
-    category: "Food",
+    category: "Thực phẩm",
   },
   {
     id: 5,
@@ -55,15 +55,15 @@ const products = [
     description: "Where flavors create a harmonious symphony",
     price: "19.000 VND",
     image: tiramisu,
-    category: "Food",
+    category: "Thực phẩm",
   },
   {
     id: 6,
-    name: "Combo A",
+    name: "Gimbap",
     description: "1 Pizza + 1 Coca Cola",
     price: "45.000 VND",
-    image: combo,
-    category: "combo",
+    image: gimbap,
+    category: "Thực phẩm",
   },
 ];
 
@@ -76,13 +76,13 @@ const CartProduct = () => {
       <div className="header ">
         <Navbar />
         <div className="flex flex-row py-4 justify-between relative">
-          <div className="h-bot flex flex-col items-start px-20">
+        <div className="h-bot flex flex-col items-start px-20">
             <h1>
               <span className="h-title">
                 <p
                   style={{ fontFamily: "Poppins, sans-serif" }}
-                >{`Chào mừng đến với `}</p>
-                <p className="mt-1" style={{ color: "#0adc5d" }}>
+                >{`CHÀO MỪNG ĐẾN VỚI `}</p>
+                <p className="mt-1" >
                   FEV - SHOP
                 </p>
               </span>
@@ -94,8 +94,8 @@ const CartProduct = () => {
               Vị ngon trên từng hương vị.
             </h3>
             <button
-              className="bg-[#0adc5d] hover:bg-[#40b36e] text-white py-5 px-10 rounded-full tracking-widest mt-8"
-              style={{ fontSize: "24px", marginRight: "420px" }}
+              className="bg-[#00AEFF] text-white py-5 px-10 rounded-full tracking-widest mt-8"
+              style={{ fontSize: "24px", marginRight: "475px" }}
             >
               <b>TẠO ĐƠN HÀNG</b>
             </button>
@@ -147,7 +147,7 @@ const CartProduct = () => {
           </div>
         </div>
 
-        <div className="flex justify-end text-xl text-[#0adc5d] font-bold   pr-36 pb-20">
+        <div className="flex justify-end text-xl text-[#00AEFF] font-bold   pr-36 pb-20">
           <h3>TỔNG DOANH THU: 119.000 VND</h3>
         </div>
         <div className="table-container flex justify-center ">
