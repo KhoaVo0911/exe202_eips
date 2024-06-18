@@ -9,6 +9,8 @@ import slider from "../../assets/images/slider.png";
 import Navbar from "../Navbar";
 import SearchBar from "../Search";
 import Footer from "../../components/Footer";
+import Shop from "./Shop/Shop";
+import CardList from "../Card/CardList";
 
 const Homepage = () => {
   return (
@@ -42,8 +44,10 @@ const Homepage = () => {
           </SwiperSlide>
         </Swiper>
       </div>
+      {/* <CardList
+      <Shop /> */}
       <SearchBar />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

@@ -162,10 +162,10 @@ export default function Navbar() {
     {
       title: "DANH SÁCH",
       subItems: [
-        { name: "Cửa hàng", url: "/shop" },
+        // { name: "Cửa hàng", url: "/shop" },
         { name: "Danh sách đặt hàng", url: "/ListOrders" },
-        { name: "Danh sách thẻ", url: "/ListCards" },
-        { name: "Danh sách tài khoản", url: "/ListAccounts" },
+        // { name: "Danh sách thẻ", url: "/ListCards" },
+        // { name: "Danh sách tài khoản", url: "/ListAccounts" },
       ],
     },
     {

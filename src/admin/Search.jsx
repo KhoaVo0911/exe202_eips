@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
@@ -11,6 +10,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import a_1 from "../assets/images/a_1.png";
 import AddPhotoAlternateIcon from "@mui/icons-material/AddPhotoAlternate";
 import CardList from "./Card/CardList";
+import Shop from "./home/Shop/Shop";
 
 const SearchBar = () => {
   const [startDate, setStartDate] = useState(null);
@@ -151,9 +151,9 @@ const SearchBar = () => {
   });
 
   return (
-    <div>
-      <div className="flex justify-center items-center h-96">
-        <div className="relative bg-[#00AEFF] rounded-[20px] w-[1086px] h-[140px] shadow-[0px_10px_50px_0px_rgba(61,55,241,0.25)]">
+    <div className="">
+      <div className="flex justify-center items-center">
+        {/* <div className="relative bg-[#00AEFF] rounded-[20px] w-[1086px] h-[140px] shadow-[0px_10px_50px_0px_rgba(61,55,241,0.25)]">
           <div className="absolute w-full h-full flex justify-around items-center">
             <div className="inline-block w-[290px] h-[35px]">
               <input
@@ -209,14 +209,14 @@ const SearchBar = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
       <CreateEventSection onCreateEventClick={handleCreateEventClick} />
-      <div className="relative w-full mt-10 flex items-center">
-        <div className="text-[#242565] text-left font-dmSansBold text-[40px] font-bold absolute left-[177px]">
-          Upcoming Events
+      <div className=" w-full mt-10 mb-10 flex justify-between ">
+        <div className="text-[#242565] text-left font-dmSansBold text-[40px] font-bold ml-10  ">
+          CÁC SỰ KIỆN NỔI BẬT
         </div>
-        <div className="flex ml-[1080px] space-x-16">
+        <div className="flex mr-10 space-x-16">
           <ThemeProvider theme={customTheme}>
             <Box sx={{ minWidth: 140 }}>
               <FormControl fullWidth>
@@ -280,6 +280,8 @@ const SearchBar = () => {
         </div>
       </div>
       <CardList />
+      <Shop />
+
       {showForm && (
         <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50">
           <div className="bg-white p-6 rounded-lg shadow-lg w-1/3">
