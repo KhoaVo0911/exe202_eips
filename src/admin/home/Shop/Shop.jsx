@@ -292,6 +292,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import { MdOutlineAddPhotoAlternate } from "react-icons/md";
 import listshop from "./ListShop"; // Importing shop data
 import "./Shop.scss"; // Importing CSS
+import { RiEditCircleFill } from "react-icons/ri";
 
 const Shop = () => {
   const [shops, setShops] = useState(listshop);
@@ -349,17 +350,17 @@ const Shop = () => {
                     <strong>ID:</strong> 1
                   </p>
                   <p>
-                    <strong>Area:</strong> FPT Floor 2
+                    <strong>Khu vực diễn ra:</strong> Tầng 2 FPT
                   </p>
                   <p>
-                    <strong>Description:</strong> Mừng tết đến xuân về trên đại
+                    <strong>Thông tin chi tiết:</strong> Mừng tết đến xuân về trên đại
                     học FPT
                   </p>
                   <p>
-                    <strong>Begin Date:</strong> 20/01/2024
+                    <strong>Ngày bắt đầu:</strong> 20/01/2024
                   </p>
                   <p>
-                    <strong>End Date:</strong> 20/01/2024
+                    <strong>Ngày kết thúc:</strong> 20/01/2024
                   </p>
                 </div>
               </div>
@@ -370,14 +371,14 @@ const Shop = () => {
       <CreateShopSection onCreateShopClick={handleCreateShopClick} />
       <div className="bg-slate-100 p-10 mt-10">
         <div className="flex space-x-10 ml-10 font-bold">
-          <a href="/ListShop">SHOP</a>
-          <a href="/ListCards">CARD</a>
-          <a href="/ListOrders">ORDER</a>
+          <a href="/ListShop">CỬA HÀNG</a>
+          {/* <a href="/ListCards">CARD</a> */}
+          <a href="/ListOrders">ĐẶT HÀNG</a>
         </div>
       </div>
       <div className="relative w-full mt-10 flex items-center mb-10">
         <div className="text-[#242565] text-left font-dmSansBold text-[40px] font-bold absolute left-[80px]">
-          LIST SHOP
+          DANH SÁCH CỬA HÀNG
         </div>
         <div className="flex ml-[900px] space-x-16">
           {/* ... (filters section here) */}
@@ -421,9 +422,9 @@ const ShopItem = ({ item, onEdit }) => {
           </div>
         </div>
         <div className="shop-item-desc">
-          <button className="shop-item-button" onClick={() => onEdit(item)}>
-            EDIT
-          </button>
+          <RiEditCircleFill className="shop-item-button" onClick={() => onEdit(item)}>
+            
+          </RiEditCircleFill>
           <p>{description}</p>
         </div>
       </div>
@@ -452,7 +453,7 @@ const ShopForm = ({ item, onSave, onCancel }) => {
       <div className="bg-white p-6 rounded-lg shadow-lg w-1/3">
         <div className="p-6">
           <h2 className="text-2xl font-semibold mb-4">
-            {id ? "Edit Shop" : "Create Shop"}
+            {id ? "Chỉnh sửa cửa hàng" : "Thêm cửa hàng"}
           </h2>
           <form onSubmit={handleSubmit}>
             <div className="mb-4 flex gap-5">
@@ -460,7 +461,7 @@ const ShopForm = ({ item, onSave, onCancel }) => {
                 htmlFor="shopTitle"
                 className="flex items-center text-sm font-medium text-gray-700 w-1/4"
               >
-                Shop Title
+                Tiêu đề cửa hàng
               </label>
               <input
                 type="text"
@@ -477,7 +478,7 @@ const ShopForm = ({ item, onSave, onCancel }) => {
                 htmlFor="shopDescription"
                 className="flex items-center text-sm font-medium text-gray-700 w-1/4"
               >
-                Shop Description
+                Thông tin cửa hàng
               </label>
               <textarea
                 id="shopDescription"
@@ -493,7 +494,7 @@ const ShopForm = ({ item, onSave, onCancel }) => {
                 htmlFor="shopImage"
                 className="flex items-center text-sm font-medium text-gray-700 w-1/4"
               >
-                Shop Image
+                Hình ảnh
               </label>
               <input
                 type="file"
@@ -520,13 +521,13 @@ const ShopForm = ({ item, onSave, onCancel }) => {
                 className="w-full text-[#0adc5d] border rounded-lg text-xl"
                 onClick={onCancel}
               >
-                Cancel
+                Hủy bỏ
               </button>
               <button
                 type="submit"
                 className="w-full bg-[#0adc5d] text-white p-2 rounded-lg text-xl"
               >
-                Submit
+                Xác nhận
               </button>
             </div>
           </form>
@@ -542,16 +543,13 @@ const CreateShopSection = ({ onCreateShopClick }) => {
       <img className="h-64 w-80" src={a_1} alt="People sitting on a sofa" />
       <div>
         <h2 className="text-4xl font-bold font-DmSans text-gray-900 mb-4">
-          Make your own Shop
+          Danh sách cửa hàng
         </h2>
-        <p className="text-xl text-gray-600 font-DmSans mb-6">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
         <button
           className="bg-[#4F4F4F] text-white font-bold py-2 px-4 w-[182px] h-[60px] text-[16px] cursor-pointer rounded-full shadow-[0_10px_50px_rgba(61,55,241,0.25)] font-DmSans"
           onClick={onCreateShopClick}
         >
-          Create Shop
+          Thêm cửa hàng
         </button>
       </div>
     </div>

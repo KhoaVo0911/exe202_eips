@@ -26,100 +26,112 @@ const ListOrders = () => {
   const data = [
     {
       id: 1,
-      idNumber: "001",
+      username: "Nguyen Van A",
       cardId: "1234",
-      shopId: "5678",
+      shopId: "FEV-Shop",
       time: "20/05/2024",
       total: 5000000,
+      number: "0123456454",
     },
     {
       id: 2,
-      idNumber: "002",
+      username: "Nguyen Van A",
       cardId: "5678",
-      shopId: "9101",
+      shopId: "FEV-Shop",
       time: "21/05/2024",
       total: 1500000,
+      number: "0123456454",
     },
     {
       id: 3,
-      idNumber: "003",
+      username: "Nguyen Van A",
       cardId: "9101",
-      shopId: "1121",
+      shopId: "FEV-Shop",
       time: "22/05/2024",
       total: 2500000,
+      number: "0123456454",
     },
     // Thêm các hàng khác tương tự
     {
       id: 4,
-      idNumber: "004",
-      cardId: "1121",
-      shopId: "3141",
+      username: "Nguyen Van A",
+      cardId: "1222",
+      shopId: "FEV-Shop",
       time: "23/05/2024",
       total: 3500000,
+      number: "0123456454",
     },
     {
       id: 5,
-      idNumber: "005",
+      username: "Nguyen Van A",
       cardId: "3141",
-      shopId: "5161",
+      shopId: "FEV-Shop",
       time: "24/05/2024",
       total: 4500000,
+      number: "0123456454",
     },
     {
       id: 6,
-      idNumber: "006",
-      cardId: "5161",
-      shopId: "7181",
+      username: "Nguyen Van A",
+      cardId: "1231",
+      shopId: "FEV-Shop",
       time: "25/05/2024",
       total: 5500000,
+      number: "0123456454",
     },
     {
       id: 7,
-      idNumber: "007",
+      username: "Nguyen Van A",
       cardId: "7181",
-      shopId: "9202",
+      shopId: "FEV-Shop",
       time: "26/05/2024",
       total: 6500000,
+      number: "0123456454",
     },
     {
       id: 8,
-      idNumber: "008",
-      cardId: "9202",
-      shopId: "2232",
+      username: "Nguyen Van A",
+      cardId: "2133",
+      shopId: "FEV-Shop",
       time: "27/05/2024",
       total: 7500000,
+      number: "0123456454",
     },
     {
       id: 9,
-      idNumber: "009",
+      username: "Nguyen Van A",
       cardId: "2232",
-      shopId: "4252",
+      shopId: "FEV-Shop",
       time: "28/05/2024",
       total: 8500000,
+      number: "0123456454",
     },
     {
       id: 10,
-      idNumber: "010",
-      cardId: "4252",
-      shopId: "6272",
+      username: "Nguyen Van A",
+      cardId: "1221",
+      shopId: "FEV-Shop",
       time: "29/05/2024",
       total: 9500000,
+      number: "0123456454",
     },
     {
       id: 11,
-      idNumber: "011",
+      username: "Nguyen Van A",
       cardId: "6272",
-      shopId: "8292",
+      shopId: "FEV-Shop",
       time: "30/05/2024",
       total: 10500000,
+      number: "0123456454",
     },
     {
       id: 12,
-      idNumber: "012",
+      username: "Nguyen Van A",
       cardId: "8292",
-      shopId: "0314",
+      shopId: "FEV-Shop",
       time: "31/05/2024",
       total: 11500000,
+      number: "0123456454",
     },
   ];
 
@@ -283,17 +295,17 @@ const ListOrders = () => {
                     <strong>ID:</strong> 1
                   </p>
                   <p>
-                    <strong>Area:</strong> FPT Floor 2
+                    <strong>Khu vực:</strong> FPT Floor 2
                   </p>
                   <p>
-                    <strong>Description:</strong> Mừng tết đến xuân về trên đại
+                    <strong>Thông tin chi tiết:</strong> Mừng tết đến xuân về trên đại
                     học FPT
                   </p>
                   <p>
-                    <strong>Begin Date:</strong> 20/01/2024
+                    <strong>Ngày bắt đầu:</strong> 20/01/2024
                   </p>
                   <p>
-                    <strong>End Date:</strong> 20/01/2024
+                    <strong>Ngày kết thúc:</strong> 20/01/2024
                   </p>
                 </div>
               </div>
@@ -328,7 +340,7 @@ const ListOrders = () => {
                 Tên khách hàng
               </th>
               <th className="py-2 px-4 border border-gray-200 text-center">
-                Thẻ
+                Số điện thoại
               </th>
               <th className="py-2 px-4 border border-gray-200 text-center">
                 Tên Shop
@@ -350,12 +362,12 @@ const ListOrders = () => {
                 <td className="py-2 px-4 border border-gray-200">{row.id}</td>
                 <td className="py-2 px-4 border border-gray-200">
                   <span className="bg-gray-100 text-[#242565] px-2 py-1 rounded-full">
-                    {row.idNumber}
+                    {row.username}
                   </span>
                 </td>
                 <td className="py-2 px-4 border border-gray-200">
                   <span className="bg-green-500 text-white px-2 py-1 rounded-full">
-                    {row.cardId}
+                    {row.number}
                   </span>
                 </td>
                 <td className="py-2 px-4 border border-gray-200">
@@ -486,9 +498,7 @@ const CreateEventSection = ({ onCreateEventClick }) => {
         <h2 className="text-4xl font-bold font-DmSans text-gray-900 mb-4">
           Danh sách mua hàng
         </h2>
-        <p className="text-xl text-gray-600 font-DmSans mb-6">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
+
         {/* <button
           className="bg-[#000080] text-white font-bold py-2 px-4 w-[182px] h-[60px] text-[16px] cursor-pointer rounded-full shadow-[0_10px_50px_rgba(61,55,241,0.25)] font-DmSans"
           onClick={onCreateEventClick}

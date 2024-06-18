@@ -39,11 +39,11 @@ const Dashboard = () => {
     <div>
       <div
         className="dashboard-container bg-[white]"
-        style={{ display: "flex", height: "100vh" }}
+        style={{ display: "flex", height: "100%" }}
       >
         <Sidebar setActiveComponent={setActiveComponent} />
         <div
-          className="main-content h-5/6  p-4  my-10 mx-5 "
+          className="main-content h-6/6  p-4  my-10 mx-5 "
           style={{ flex: 1, padding: "20px", overflowY: "auto" }}
         >
           {renderComponent()}

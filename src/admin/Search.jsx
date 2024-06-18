@@ -153,13 +153,13 @@ const SearchBar = () => {
   return (
     <div>
       <div className="flex justify-center items-center h-96">
-        <div className="relative bg-[#242565] rounded-[20px] w-[1086px] h-[140px] shadow-[0px_10px_50px_0px_rgba(61,55,241,0.25)]">
+        <div className="relative bg-[#00AEFF] rounded-[20px] w-[1086px] h-[140px] shadow-[0px_10px_50px_0px_rgba(61,55,241,0.25)]">
           <div className="absolute w-full h-full flex justify-around items-center">
             <div className="inline-block w-[290px] h-[35px]">
               <input
                 type="text"
                 placeholder="Search Event"
-                className="bg-transparent border-b border-[#ffffff] text-white text-left font-DmSans font-bold text-[22px] w-full outline-none"
+                className="bg-[#00AEFF] border-b border-[#00AEFF] text-white text-left font-DmSans font-bold text-[22px] w-full outline-none"
               />
             </div>
             <ThemeProvider theme={defaultTheme}>
@@ -388,16 +388,13 @@ const CreateEventSection = ({ onCreateEventClick }) => {
       <img className="h-64 w-80" src={a_1} alt="People sitting on a sofa" />
       <div>
         <h2 className="text-4xl font-bold font-DmSans text-gray-900 mb-4">
-          Make your own Event
+          Danh sách sự kiện
         </h2>
-        <p className="text-xl text-gray-600 font-DmSans mb-6">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
         <button
-          className="bg-[#000080] text-white font-bold py-2 px-4 w-[182px] h-[60px] text-[16px] cursor-pointer rounded-full shadow-[0_10px_50px_rgba(61,55,241,0.25)] font-DmSans"
+          className="bg-[#393939] text-white font-bold py-2 px-4 w-[182px] h-[60px] text-[16px] cursor-pointer rounded-full shadow-[0_10px_50px_rgba(61,55,241,0.25)] font-DmSans"
           onClick={onCreateEventClick}
         >
-          Create Events
+          Thêm sự kiện
         </button>
       </div>
     </div>

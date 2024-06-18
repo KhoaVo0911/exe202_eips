@@ -5,7 +5,7 @@ import Pizza from "../../assets/images/Pizza.png";
 import noodle from "../../assets/images/noodle.png";
 import nuggets from "../../assets/images/nuggets.png";
 import tiramisu from "../../assets/images/tiramisu.png";
-import combo from "../../assets/images/combo.png";
+import gimbap from "../../assets/images/gimbap.png";
 import Footer from "../../components/Footer";
 import Logo from "../../assets/images/esms 4.png";
 import LogoutIcon from "@mui/icons-material/Logout";
@@ -60,11 +60,11 @@ const products = [
   },
   {
     id: 6,
-    name: "Combo A",
+    name: "Gimbap",
     description: "1 Pizza + 1 Coca Cola",
     price: "45.000 VND",
-    image: combo,
-    category: "combo",
+    image: gimbap,
+    category: "Food",
   },
 ];
 
@@ -84,10 +84,8 @@ const ListOrdered = () => {
               <span className="h-title">
                 <p
                   style={{ fontFamily: "Poppins, sans-serif" }}
-                >{`Chào mừng đến với `}</p>
-                <p className="mt-1" style={{ color: "#0adc5d" }}>
-                  FEV - SHOP
-                </p>
+                >{`CHÀO MỪNG ĐẾN VỚI `}</p>
+                <p className="mt-1">FEV - SHOP</p>
               </span>
             </h1>
             <h3
@@ -97,8 +95,8 @@ const ListOrdered = () => {
               Vị ngon trên từng hương vị.
             </h3>
             <button
-              className="bg-[#0adc5d] hover:bg-[#40b36e] text-white py-5 px-10 rounded-full tracking-widest mt-8"
-              style={{ fontSize: "24px", marginRight: "420px" }}
+              className="bg-[#00AEFF] text-white py-5 px-10 rounded-full tracking-widest mt-8"
+              style={{ fontSize: "24px", marginRight: "475px" }}
             >
               <b>TẠO ĐƠN HÀNG</b>
             </button>
