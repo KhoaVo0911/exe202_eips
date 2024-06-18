@@ -33,25 +33,10 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-
     { link: "TRANG CHỦ", path: "home" },
     { link: "VỀ CHÚNG TÔI", path: "about" },
     { link: "DỊCH VỤ", path: "service" },
     { link: "LIÊN HỆ", path: "product" },
-
-    { link: "TRANG CHỦ", path: "home" },
-    { link: "VỀ CHÚNG TÔI", path: "about" },
-    { link: "DỊCH VỤ", path: "service" },
-    { link: "LIÊN HỆ", path: "faq" },
-
-
-    {link: "TRANG CHỦ", path: "home" },
-    {link: "VỀ CHÚNG TÔI", path: "about" },
-    {link: "DỊCH VỤ", path: "service" },
-    {link: "LIÊN HỆ", path: "faq" },
-
-    // {link: "Testimonial", path: "testimonial" },
-    // {link: "FAQ", path: "faq" },
   ];
   return (
     <header className=" bg-white md:bg-transparent fixed top-0 left-0 right-0">
