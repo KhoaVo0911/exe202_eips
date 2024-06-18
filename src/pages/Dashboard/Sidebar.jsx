@@ -26,7 +26,7 @@ export default function Sidebar({ setActiveComponent }) {
   ];
   const menuItems = [
     { text: "Thống kê doanh thu", component: "SalesOverview" },
-    { text: "Tổng đơn hàng", component: "InventoryManagement" },
+    { text: "Quản Lí Tài Khoản", component: "AccountManagement" },
     { text: "Sự kiện", component: "EventsManagement" },
   ];
 

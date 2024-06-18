@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import SalesOverview from "./SalesOverview/SaleOverview";
-import InventoryManagement from "./Inventory/InventoryManagement";
-import EventsManagement from "./EventsManagement";
+
+import EventsManagement from "./Events/EventsManagement";
+import AccountManagement from "./Inventory/AccountManagement";
 
 const Dashboard = () => {
-  const [activeComponent, setActiveComponent] = useState("SalesOverview");
+  const [activeComponent, setActiveComponent] = useState("EventsManagement");
 
   const renderComponent = () => {
     switch (activeComponent) {
       case "SalesOverview":
         return <SalesOverview />;
-      case "InventoryManagement":
-        return <InventoryManagement />;
+      case "AccountManagement":
+        return <AccountManagement />;
       case "EventsManagement":
         return <EventsManagement />;
       // case "CustomerAnalysis":
@@ -30,7 +31,7 @@ const Dashboard = () => {
       // case "StaffManagement":
       //   return <StaffManagement />;
       default:
-        return <SalesOverview />;
+        return <EventsManagement />;
     }
   };
 
