@@ -37,6 +37,7 @@ const data = [
         expectedSales: "5,000,000 VNĐ",
         customerPaid: "4,500,000 VNĐ",
         totalRevenue: "10,000,000 VNĐ",
+        date: "2023-12-21",
       },
       {
         id: "2",
@@ -46,6 +47,7 @@ const data = [
         expectedSales: "3,000,000 VNĐ",
         customerPaid: "2,500,000 VNĐ",
         totalRevenue: "6,000,000 VNĐ",
+        date: "2023-12-21",
       },
     ],
   },
@@ -64,6 +66,7 @@ const data = [
         expectedSales: "4,000,000 VNĐ",
         customerPaid: "3,500,000 VNĐ",
         totalRevenue: "8,000,000 VNĐ",
+        date: "2023-07-11",
       },
       {
         id: "4",
@@ -73,6 +76,7 @@ const data = [
         expectedSales: "2,000,000 VNĐ",
         customerPaid: "1,500,000 VNĐ",
         totalRevenue: "4,000,000 VNĐ",
+        date: "2023-07-11",
       },
     ],
   },
@@ -91,6 +95,7 @@ const data = [
         expectedSales: "6,000,000 VNĐ",
         customerPaid: "5,500,000 VNĐ",
         totalRevenue: "12,000,000 VNĐ",
+        date: "2023-10-31",
       },
       {
         id: "6",
@@ -100,6 +105,7 @@ const data = [
         expectedSales: "2,500,000 VNĐ",
         customerPaid: "2,000,000 VNĐ",
         totalRevenue: "5,000,000 VNĐ",
+        date: "2023-10-31",
       },
     ],
   },
@@ -118,6 +124,7 @@ const data = [
         expectedSales: "7,000,000 VNĐ",
         customerPaid: "6,500,000 VNĐ",
         totalRevenue: "14,000,000 VNĐ",
+        date: "2023-05-23",
       },
       {
         id: "8",
@@ -127,6 +134,7 @@ const data = [
         expectedSales: "3,500,000 VNĐ",
         customerPaid: "3,000,000 VNĐ",
         totalRevenue: "7,000,000 VNĐ",
+        date: "2023-05-23",
       },
     ],
   },
@@ -145,6 +153,7 @@ const data = [
         expectedSales: "5,500,000 VNĐ",
         customerPaid: "5,000,000 VNĐ",
         totalRevenue: "11,000,000 VNĐ",
+        date: "2023-04-26",
       },
       {
         id: "10",
@@ -154,6 +163,7 @@ const data = [
         expectedSales: "3,000,000 VNĐ",
         customerPaid: "2,500,000 VNĐ",
         totalRevenue: "6,000,000 VNĐ",
+        date: "2023-04-26",
       },
     ],
   },
@@ -172,6 +182,7 @@ const data = [
         expectedSales: "4,500,000 VNĐ",
         customerPaid: "4,000,000 VNĐ",
         totalRevenue: "9,000,000 VNĐ",
+        date: "2024-02-25",
       },
       {
         id: "12",
@@ -181,6 +192,7 @@ const data = [
         expectedSales: "2,000,000 VNĐ",
         customerPaid: "1,500,000 VNĐ",
         totalRevenue: "4,000,000 VNĐ",
+        date: "2024-02-25",
       },
     ],
   },
@@ -199,6 +211,7 @@ const data = [
         expectedSales: "8,000,000 VNĐ",
         customerPaid: "7,500,000 VNĐ",
         totalRevenue: "16,000,000 VNĐ",
+        date: "2024-01-10",
       },
       {
         id: "14",
@@ -208,6 +221,7 @@ const data = [
         expectedSales: "4,000,000 VNĐ",
         customerPaid: "3,500,000 VNĐ",
         totalRevenue: "8,000,000 VNĐ",
+        date: "2024-01-10",
       },
     ],
   },
@@ -226,6 +240,7 @@ const data = [
         expectedSales: "5,000,000 VNĐ",
         customerPaid: "4,500,000 VNĐ",
         totalRevenue: "10,000,000 VNĐ",
+        date: "2024-03-15",
       },
       {
         id: "16",
@@ -235,6 +250,7 @@ const data = [
         expectedSales: "3,000,000 VNĐ",
         customerPaid: "2,500,000 VNĐ",
         totalRevenue: "6,000,000 VNĐ",
+        date: "2024-03-15",
       },
     ],
   },
@@ -253,6 +269,7 @@ const data = [
         expectedSales: "6,000,000 VNĐ",
         customerPaid: "5,500,000 VNĐ",
         totalRevenue: "12,000,000 VNĐ",
+        date: "2024-09-05",
       },
       {
         id: "18",
@@ -262,15 +279,16 @@ const data = [
         expectedSales: "3,500,000 VNĐ",
         customerPaid: "3,000,000 VNĐ",
         totalRevenue: "7,000,000 VNĐ",
+        date: "2024-09-05",
       },
     ],
   },
   {
     id: 10,
     image: sk4,
-    title: "HỘI THẢO CÔNG NGHỆ 4.0",
+    title: "HỘI CHỢ THƯƠNG MẠI XUÂN 2024",
     description: "Tổng doanh thu: 22,000,000 VNĐ",
-    startdate: "AUG 18",
+    startdate: "APR 02",
     tableData: [
       {
         id: "19",
@@ -280,15 +298,75 @@ const data = [
         expectedSales: "7,000,000 VNĐ",
         customerPaid: "6,500,000 VNĐ",
         totalRevenue: "14,000,000 VNĐ",
+        date: "2024-04-02",
       },
       {
         id: "20",
         shop: "Shop T",
         status: "Hoàn thành",
-        quantity: "40",
-        expectedSales: "4,000,000 VNĐ",
-        customerPaid: "3,500,000 VNĐ",
-        totalRevenue: "8,000,000 VNĐ",
+        quantity: "35",
+        expectedSales: "3,500,000 VNĐ",
+        customerPaid: "3,000,000 VNĐ",
+        totalRevenue: "7,000,000 VNĐ",
+        date: "2024-04-02",
+      },
+    ],
+  },
+  {
+    id: 11,
+    image: sk5,
+    title: "LỄ HỘI TRĂNG RẰM 2024",
+    description: "Tổng doanh thu: 15,000,000 VNĐ",
+    startdate: "AUG 15",
+    tableData: [
+      {
+        id: "21",
+        shop: "Shop U",
+        status: "Hoàn thành",
+        quantity: "55",
+        expectedSales: "5,500,000 VNĐ",
+        customerPaid: "5,000,000 VNĐ",
+        totalRevenue: "11,000,000 VNĐ",
+        date: "2024-08-15",
+      },
+      {
+        id: "22",
+        shop: "Shop V",
+        status: "Hoàn thành",
+        quantity: "25",
+        expectedSales: "2,500,000 VNĐ",
+        customerPaid: "2,000,000 VNĐ",
+        totalRevenue: "5,000,000 VNĐ",
+        date: "2024-08-15",
+      },
+    ],
+  },
+  {
+    id: 12,
+    image: sk6,
+    title: "CHƯƠNG TRÌNH GIÁNG SINH 2024",
+    description: "Tổng doanh thu: 18,000,000 VNĐ",
+    startdate: "DEC 24",
+    tableData: [
+      {
+        id: "23",
+        shop: "Shop W",
+        status: "Hoàn thành",
+        quantity: "65",
+        expectedSales: "6,500,000 VNĐ",
+        customerPaid: "6,000,000 VNĐ",
+        totalRevenue: "13,000,000 VNĐ",
+        date: "2024-12-24",
+      },
+      {
+        id: "24",
+        shop: "Shop X",
+        status: "Hoàn thành",
+        quantity: "35",
+        expectedSales: "3,500,000 VNĐ",
+        customerPaid: "3,000,000 VNĐ",
+        totalRevenue: "7,000,000 VNĐ",
+        date: "2024-12-24",
       },
     ],
   },
@@ -342,13 +420,14 @@ const CardEvent = () => {
             <DialogTitle>{selectedCard.title}</DialogTitle>
             <a href="/shop">
               {" "}
-              <Button
-                variant="contained"
-                disableElevation
-                style={{ fontSize: "12px", padding: "10px", margin: "10px" }}
+              <button
+                className="bg-[#393939] text-white font-bold py-2 px-4 w-[182px] h-[60px] text-[16px] cursor-pointer rounded-full shadow-[0_10px_50px_rgba(61,55,241,0.25)] font-DmSans mr-10"
+                // variant="contained"
+                // disableElevation
+                // style={{ fontSize: "12px", padding: "10px", margin: "10px" }}
               >
                 Tạo mới cửa hàng
-              </Button>
+              </button>
             </a>
           </div>
 
@@ -364,6 +443,7 @@ const CardEvent = () => {
                     <TableCell>DOANH SỐ DỰ KIẾN</TableCell>
                     <TableCell>KHÁCH ĐÃ TRẢ</TableCell>
                     <TableCell>TỔNG DOANH THU</TableCell>
+                    <TableCell>NGÀY</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -376,6 +456,7 @@ const CardEvent = () => {
                       <TableCell>{row.expectedSales}</TableCell>
                       <TableCell>{row.customerPaid}</TableCell>
                       <TableCell>{row.totalRevenue}</TableCell>
+                      <TableCell>{row.date}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>

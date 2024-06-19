@@ -368,7 +368,7 @@ const Shop = () => {
           </SwiperSlide>
         </Swiper>
       </div> */}
-      {/* <CreateShopSection onCreateShopClick={handleCreateShopClick} /> */}
+      <CreateShopSection onCreateShopClick={handleCreateShopClick} />
       {/* <div className="bg-slate-100 p-10 mt-10">
         <div className="flex space-x-10 ml-10 font-bold">
           <a href="/ListShop">CỬA HÀNG</a>
@@ -378,7 +378,7 @@ const Shop = () => {
       </div> */}
       <div className="w-full mt-10 flex justify-center   mb-10">
         <div className="text-[#242565] text-center font-dmSansBold text-[40px] font-bold ">
-          DANH SÁCH CỬA HÀNG
+          CÁC CỬA HÀNG
         </div>
       </div>
       <div className="shop-list">
