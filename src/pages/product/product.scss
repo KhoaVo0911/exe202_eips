@@ -8,15 +8,14 @@
 //   z-index: 1;
 // }
 
-h-menu{
+h-menu {
   margin: 0;
   font-size: 20px;
   line-height: 74px;
   font-weight: 700;
-  font-family: "Open Sans" ;
+  font-family: "Open Sans";
 
   align-items: center;
-
 }
 
 .white-blur {
@@ -24,18 +23,18 @@ h-menu{
   width: 200px;
   height: 100%;
   background: linear-gradient(
-      90deg,
-      #fff 0%,
-      rgba(255, 255, 255, 0.94) 55%,
-      rgba(255, 255, 255, 0.9) 65.65%,
-      rgba(255, 255, 255, 0.733) 75.65%,
+    90deg,
+    #fff 0%,
+    rgba(255, 255, 255, 0.94) 55%,
+    rgba(255, 255, 255, 0.9) 65.65%,
+    rgba(255, 255, 255, 0.733) 75.65%,
 
-      rgba(255, 255, 255, 0) 100%
-    );
+    rgba(255, 255, 255, 0) 100%
+  );
   z-index: 1;
 }
 
-.h-title{
+.h-title {
   margin: 0;
   font-size: 72px;
   line-height: 74px;
@@ -43,9 +42,8 @@ h-menu{
   font-family: inherit;
   margin-left: 12px;
   align-items: center;
-
 }
-.h-content{
+.h-content {
   top: 435px;
   font-size: 36px;
   line-height: 58px;
@@ -54,8 +52,6 @@ h-menu{
   height: 84px;
   margin-right: 195px;
 }
-
-
 
 .first-fold-child {
   position: absolute;
@@ -231,7 +227,6 @@ h-menu{
   flex-direction: row;
   white-space: nowrap;
   z-index: 2;
-  
 }
 
 .custom-date-picker {
@@ -242,7 +237,6 @@ h-menu{
   width: 100%;
   box-sizing: border-box;
   font-size: medium;
-
 }
 .product-list-wrapper {
   position: relative;
@@ -312,7 +306,6 @@ h-menu{
   transform: rotate(180deg);
   transform-origin: 0 0;
   mix-blend-mode: normal;
-
 }
 
 .homepage {
@@ -331,7 +324,8 @@ h-menu{
   font-family: "Open Sans";
 }
 
-.h-top, .h-bot {
+.h-top,
+.h-bot {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -433,7 +427,7 @@ h-menu{
 }
 
 .product-name {
-  color: #00AEFF;
+  color: #00aeff;
   font-size: 30px;
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
@@ -442,13 +436,12 @@ h-menu{
   margin-top: 10px;
 }
 
-.card-product{
+.card-product {
   border-radius: 20px;
-    background: #FFF;
-    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
-    padding: 50px;
-    margin-top: 20px;
-    
+  background: #fff;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 50px;
+  margin-top: 20px;
 }
 
 .food {
@@ -495,7 +488,7 @@ h-menu{
   cursor: pointer;
   border: 0;
   padding: 10px 74.5px 11px;
-  background-color: #C5E3FF;
+  background-color: #c5e3ff;
   // background-color: #1d275f;
   border-radius: 25px;
   display: flex;
@@ -505,11 +498,11 @@ h-menu{
   white-space: nowrap;
 }
 
-.add-to-cart-wrapperr{
+.add-to-cart-wrapperr {
   cursor: pointer;
-border: 1px solid #1d275f;
+  border: 1px solid #1d275f;
   padding: 10px 74.5px 11px;
- border-color: #000;
+  border-color: #000;
   border-radius: 25px;
   display: flex;
   flex-direction: row;
@@ -519,7 +512,6 @@ border: 1px solid #1d275f;
 }
 
 .add-to-cartt {
-  
   position: relative;
   font-size: 16px;
   text-transform: uppercase;
@@ -1835,45 +1827,80 @@ border: 1px solid #1d275f;
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 
 .modal {
-  background-color: #fff;
+  background: white;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 10px;
   text-align: center;
-  max-width: 400px;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.success-modal {
+  width: 300px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.success-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.success-text {
+  margin-top: 20px;
+  font-size: 24px;
+  text-align: center;
 }
 
 .close-modal {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #00AEFF;
+  background: #0adc5d;
   color: white;
   border: none;
-  border-radius: 4px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.close-icon {
+  position: absolute;
+  top: 5px;
+  right: 25px;
+  background: none;
+  border: none;
+  font-size: 30px;
   cursor: pointer;
 }
+
 /* CSS cho cửa sổ popup */
 
 .product-table {
   width: 80%;
   border-collapse: collapse;
-
 }
 
 .product-table th,
 .product-table td {
   border: 1px solid #ddd;
   padding: 8px;
-
 }
 
 .product-table th {
@@ -1903,5 +1930,4 @@ border: 1px solid #1d275f;
 
 .table-container {
   margin-bottom: 40px;
-
 }

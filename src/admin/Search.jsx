@@ -214,7 +214,7 @@ const SearchBar = () => {
       <CreateEventSection onCreateEventClick={handleCreateEventClick} />
       <div className="relative w-full mt-10 flex items-center">
         <div className="text-[#242565] text-left font-dmSansBold text-[40px] font-bold absolute left-[177px]">
-          Upcoming Events
+          Sự kiện đang diễn ra
         </div>
         <div className="flex ml-[1080px] space-x-16">
           <ThemeProvider theme={customTheme}>
@@ -284,14 +284,14 @@ const SearchBar = () => {
         <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50">
           <div className="bg-white p-6 rounded-lg shadow-lg w-1/3">
             <div className="p-6">
-              <h2 className="text-2xl font-semibold mb-4">Create Event</h2>
+              <h2 className="text-2xl font-semibold mb-4">Tạo mới sự kiện</h2>
               <form onSubmit={handleSubmit}>
                 <div className="mb-4 flex gap-5">
                   <label
                     htmlFor="eventTitle"
                     className="flex items-center text-sm font-medium text-gray-700 w-1/4"
                   >
-                    Event Title
+                    Tiêu đề sự kiện
                   </label>
                   <input
                     type="text"
@@ -308,7 +308,7 @@ const SearchBar = () => {
                     htmlFor="eventDescription"
                     className="flex items-center text-sm font-medium text-gray-700 w-1/4"
                   >
-                    Event Description
+                    Thông tin sự kiện
                   </label>
                   <textarea
                     id="eventDescription"
@@ -324,12 +324,12 @@ const SearchBar = () => {
                     htmlFor="eventStartDate"
                     className="flex items-center text-sm font-medium text-gray-700 w-1/4"
                   >
-                    Event Start Date
+                    Ngày bắt đầu
                   </label>
                   <DatePicker
                     selected={eventStartDate}
                     onChange={(date) => setEventStartDate(date)}
-                    placeholderText="Select a date"
+                    placeholderText="Chọn ngày diễn ra"
                     className="bg-transparent border-b border-[#000] text-black text-left font-DmSans font-bold text-[16px] w-full outline-none"
                     required
                   />
@@ -339,7 +339,7 @@ const SearchBar = () => {
                     htmlFor="eventImage"
                     className="flex items-center text-sm font-medium text-gray-700 w-1/4"
                   >
-                    Event Image
+                    Hình ảnh sự kiện
                   </label>
                   <input
                     type="file"
@@ -364,13 +364,13 @@ const SearchBar = () => {
                     className="w-full text-[#0adc5d] border rounded-lg text-xl"
                     onClick={() => setShowForm(false)}
                   >
-                    Cancel
+                    Hủy bỏ
                   </button>
                   <button
                     type="submit"
                     className="w-full bg-[#0adc5d] text-white p-2 rounded-lg text-xl"
                   >
-                    Submit
+                    Xác nhận
                   </button>
                 </div>
               </form>

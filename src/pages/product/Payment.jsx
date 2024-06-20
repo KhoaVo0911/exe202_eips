@@ -233,6 +233,7 @@ import PizzaHeader from "../../assets/images/margherita-pizza_3.png";
 import DeleteIcon from "@mui/icons-material/Delete";
 import Navbar from "../../admin/Navbar";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import CloseIcon from "@mui/icons-material/Close";
 
 const PaymentOrder = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -291,7 +292,7 @@ const PaymentOrder = () => {
         </div>
       </div>
 
-      <div className=" grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="bg-white p-6 ">
           <h2 className="text-2xl font-semibold mb-4">Đơn hàng của bạn</h2>
           <h3>
@@ -404,9 +405,15 @@ const PaymentOrder = () => {
       {isModalOpen && (
         <div className="modal-overlay">
           <div className="modal">
+            <button onClick={handleCloseModal} className="close-icon">
+              <CloseIcon />
+            </button>
             <h2 className="font-bold">QR Code</h2>
             <img src={qr_code} alt="QR Code" />
-            <button onClick={handleConfirmPaymentClick} className="close-modal">
+            <button
+              onClick={handleConfirmPaymentClick}
+              className="bg-[#0ADC5D] text-white font-bold"
+            >
               THANH TOÁN
             </button>
           </div>
@@ -415,15 +422,19 @@ const PaymentOrder = () => {
 
       {isPaymentSuccessful && (
         <div className="modal-overlay">
-          <div className="modal">
-            <h2>THANH TOÁN THÀNH CÔNG</h2>
-            <CheckCircleIcon style={{ color: "#00AEFF", fontSize: "50px" }} />
+          <div className="modal success-modal">
             <button
               onClick={() => setIsPaymentSuccessful(false)}
-              className="close-modal"
+              className="close-icon"
             >
-              Đóng
+              <CloseIcon />
             </button>
+            <div className="success-content">
+              <CheckCircleIcon
+                style={{ color: "#0ADC5D", fontSize: "100px" }}
+              />
+            </div>
+            <h2 className="success-text font-bold">THANH TOÁN THÀNH CÔNG</h2>
           </div>
         </div>
       )}
