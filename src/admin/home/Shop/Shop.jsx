@@ -327,9 +327,9 @@ const Shop = () => {
   };
 
   return (
-    <div className="div">
-      <Navbar />
-      <div className="slider-container">
+    <div className="">
+      {/* <Navbar /> */}
+      {/* <div className="slider-container">
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={50}
@@ -353,8 +353,8 @@ const Shop = () => {
                     <strong>Khu vực diễn ra:</strong> Tầng 2 FPT
                   </p>
                   <p>
-                    <strong>Thông tin chi tiết:</strong> Mừng tết đến xuân về trên đại
-                    học FPT
+                    <strong>Thông tin chi tiết:</strong> Mừng tết đến xuân về
+                    trên đại học FPT
                   </p>
                   <p>
                     <strong>Ngày bắt đầu:</strong> 20/01/2024
@@ -367,21 +367,18 @@ const Shop = () => {
             </div>
           </SwiperSlide>
         </Swiper>
-      </div>
+      </div> */}
       <CreateShopSection onCreateShopClick={handleCreateShopClick} />
-      <div className="bg-slate-100 p-10 mt-10">
+      {/* <div className="bg-slate-100 p-10 mt-10">
         <div className="flex space-x-10 ml-10 font-bold">
           <a href="/ListShop">CỬA HÀNG</a>
           {/* <a href="/ListCards">CARD</a> */}
-          <a href="/ListOrders">ĐẶT HÀNG</a>
+      {/* <a href="/ListOrders">ĐẶT HÀNG</a>
         </div>
-      </div>
-      <div className="relative w-full mt-10 flex items-center mb-10">
-        <div className="text-[#242565] text-left font-dmSansBold text-[40px] font-bold absolute left-[80px]">
-          DANH SÁCH CỬA HÀNG
-        </div>
-        <div className="flex ml-[900px] space-x-16">
-          {/* ... (filters section here) */}
+      </div> */}
+      <div className="w-full mt-10 flex justify-center   mb-10">
+        <div className="text-[#242565] text-center font-dmSansBold text-[40px] font-bold ">
+          CÁC CỬA HÀNG
         </div>
       </div>
       <div className="shop-list">
@@ -422,9 +419,10 @@ const ShopItem = ({ item, onEdit }) => {
           </div>
         </div>
         <div className="shop-item-desc">
-          <RiEditCircleFill className="shop-item-button" onClick={() => onEdit(item)}>
-            
-          </RiEditCircleFill>
+          <RiEditCircleFill
+            className="shop-item-button"
+            onClick={() => onEdit(item)}
+          ></RiEditCircleFill>
           <p>{description}</p>
         </div>
       </div>
