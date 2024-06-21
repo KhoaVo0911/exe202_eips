@@ -308,35 +308,35 @@ const PaymentOrder = () => {
               </div>
               <span className="text-lg">1</span>
               <div className="flex flex-col items-end">
-                <span className="text-base">49.000 VND</span>
+                <span className="text-base">10.000 VND</span>
               </div>
               <span>
                 <DeleteIcon />
               </span>
             </div>
             <div className="card-product flex justify-between items-center p-10 gap-10 rounded-lg  bg-white shadow">
-              <img src={Pizza} alt="" className="w-32" />
+              <img src={Coca} alt="" className="w-32" />
               <div className="flex flex-col items-start ml-4">
-                <span className="text-base font-bold">Pizza</span>
-                <span className="text-sm">Food</span>
+                <span className="text-base font-bold">Coca Cola</span>
+                <span className="text-sm">Drink</span>
               </div>
               <span className="text-lg">1</span>
               <div className="flex flex-col items-end">
-                <span className="text-base">49.000 VND</span>
+                <span className="text-base">10.000 VND</span>
               </div>
               <span>
                 <DeleteIcon />
               </span>
             </div>
             <div className="card-product flex justify-between items-center p-10 gap-10 rounded-lg  bg-white shadow">
-              <img src={Pizza} alt="" className="w-32" />
+              <img src={noodle} alt="" className="w-32" />
               <div className="flex flex-col items-start ml-4">
-                <span className="text-base font-bold">Pizza</span>
+                <span className="text-base font-bold">Noodle</span>
                 <span className="text-sm">Food</span>
               </div>
               <span className="text-lg">1</span>
               <div className="flex flex-col items-end">
-                <span className="text-base">49.000 VND</span>
+                <span className="text-base">10.000 VND</span>
               </div>
               <span>
                 <DeleteIcon />

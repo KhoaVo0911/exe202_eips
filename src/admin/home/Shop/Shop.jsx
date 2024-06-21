@@ -293,6 +293,7 @@ import { MdOutlineAddPhotoAlternate } from "react-icons/md";
 import listshop from "./ListShop"; // Importing shop data
 import "./Shop.scss"; // Importing CSS
 import { RiEditCircleFill } from "react-icons/ri";
+import sk1 from "../../../assets/images/sk1.png";
 
 const Shop = () => {
   const [shops, setShops] = useState(listshop);
@@ -328,8 +329,8 @@ const Shop = () => {
 
   return (
     <div className="">
-      {/* <Navbar /> */}
-      {/* <div className="slider-container">
+      <Navbar />
+      <div className="slider-container">
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={50}
@@ -340,11 +341,11 @@ const Shop = () => {
           <SwiperSlide>
             <div className="slide-content">
               <div className="image-container">
-                <img src={slider} alt="Event" />
+                <img src={sk1} alt="Event" />
               </div>
               <div className="text-container">
-                <h1 className="title">HỘI XUÂN LÀNG CÓC 2024</h1>
-                <p className="title-name">LONG PHƯỢNG ĐÌNH</p>
+                <h1 className="title">FPT EDU’S GOT TALENT 2023 </h1>
+                <p className="title-name">SLAY YOUR WAY</p>
                 <div>
                   <p>
                     <strong>ID:</strong> 1
@@ -353,8 +354,8 @@ const Shop = () => {
                     <strong>Khu vực diễn ra:</strong> Tầng 2 FPT
                   </p>
                   <p>
-                    <strong>Thông tin chi tiết:</strong> Mừng tết đến xuân về
-                    trên đại học FPT
+                    <strong>Thông tin chi tiết:</strong> CUỘC THI TÌM KIẾM TÀI
+                    NĂNG FPT EDU’S GOT TALENT 2023
                   </p>
                   <p>
                     <strong>Ngày bắt đầu:</strong> 20/01/2024
@@ -367,15 +368,8 @@ const Shop = () => {
             </div>
           </SwiperSlide>
         </Swiper>
-      </div> */}
+      </div>
       <CreateShopSection onCreateShopClick={handleCreateShopClick} />
-      {/* <div className="bg-slate-100 p-10 mt-10">
-        <div className="flex space-x-10 ml-10 font-bold">
-          <a href="/ListShop">CỬA HÀNG</a>
-          {/* <a href="/ListCards">CARD</a> */}
-      {/* <a href="/ListOrders">ĐẶT HÀNG</a>
-        </div>
-      </div> */}
       <div className="w-full mt-10 flex justify-center   mb-10">
         <div className="text-[#242565] text-center font-dmSansBold text-[40px] font-bold ">
           CÁC CỬA HÀNG

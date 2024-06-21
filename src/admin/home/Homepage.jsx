@@ -11,6 +11,7 @@ import SearchBar from "../Search";
 import Footer from "../../components/Footer";
 import Shop from "./Shop/Shop";
 import CardList from "../Card/CardList";
+// import sk1 from "./"
 
 const Homepage = () => {
   return (
@@ -30,10 +31,10 @@ const Homepage = () => {
                 <img src={slider} alt="Event" />
               </div>
               <div className="text-container">
-                <h1 className="title">HỘI XUÂN LÀNG CÓC 2024 </h1>
-                <p className="title-name">LONG PHƯỢNG ĐÌNH</p>
+                <h1 className="title">FPT EDU’S GOT TALENT 2023 </h1>
+                <p className="title-name"> SLAY YOUR WAY</p>
                 <p className="description">
-                  MỪNG TẾT ĐẾN XUÂN VỀ TRÊN ĐẠI HỌC FPT TP.HCM
+                  CUỘC THI TÌM KIẾM TÀI NĂNG FPT EDU’S GOT TALENT 2023
                 </p>
                 <div className="buttons">
                   <button className="edit-button">EDIT</button>

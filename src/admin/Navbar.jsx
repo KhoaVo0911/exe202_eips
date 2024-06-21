@@ -163,7 +163,7 @@ export default function Navbar() {
       title: "DANH SÁCH",
       subItems: [
         // { name: "Cửa hàng", url: "/shop" },
-        { name: "Danh sách đặt hàng", url: "/ListOrders" },
+        { name: "Danh sách mua hàng", url: "/ListOrders" },
         // { name: "Danh sách thẻ", url: "/ListCards" },
         // { name: "Danh sách tài khoản", url: "/ListAccounts" },
       ],
@@ -173,12 +173,12 @@ export default function Navbar() {
       subItems: [
         { name: "Doanh thu", url: "Cart" },
         { name: "Thanh toán", url: "/Payment" },
-        { name: "Đơn hàng đã thanh toán", url: "/ListOrdered" },
+        { name: "Sản phẩm đã bán", url: "/Cart" },
       ],
     },
     {
       title: "CÀI ĐẶT",
-      subItems: [{ name: "Admin Dashboard", url: "/dashboard" }],
+      subItems: [{ name: "Host Dashboard", url: "/dashboard" }],
     },
   ];
 

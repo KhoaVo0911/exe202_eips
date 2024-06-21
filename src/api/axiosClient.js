@@ -1,20 +1,20 @@
-import axios from 'axios';
+import axios from "axios";
 
-axios.defaults.baseURL = 'http://192.168.0.201:2510/api/healthcheck';
-axios.defaults.headers.post['Content-Type'] = 'application/json';
-axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
-axios.defaults.headers.delete['Access-Control-Allow-Origin'] = '*';
+axios.defaults.baseURL = "https://66598fc6de346625136cf421.mockapi.io/";
+axios.defaults.headers.post["Content-Type"] = "application/json";
+axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
+axios.defaults.headers.delete["Access-Control-Allow-Origin"] = "*";
 
 export const axiosClient = {
   getByUrl(url) {
-    return axios.get(`${url}`).catch((error) => console.log((error)));
+    return axios.get(`${url}`).catch((error) => console.log(error));
   },
 
-  get(url, slug = '') {
+  get(url, slug = "") {
     return axios.get(`${url}/${slug}`).catch((error) => console.log(error));
   },
 
-  getWithId(url, slug = '') {
+  getWithId(url, slug = "") {
     return axios.get(`${url}`, `${slug}`).catch((error) => console.log(error));
   },
 
@@ -26,16 +26,22 @@ export const axiosClient = {
     return axios.get(url, config).catch((error) => console.log(error));
   },
 
-  getWithFilter(url, slug = '', params) {
-    return axios.get(`${url}/${slug}`, params).catch((error) => console.log(error));
+  getWithFilter(url, slug = "", params) {
+    return axios
+      .get(`${url}/${slug}`, params)
+      .catch((error) => console.log(error));
   },
 
-  getWithFilterMiddleId(url, slug = '', url2, params) {
-    return axios.get(`${url}/${slug}/${url2}`, params).catch((error) => console.log(error));
+  getWithFilterMiddleId(url, slug = "", url2, params) {
+    return axios
+      .get(`${url}/${slug}/${url2}`, params)
+      .catch((error) => console.log(error));
   },
 
-  getMiddleParams(url, slug = '', url2) {
-    return axios.get(`${url}/${slug}/${url2}`).catch((error) => console.log(error));
+  getMiddleParams(url, slug = "", url2) {
+    return axios
+      .get(`${url}/${slug}/${url2}`)
+      .catch((error) => console.log(error));
   },
 
   query(url) {
@@ -49,7 +55,7 @@ export const axiosClient = {
     return axios.post(`${url}/${slug}`, params, config);
   },
 
-  postWith2Id(url, slug = '', url2, slug2 = '', params) {
+  postWith2Id(url, slug = "", url2, slug2 = "", params) {
     return axios.post(`${url}/${slug}/${url2}/${slug2}`, params);
   },
 
@@ -58,7 +64,9 @@ export const axiosClient = {
   },
 
   postFile(url, params, config) {
-    return axios.post(`${url}`, params, { headers: { 'Content-Type': 'multipart/form-data' } });
+    return axios.post(`${url}`, params, {
+      headers: { "Content-Type": "multipart/form-data" },
+    });
   },
 
   put(url, params, config) {
@@ -73,7 +81,7 @@ export const axiosClient = {
     return axios.put(`${url}/${slug}`);
   },
 
-  putWithMiddleId(url, slug = '', url2) {
+  putWithMiddleId(url, slug = "", url2) {
     return axios.put(`${url}/${slug}/${url2}`);
   },
 
@@ -85,7 +93,7 @@ export const axiosClient = {
     return axios.delete(`${url}`, params, config);
   },
 
-  deleteWithId(url, slug = '') {
+  deleteWithId(url, slug = "") {
     return axios.delete(`${url}/${slug}`);
   },
 
@@ -94,15 +102,17 @@ export const axiosClient = {
   },
 
   saveToken(token, expired) {
-    window.localStorage.setItem('access_token', JSON.stringify(token));
+    window.localStorage.setItem("access_token", JSON.stringify(token));
   },
 
   getToken() {
-    if (typeof window === 'undefined') {
+    if (typeof window === "undefined") {
       return null;
     }
 
-    return window.localStorage.getItem('access_token') ? JSON.parse(window.localStorage.getItem('access_token')) : '';
+    return window.localStorage.getItem("access_token")
+      ? JSON.parse(window.localStorage.getItem("access_token"))
+      : "";
     // return window.localStorage.StorageKeys.TOKEN ? JSON.parse(window.localStorage.StorageKeys.TOKEN) : "";
   },
 

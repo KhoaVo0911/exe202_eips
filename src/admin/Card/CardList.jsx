@@ -1,5 +1,46 @@
-import React, { useState } from 'react';
-import Card from './Card';
+// import React, { useState } from "react";
+// import Card from "./Card";
+// import "./Card.scss"; // Import the CSS file for styling
+
+// const CardList = ({ events = [], onEditEvent }) => {
+//   const [visibleCards, setVisibleCards] = useState(6);
+
+//   const loadMore = () => {
+//     setVisibleCards((prev) => prev + 3);
+//   };
+
+//   console.log("Events in CardList:", events); // Log kiểm tra dữ liệu events
+
+//   return (
+//     <div>
+//       <div className="card-list">
+//         {events.slice(0, visibleCards).map((item) => (
+//           <div key={item.id} style={{ cursor: "pointer" }}>
+//             <Card
+//               image={item.image} // Sử dụng hình ảnh từ API
+//               eventName={item.eventName} // Sử dụng eventName thay vì title
+//               description={item.description}
+//               startdate={item.startDate} // Sử dụng startDate từ API
+//               onEdit={() => onEditEvent(item)}
+//             />
+//           </div>
+//         ))}
+//       </div>
+//       <div className="clearfix"></div>
+//       {visibleCards < events.length && (
+//         <button className="btn-load-more" onClick={loadMore}>
+//           Load More
+//         </button>
+//       )}
+//     </div>
+//   );
+// };
+
+// export default CardList;
+
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Card from "./Card";
 import sk1 from "../../assets/images/sk1.png";
 import sk2 from "../../assets/images/sk2.png";
 import sk3 from "../../assets/images/sk3.png";
@@ -10,82 +51,87 @@ import "./Card.scss"; // Import the CSS file for styling
 import Shop from "../home/Shop/Shop";
 
 const data = [
-    // Existing data
-    {
-      id: 1,
-      image: sk1,
-      title: "FPT EDU’S GOT TALENT 2023 – SLAY YOUR WAY",
-      description: "CUỘC THI TÌM KIẾM TÀI NĂNG FPT EDU’S GOT TALENT 2023",
-      startdate: "DEC 21"
-    },
-    {
-      id: 2,
-      image: sk2,
-      title: "LÊ HỘI VĂN HÓA CHI CHI CHÀNH CHÀNH",
-      description: "LÊ HỘI VĂN HÓA CHI CHI CHÀNH CHÀNH 2024: ĐẤT VIỆT TRỜI NAM",
-      startdate: "JUL 11"
-    },
-    {
-      id: 3,
-      image: sk3,
-      title: "HALLOWEEN 2023: MỘNG ĐỊA I CÕI ÂM",
-      description: "Cơn ác mộng đêm nay, bóng ma đầy ẩn số. Nắm bạn trẻ trở mình, vén lớp bí ẩn khởi.",
-      startdate: "OCT 31"
-    },
-    {
-      id: 4,
-      image: sk4,
-      title: "FES-SPORTLIGHT #6 ÁNH VÀNG HUY CHƯƠNG",
-      description: "HÀNH TRÌNH MANG 'VÀNG' VỀ CHO ĐOÀN THỂ THAO VIỆT NAM",
-      startdate: "MAY 23"
-    },
-    {
-      id: 5,
-      image: sk5,
-      title: "FES-CAMP #4 THANG ÂM VIỆT",
-      description: "CHƯƠNG TRÌNH BIỂU DIỄN ÂM NHẠC TRUYỀN THỐNG",
-      startdate: "APR 26"
-    },
-    {
-      id: 6,
-      image: sk6,
-      title: "GIẢI ĐẤU CỜ VUA – KHAI XUÂN KỶ HỢI 2024",
-      description: "Chơi cờ vua là nghệ thuật, còn là người chơi cờ đích thực là nghệ sĩ.",
-      startdate: "FEB 25"
-    },
-    // New data
-    {
-      id: 7,
-      image: sk1,
-      title: "TRIỂN LÃM NGHỆ THUẬT HIỆN ĐẠI 2024",
-      description: "Cuộc triển lãm nghệ thuật hiện đại với sự góp mặt của nhiều nghệ sĩ nổi tiếng.",
-      startdate: "JAN 10"
-    },
-    {
-      id: 8,
-      image: sk2,
-      title: "ĐÊM NHẠC TRUYỀN THỐNG VIỆT",
-      description: "Chương trình biểu diễn nhạc cụ truyền thống của các nghệ sĩ trẻ.",
-      startdate: "MAR 15"
-    },
-    {
-      id: 9,
-      image: sk3,
-      title: "LIÊN HOAN PHIM QUỐC TẾ 2024",
-      description: "Sự kiện quy tụ các bộ phim xuất sắc từ nhiều quốc gia trên thế giới.",
-      startdate: "SEP 05"
-    },
-    {
-      id: 10,
-      image: sk4,
-      title: "HỘI THẢO CÔNG NGHỆ 4.0",
-      description: "Cập nhật những xu hướng công nghệ mới nhất trong cuộc cách mạng 4.0.",
-      startdate: "AUG 18"
-    }
+  // Existing data
+  {
+    id: 1,
+    image: sk1,
+    title: "FPT EDU’S GOT TALENT 2023 – SLAY YOUR WAY",
+    description: "CUỘC THI TÌM KIẾM TÀI NĂNG FPT EDU’S GOT TALENT 2023",
+    startdate: "DEC 21",
+  },
+  {
+    id: 2,
+    image: sk2,
+    title: "LÊ HỘI VĂN HÓA CHI CHI CHÀNH CHÀNH",
+    description: "LÊ HỘI VĂN HÓA CHI CHI CHÀNH CHÀNH 2024: ĐẤT VIỆT TRỜI NAM",
+    startdate: "JUL 11",
+  },
+  {
+    id: 3,
+    image: sk3,
+    title: "HALLOWEEN 2023: MỘNG ĐỊA I CÕI ÂM",
+    description:
+      "Cơn ác mộng đêm nay, bóng ma đầy ẩn số. Nắm bạn trẻ trở mình, vén lớp bí ẩn khởi.",
+    startdate: "OCT 31",
+  },
+  {
+    id: 4,
+    image: sk4,
+    title: "FES-SPORTLIGHT #6 ÁNH VÀNG HUY CHƯƠNG",
+    description: "HÀNH TRÌNH MANG 'VÀNG' VỀ CHO ĐOÀN THỂ THAO VIỆT NAM",
+    startdate: "MAY 23",
+  },
+  {
+    id: 5,
+    image: sk5,
+    title: "FES-CAMP #4 THANG ÂM VIỆT",
+    description: "CHƯƠNG TRÌNH BIỂU DIỄN ÂM NHẠC TRUYỀN THỐNG",
+    startdate: "APR 26",
+  },
+  {
+    id: 6,
+    image: sk6,
+    title: "GIẢI ĐẤU CỜ VUA – KHAI XUÂN KỶ HỢI 2024",
+    description:
+      "Chơi cờ vua là nghệ thuật, còn là người chơi cờ đích thực là nghệ sĩ.",
+    startdate: "FEB 25",
+  },
+  // New data
+  {
+    id: 7,
+    image: sk1,
+    title: "TRIỂN LÃM NGHỆ THUẬT HIỆN ĐẠI 2024",
+    description:
+      "Cuộc triển lãm nghệ thuật hiện đại với sự góp mặt của nhiều nghệ sĩ nổi tiếng.",
+    startdate: "JAN 10",
+  },
+  {
+    id: 8,
+    image: sk2,
+    title: "ĐÊM NHẠC TRUYỀN THỐNG VIỆT",
+    description:
+      "Chương trình biểu diễn nhạc cụ truyền thống của các nghệ sĩ trẻ.",
+    startdate: "MAR 15",
+  },
+  {
+    id: 9,
+    image: sk3,
+    title: "LIÊN HOAN PHIM QUỐC TẾ 2024",
+    description:
+      "Sự kiện quy tụ các bộ phim xuất sắc từ nhiều quốc gia trên thế giới.",
+    startdate: "SEP 05",
+  },
+  {
+    id: 10,
+    image: sk4,
+    title: "HỘI THẢO CÔNG NGHỆ 4.0",
+    description:
+      "Cập nhật những xu hướng công nghệ mới nhất trong cuộc cách mạng 4.0.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    startdate: "AUG 18",
+  },
 ];
 
 const CardList = () => {
-  const navigate = useNavigate();
   const [visibleCards, setVisibleCards] = useState(6);
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -94,20 +140,13 @@ const CardList = () => {
     setCurrentPage((prev) => prev + 1);
   };
 
-  const handleCardClick = (event) => {
-    navigate(`/event/${event.id}`, { state: { event } });
-  };
-
   return (
     <div>
       <div className="card-list">
         {data.slice(0, visibleCards).map((item) => (
-          <div
-            key={item.id}
-            onClick={() => handleCardClick(item)}
-            style={{ cursor: "pointer" }}
-          >
+          <div key={item.id} style={{ cursor: "pointer" }}>
             <Card
+              event={item}
               image={item.image}
               title={item.title}
               description={item.description}
@@ -116,12 +155,13 @@ const CardList = () => {
           </div>
         ))}
       </div>
-      <div className="clearfix"></div>
-      {visibleCards < data.length && (
-        <button className="btn-load-more" onClick={loadMore}>
-          Load More
-        </button>
-      )}
+      <div className="load-more-btn">
+        {visibleCards < data.length && (
+          <button className="btn-load-more" onClick={loadMore}>
+            Load More
+          </button>
+        )}
+      </div>
     </div>
   );
 };
