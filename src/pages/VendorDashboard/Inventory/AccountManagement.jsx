@@ -1,15 +1,9 @@
 import React, { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
-import "./Homepage.scss";
-import slider from "../../assets/images/slider.png";
-import Navbar from "../Navbar";
-import SearchBar from "../Search";
-import Footer from "../../components/Footer";
-import a_1 from "../../assets/images/a_1.png";
+
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import AddPhotoAlternateIcon from "@mui/icons-material/AddPhotoAlternate";
@@ -20,118 +14,104 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "react-datepicker/dist/react-datepicker.css";
-import CardList from "../Card/CardList";
 
-const ListOrders = () => {
+export default function AccountManagement({ value, onChange }) {
   const data = [
     {
-      id: 1,
-      username: "Nguyen Van A",
-      cardId: "1234",
-      shopId: "FEV-Shop",
-      time: "20/05/2024",
-      total: 5000000,
-      number: "0123456454",
+      no: 1,
+      username: "john_doe",
+      password: "****",
+      name: "John Doe",
+      role: "Vendor", // Thay đổi role thành Vendor
+      status: "Active",
     },
     {
-      id: 2,
-      username: "Nguyen Van A",
-      cardId: "5678",
-      shopId: "FEV-Shop",
-      time: "21/05/2024",
-      total: 1500000,
-      number: "0123456454",
+      no: 2,
+      username: "jane_smith",
+      password: "****",
+      name: "Jane Smith",
+      role: "Vendor", // Thay đổi role thành Vendor
+      status: "Inactive",
     },
     {
-      id: 3,
-      username: "Nguyen Van A",
-      cardId: "9101",
-      shopId: "FEV-Shop",
-      time: "22/05/2024",
-      total: 2500000,
-      number: "0123456454",
-    },
-    // Thêm các hàng khác tương tự
-    {
-      id: 4,
-      username: "Nguyen Van A",
-      cardId: "1222",
-      shopId: "FEV-Shop",
-      time: "23/05/2024",
-      total: 3500000,
-      number: "0123456454",
+      no: 3,
+      username: "sam_green",
+      password: "****",
+      name: "Sam Green",
+      role: "Vendor", // Thay đổi role thành Vendor
+      status: "Active",
     },
     {
-      id: 5,
-      username: "Nguyen Van A",
-      cardId: "3141",
-      shopId: "FEV-Shop",
-      time: "24/05/2024",
-      total: 4500000,
-      number: "0123456454",
+      no: 4,
+      username: "alice_jones",
+      password: "****",
+      name: "Alice Jones",
+      role: "Vendor", // Thay đổi role thành Vendor
+      status: "Inactive",
     },
     {
-      id: 6,
-      username: "Nguyen Van A",
-      cardId: "1231",
-      shopId: "FEV-Shop",
-      time: "25/05/2024",
-      total: 5500000,
-      number: "0123456454",
+      no: 5,
+      username: "michael_brown",
+      password: "****",
+      name: "Michael Brown",
+      role: "Vendor", // Thay đổi role thành Vendor
+      status: "Active",
     },
     {
-      id: 7,
-      username: "Nguyen Van A",
-      cardId: "7181",
-      shopId: "FEV-Shop",
-      time: "26/05/2024",
-      total: 6500000,
-      number: "0123456454",
+      no: 6,
+      username: "linda_white",
+      password: "****",
+      name: "Linda White",
+      role: "Vendor", // Thay đổi role thành Vendor
+      status: "Inactive",
     },
     {
-      id: 8,
-      username: "Nguyen Van A",
-      cardId: "2133",
-      shopId: "FEV-Shop",
-      time: "27/05/2024",
-      total: 7500000,
-      number: "0123456454",
+      no: 7,
+      username: "robert_black",
+      password: "****",
+      name: "Robert Black",
+      role: "Vendor", // Thay đổi role thành Vendor
+      status: "Active",
     },
     {
-      id: 9,
-      username: "Nguyen Van A",
-      cardId: "2232",
-      shopId: "FEV-Shop",
-      time: "28/05/2024",
-      total: 8500000,
-      number: "0123456454",
+      no: 8,
+      username: "patricia_wilson",
+      password: "****",
+      name: "Patricia Wilson",
+      role: "Vendor", // Thay đổi role thành Vendor
+      status: "Inactive",
     },
     {
-      id: 10,
-      username: "Nguyen Van A",
-      cardId: "1221",
-      shopId: "FEV-Shop",
-      time: "29/05/2024",
-      total: 9500000,
-      number: "0123456454",
+      no: 9,
+      username: "james_clark",
+      password: "****",
+      name: "James Clark",
+      role: "Vendor", // Thay đổi role thành Vendor
+      status: "Active",
     },
     {
-      id: 11,
-      username: "Nguyen Van A",
-      cardId: "6272",
-      shopId: "FEV-Shop",
-      time: "30/05/2024",
-      total: 10500000,
-      number: "0123456454",
+      no: 10,
+      username: "mary_lewis",
+      password: "****",
+      name: "Mary Lewis",
+      role: "Vendor", // Thay đổi role thành Vendor
+      status: "Inactive",
     },
     {
-      id: 12,
-      username: "Nguyen Van A",
-      cardId: "8292",
-      shopId: "FEV-Shop",
-      time: "31/05/2024",
-      total: 11500000,
-      number: "0123456454",
+      no: 11,
+      username: "david_harris",
+      password: "****",
+      name: "David Harris",
+      role: "Vendor", // Thay đổi role thành Vendor
+      status: "Active",
+    },
+    {
+      no: 12,
+      username: "susan_martin",
+      password: "****",
+      name: "Susan Martin",
+      role: "Vendor", // Thay đổi role thành Vendor
+      status: "Inactive",
     },
   ];
 
@@ -272,122 +252,132 @@ const ListOrders = () => {
   });
 
   return (
-    <div className="div">
-      <Navbar />
-      <div className="slider-container">
-        <Swiper
-          modules={[Navigation, Pagination]}
-          spaceBetween={50}
-          slidesPerView={1}
-          navigation
-          pagination={{ clickable: true }}
-        >
-          <SwiperSlide>
-            <div className="slide-content">
-              <div className="image-container">
-                <img src={slider} alt="Event" />
-              </div>
-              <div className="text-container">
-                <h1 className="title">HỘI XUÂN LÀNG CÓC 2024 </h1>
-                <p className="title-name">LONG PHƯỢNG ĐÌNH</p>
-                <div>
-                  <p>
-                    <strong>ID:</strong> 1
-                  </p>
-                  <p>
-                    <strong>Khu vực:</strong> FPT Floor 2
-                  </p>
-                  <p>
-                    <strong>Thông tin chi tiết:</strong> Mừng tết đến xuân về
-                    trên đại học FPT
-                  </p>
-                  <p>
-                    <strong>Ngày bắt đầu:</strong> 20/01/2024
-                  </p>
-                  <p>
-                    <strong>Ngày kết thúc:</strong> 20/01/2024
-                  </p>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-        </Swiper>
-      </div>
-      <CreateEventSection onCreateEventClick={handleCreateEventClick} />
-      <div className=" bg-slate-100 p-10 mt-10">
-        <div className="flex space-x-10 ml-10 font-bold">
-          <a href="/ListShop">CỬA HÀNG</a>
-          <a href="/ListCards">THẺ</a>
-          <a href="/ListOrders">ĐẶT HÀNG</a>
+    <div>
+      <div className="relative w-full mt-10 flex justify-between mb-10">
+        <div className="text-[#242565] text-center font-dmSansBold text-[40px] font-bold absolute left-[50px] bot-[100px] ">
+          Quản lí tài khoản
+        </div>
+        <div className="flex justify-center ml-[20px] mt-[100px] space-x-36">
+          <ThemeProvider theme={customTheme}>
+            <Box sx={{ minWidth: 140 }}>
+              <FormControl fullWidth>
+                <InputLabel id="weekday-select-label">ADMIN</InputLabel>
+                <Select
+                  labelId="weekday-select-label"
+                  id="weekday-select"
+                  value={weekday}
+                  onChange={handleWeekdayChange}
+                  label="Weekdays"
+                ></Select>
+              </FormControl>
+            </Box>
+          </ThemeProvider>
+          <ThemeProvider theme={customTheme}>
+            <Box sx={{ minWidth: 140 }}>
+              <FormControl fullWidth>
+                <InputLabel id="weekday-select-label">Events</InputLabel>
+                <Select
+                  labelId="weekday-select-label"
+                  id="weekday-select"
+                  value={weekday}
+                  onChange={handleWeekdayChange}
+                  label="Weekdays"
+                >
+                  <MenuItem value={"Monday"}>Monday</MenuItem>
+                  <MenuItem value={"Tuesday"}>Tuesday</MenuItem>
+                  <MenuItem value={"Wednesday"}>Wednesday</MenuItem>
+                  <MenuItem value={"Thursday"}>Thursday</MenuItem>
+                  <MenuItem value={"Friday"}>Friday</MenuItem>
+                  <MenuItem value={"Saturday"}>Saturday</MenuItem>
+                  <MenuItem value={"Sunday"}>Sunday</MenuItem>
+                </Select>
+              </FormControl>
+            </Box>
+          </ThemeProvider>
+          <ThemeProvider theme={customTheme}>
+            <Box sx={{ minWidth: 150 }}>
+              <FormControl fullWidth>
+                <InputLabel id="event-select-label">Area</InputLabel>
+                <Select
+                  labelId="event-select-label"
+                  id="event-select"
+                  value={eventType}
+                  onChange={handleEventTypeChange}
+                  label="Event Type"
+                >
+                  <MenuItem value={"Conference"}>Conference</MenuItem>
+                  <MenuItem value={"Workshop"}>Workshop</MenuItem>
+                  <MenuItem value={"Seminar"}>Seminar</MenuItem>
+                  <MenuItem value={"Webinar"}>Webinar</MenuItem>
+                </Select>
+              </FormControl>
+            </Box>
+          </ThemeProvider>
+          <ThemeProvider theme={customTheme}>
+            <Box sx={{ minWidth: 150 }}>
+              <FormControl fullWidth>
+                <InputLabel id="category-select-label">Any Category</InputLabel>
+                <Select
+                  labelId="category-select-label"
+                  id="category-select"
+                  value={category}
+                  onChange={handleCategoryChange}
+                  label="Category"
+                >
+                  <MenuItem value={"Tech"}>Tech</MenuItem>
+                  <MenuItem value={"Business"}>Business</MenuItem>
+                  <MenuItem value={"Education"}>Education</MenuItem>
+                  <MenuItem value={"Health"}>Health</MenuItem>
+                </Select>
+              </FormControl>
+            </Box>
+          </ThemeProvider>
         </div>
       </div>
-      <div className="relative w-full mt-10 flex items-center mb-10">
-        <div className="text-[#242565] text-left font-dmSansBold text-[40px] font-bold absolute left-[80px]  ">
-          Danh sách mua hàng
-        </div>
-      </div>
-      <div className="flex justify-center  mx-auto p-4">
-        <table className="w-4/5 divide-y divide-gray-200">
+      <div className="container mx-auto p-4">
+        <table className="min-w-full divide-y divide-gray-200">
           <thead className="bg-gray-50">
             <tr>
-              <th className="py-2 px-4 border border-gray-200 text-center">
-                <input type="checkbox" />
-              </th>
-              <th className="py-2 px-4 border border-gray-200 text-center">
-                STT
-              </th>
-              <th className="py-2 px-4 border border-gray-200 text-center">
-                Tên khách hàng
-              </th>
-              <th className="py-2 px-4 border border-gray-200 text-center">
-                Số điện thoại
-              </th>
-              <th className="py-2 px-4 border border-gray-200 text-center">
-                Tên Shop
-              </th>
-              <th className="py-2 px-4 border border-gray-200 text-center">
-                Thời gian
-              </th>
-              <th className="py-2 px-4 border border-gray-200 text-center">
-                Tổng (VNĐ)
-              </th>
+              <th className="py-2 px-4 border border-gray-200">No</th>
+              <th className="py-2 px-4 border border-gray-200">Username</th>
+              <th className="py-2 px-4 border border-gray-200">Password</th>
+              <th className="py-2 px-4 border border-gray-200">Name</th>
+              <th className="py-2 px-4 border border-gray-200">Role</th>
+              <th className="py-2 px-4 border border-gray-200">Status</th>
+              <th className="py-2 px-4 border border-gray-200">Action</th>
             </tr>
           </thead>
-          <tbody className="bg-white divide-y divide-gray-200 ">
+          <tbody className="bg-white divide-y divide-gray-200">
             {data.map((row) => (
-              <tr key={row.id} className="text-center">
+              <tr key={row.no} className="text-center">
+                <td className="py-2 px-4 border border-gray-200">{row.no}</td>
                 <td className="py-2 px-4 border border-gray-200">
-                  <input type="checkbox" />
+                  {row.username}
                 </td>
-                <td className="py-2 px-4 border border-gray-200">{row.id}</td>
+                <td className="py-2 px-4 border border-gray-200">****</td>
+                <td className="py-2 px-4 border border-gray-200">{row.name}</td>
+                <td className="py-2 px-4 border border-gray-200">{row.role}</td>
                 <td className="py-2 px-4 border border-gray-200">
-                  <span className="bg-gray-100 text-[#242565] px-2 py-1 rounded-full">
-                    {row.username}
+                  <span
+                    className={
+                      row.status === "Active"
+                        ? "text-green-500"
+                        : "text-red-500"
+                    }
+                  >
+                    {row.status}
                   </span>
                 </td>
                 <td className="py-2 px-4 border border-gray-200">
-                  <span className="bg-green-500 text-white px-2 py-1 rounded-full">
-                    {row.number}
-                  </span>
-                </td>
-                <td className="py-2 px-4 border border-gray-200">
-                  <span className="bg-gray-100 text-[#242565] px-2 py-1 rounded-full">
-                    {row.shopId}
-                  </span>
-                </td>
-                <td className="py-2 px-4 border border-gray-200">{row.time}</td>
-                <td className="py-2 px-4 border border-gray-200">
-                  {row.total.toLocaleString("vi-VN", {
-                    style: "currency",
-                    currency: "VND",
-                  })}
+                  <a href="#" className="text-blue-500">
+                    View
+                  </a>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-
       {showForm && (
         <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50">
           <div className="bg-white p-6 rounded-lg shadow-lg w-1/3">
@@ -486,27 +476,6 @@ const ListOrders = () => {
           </div>
         </div>
       )}
-      <Footer />
     </div>
   );
-};
-const CreateEventSection = ({ onCreateEventClick }) => {
-  return (
-    <div className="flex justify-center items-center bg-[#C5E3FF] p-10 mt-10 space-x-10">
-      <img className="h-64 w-80" src={a_1} alt="People sitting on a sofa" />
-      <div>
-        <h2 className="text-4xl font-bold font-DmSans text-gray-900 mb-4">
-          Danh sách mua hàng
-        </h2>
-
-        {/* <button
-          className="bg-[#000080] text-white font-bold py-2 px-4 w-[182px] h-[60px] text-[16px] cursor-pointer rounded-full shadow-[0_10px_50px_rgba(61,55,241,0.25)] font-DmSans"
-          onClick={onCreateEventClick}
-        >
-          Create Shop
-        </button> */}
-      </div>
-    </div>
-  );
-};
-export default ListOrders;
+}
