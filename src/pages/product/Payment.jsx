@@ -381,11 +381,11 @@ const PaymentOrder = () => {
               <div className="border-b border-gray-300 mb-4"></div>
               <div className="flex justify-between mb-4">
                 <p>3 sản phẩm</p>
-                <p> 119.000 VNĐ </p>
+                <p> 30.000 VNĐ </p>
               </div>
               <div className="flex justify-between mb-4">
                 <p>Tổng cộng</p>
-                <p> 119.000 VNĐ </p>
+                <p> 30.000 VNĐ </p>
               </div>
               <div className="flex justify-between mb-4">
                 <button

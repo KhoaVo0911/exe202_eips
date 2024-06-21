@@ -31,8 +31,8 @@ const rows = [
     status: "Hoạt động",
     quantity: 50,
     phone: "123-456-7890",
-    expectedSales: 5000000, // đã chuyển đổi từ 50000 thành 50 triệu
-    totalAmount: 35000000, // đã chuyển đổi từ 35000 thành 35 triệu
+    expectedSales: 2000000, // đã chuyển đổi từ 50000 thành 50 triệu
+    totalAmount: 5000000, // đã chuyển đổi từ 35000 thành 35 triệu
   },
   {
     id: 2,
@@ -40,8 +40,8 @@ const rows = [
     status: "Hoạt động",
     quantity: 70,
     phone: "234-567-8901",
-    expectedSales: 6000000, // đã chuyển đổi từ 60000 thành 60 triệu
-    totalAmount: 42000000, // đã chuyển đổi từ 42000 thành 42 triệu
+    expectedSales: 3000000, // đã chuyển đổi từ 60000 thành 60 triệu
+    totalAmount: 4000000, // đã chuyển đổi từ 42000 thành 42 triệu
   },
   {
     id: 3,
@@ -49,8 +49,8 @@ const rows = [
     status: "Tạm ngừng",
     quantity: 30,
     phone: "345-678-9012",
-    expectedSales: 300000, // đã chuyển đổi từ 30000 thành 30 triệu
-    totalAmount: 4500000, // đã chuyển đổi từ 45000 thành 45 triệu
+    expectedSales: 150000, // đã chuyển đổi từ 30000 thành 30 triệu
+    totalAmount: 2200000, // đã chuyển đổi từ 45000 thành 45 triệu
   },
   {
     id: 4,
@@ -58,8 +58,8 @@ const rows = [
     status: "Hoạt động",
     quantity: 40,
     phone: "456-789-0123",
-    expectedSales: 400000, // đã chuyển đổi từ 40000 thành 40 triệu
-    totalAmount: 16000000, // đã chuyển đổi từ 16000 thành 16 triệu
+    expectedSales: 180000, // đã chuyển đổi từ 40000 thành 40 triệu
+    totalAmount: 2000000, // đã chuyển đổi từ 16000 thành 16 triệu
   },
   {
     id: 5,
@@ -67,8 +67,8 @@ const rows = [
     status: "Tạm ngừng",
     quantity: 20,
     phone: "567-890-1234",
-    expectedSales: 2000000, // đã chuyển đổi từ 20000 thành 20 triệu
-    totalAmount: 0, // totalAmount đã là 0 triệu nên không cần thay đổi
+    expectedSales: 1200000, // đã chuyển đổi từ 20000 thành 20 triệu
+    totalAmount: 1800000, // totalAmount đã là 0 triệu nên không cần thay đổi
   },
   {
     id: 6,
@@ -77,7 +77,7 @@ const rows = [
     quantity: 100,
     phone: "678-901-2345",
     expectedSales: 1000000, // đã chuyển đổi từ 100000 thành 100 triệu
-    totalAmount: 15000000, // đã chuyển đổi từ 150000 thành 150 triệu
+    totalAmount: 1500000, // đã chuyển đổi từ 150000 thành 150 triệu
   },
   {
     id: 7,
@@ -85,7 +85,7 @@ const rows = [
     status: "Hoạt động",
     quantity: 200,
     phone: "789-012-3456",
-    expectedSales: 2000000, // đã chuyển đổi từ 200000 thành 200 triệu
+    expectedSales: 1100000, // đã chuyển đổi từ 200000 thành 200 triệu
     totalAmount: 4400000, // đã chuyển đổi từ 4400000 thành 4400 triệu
   },
   {
@@ -94,8 +94,8 @@ const rows = [
     status: "Hoạt động",
     quantity: 60,
     phone: "890-123-4567",
-    expectedSales: 6000000, // đã chuyển đổi từ 60000 thành 60 triệu
-    totalAmount: 3600000, // đã chuyển đổi từ 36000 thành 36 triệu
+    expectedSales: 210000, // đã chuyển đổi từ 60000 thành 60 triệu
+    totalAmount: 360000, // đã chuyển đổi từ 36000 thành 36 triệu
   },
   {
     id: 9,
@@ -103,8 +103,8 @@ const rows = [
     status: "Tạm ngừng",
     quantity: 10,
     phone: "901-234-5678",
-    expectedSales: 1000000, // đã chuyển đổi từ 10000 thành 10 triệu
-    totalAmount: 65000000, // đã chuyển đổi từ 65000 thành 65 triệu
+    expectedSales: 550000, // đã chuyển đổi từ 10000 thành 10 triệu
+    totalAmount: 650000, // đã chuyển đổi từ 65000 thành 65 triệu
   },
 ];
 

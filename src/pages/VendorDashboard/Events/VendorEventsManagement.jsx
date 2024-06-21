@@ -69,7 +69,7 @@ export default function EventsManagement() {
   return (
     <div>
       <div className="flex justify-between">
-        <h1 className="text-2xl mb-4 text-start font-bold">Quản lí Sự kiện</h1>
+        <h1 className="text-2xl mb-4 text-start font-bold">Sự kiện tham gia</h1>
         <CreateEventSection onCreateEventClick={handleCreateEventClick} />
       </div>
       <div className="">

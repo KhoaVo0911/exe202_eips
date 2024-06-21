@@ -178,7 +178,7 @@ export default function Navbar() {
     },
     {
       title: "CÀI ĐẶT",
-      subItems: [{ name: "Host Dashboard", url: "/dashboard" }],
+      subItems: [{ name: "Vendor Dashboard", url: "/VendorDash" }],
     },
   ];
 
