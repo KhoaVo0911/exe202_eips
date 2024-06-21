@@ -80,6 +80,7 @@ import Login from "./pages/login/login";
 import Shop from "./admin/home/Shop/Shop";
 
 import { CartProvider } from "./pages/product/CartContext";
+import DashboardVendor from "./pages/VendorDashboard/VendorDashboard";
 
 function App() {
   return (
@@ -98,6 +99,7 @@ function App() {
           <Route path="/ListCards" element={<ListCards />} />
           <Route path="/ListOrders" element={<ListOrders />} />
           <Route path="/Dashboard" element={<Dashboard />} />
+          <Route path="/VendorDash" element={<DashboardVendor />} />
           <Route path="/Product" element={<Product />} />
           <Route path="/Payment" element={<Payment />} />
           <Route path="/Create" element={<Create />} />

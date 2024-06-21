@@ -76,15 +76,13 @@ const CartProduct = () => {
       <div className="header ">
         <Navbar />
         <div className="flex flex-row py-4 justify-between relative">
-        <div className="h-bot flex flex-col items-start px-20">
+          <div className="h-bot flex flex-col items-start px-20">
             <h1>
               <span className="h-title">
                 <p
                   style={{ fontFamily: "Poppins, sans-serif" }}
                 >{`CHÀO MỪNG ĐẾN VỚI `}</p>
-                <p className="mt-1" >
-                  FEV - SHOP
-                </p>
+                <p className="mt-1">FEV - SHOP</p>
               </span>
             </h1>
             <h3
@@ -150,7 +148,7 @@ const CartProduct = () => {
         <div className="flex justify-end text-xl text-[#00AEFF] font-bold   pr-36 pb-20">
           <h3>TỔNG DOANH THU: 119.000 VND</h3>
         </div>
-        <div className="table-container flex justify-center ">
+        <div className="table-container flex justify-center text-center ">
           <table className="product-table ">
             <thead>
               <tr>
