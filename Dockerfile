@@ -5,10 +5,10 @@ ENV TZ='Asia/Saigon'
 
 # Output file
 WORKDIR /react_app
-COPY . /react_app
+COPY ./package*.json ./
+RUN npm ci
 
-RUN npm ci 
-RUN npm run build
+COPY . /react_app
 
 ENTRYPOINT [ "npm", "run", "start" ]
 
