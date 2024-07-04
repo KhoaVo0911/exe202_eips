@@ -45,7 +45,7 @@ const Homepage = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-      {/* <CardList
+      {/* <CardList />
       <Shop /> */}
       <SearchBar />
       {/* <Footer /> */}

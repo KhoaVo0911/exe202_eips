@@ -107,7 +107,7 @@ const listshop = [
     id: 1,
     image: shop1,
     title: "FPTU EVENT CLUB - THE WAY WE WENT",
-    description: "Câu Lạc Bộ Tổ Chức Sự Kiện Trường Đại Học FPT - FEV",
+    description: "FPTU EVENT CLUB - THE WAY WE WENT",
   },
   {
     id: 2,
@@ -119,13 +119,15 @@ const listshop = [
     id: 3,
     image: shop3,
     title: "CỘNG ĐỒNG SINH VIÊN TÌNH NGUYỆN SITIGROUP",
-    description: "Cộng Đồng Sinh Viên Tình Nguyện SITIGROUP - Keep loving by sharing",
+    description:
+      "Cộng Đồng Sinh Viên Tình Nguyện SITIGROUP - Keep loving by sharing",
   },
   {
     id: 4,
     image: shop4,
     title: "MEC - MULTIMEDIA & ENTERTAINMENT CLUB",
-    description: "Sân Chơi Bổ Ích Và Môi Trường Trải Nghiệm Cho Sinh Viên Ngành MC & GD",
+    description:
+      "Sân Chơi Bổ Ích Và Môi Trường Trải Nghiệm Cho Sinh Viên Ngành MC & GD",
   },
   {
     id: 5,

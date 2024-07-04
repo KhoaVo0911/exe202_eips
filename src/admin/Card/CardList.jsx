@@ -69,7 +69,7 @@ const data = [
   {
     id: 3,
     image: sk3,
-    title: "HALLOWEEN 2023: MỘNG ĐỊA I CÕI ÂM",
+    title: "HALLOWEEN 2023: MỘNnpG ĐỊA I CÕI ÂM",
     description:
       "Cơn ác mộng đêm nay, bóng ma đầy ẩn số. Nắm bạn trẻ trở mình, vén lớp bí ẩn khởi.",
     startdate: "OCT 31",

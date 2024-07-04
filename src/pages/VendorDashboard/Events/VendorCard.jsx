@@ -3,7 +3,7 @@ import "./Card.scss"; // Import the CSS file for styling
 
 const Card = ({ image, title, description, startdate, onViewClick }) => {
   return (
-    <div className="card-item">
+    <div className="card-item" onClick={onViewClick}>
       <div className="card-item-img-container">
         <img className="card-item-image" src={image} alt={title} />
       </div>
@@ -15,9 +15,6 @@ const Card = ({ image, title, description, startdate, onViewClick }) => {
           </div>
         </div>
         <div className="card-item-desc">
-          <button className="card-item-button" onClick={onViewClick}>
-            VIEW
-          </button>
           <p>{description}</p>
         </div>
       </div>

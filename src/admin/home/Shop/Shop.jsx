@@ -285,7 +285,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import slider from "../../../assets/images/slider.png";
-import Navbar from "../../Navbar";
+// import Navbar from "../../Navbar";
 import Footer from "../../../components/Footer";
 import a_1 from "../../../assets/images/a_1.png";
 import "react-datepicker/dist/react-datepicker.css";
@@ -329,8 +329,8 @@ const Shop = () => {
 
   return (
     <div className="">
-      <Navbar />
-      <div className="slider-container">
+      {/* <Navbar /> */}
+      {/* <div className="slider-container">
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={50}
@@ -368,7 +368,7 @@ const Shop = () => {
             </div>
           </SwiperSlide>
         </Swiper>
-      </div>
+      </div> */}
       <CreateShopSection onCreateShopClick={handleCreateShopClick} />
       <div className="w-full mt-10 flex justify-center   mb-10">
         <div className="text-[#242565] text-center font-dmSansBold text-[40px] font-bold ">
