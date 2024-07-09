@@ -5,8 +5,8 @@ import Pizza from "../../assets/images/Pizza.png";
 import noodle from "../../assets/images/noodle.png";
 import nuggets from "../../assets/images/nuggets.png";
 import tiramisu from "../../assets/images/tiramisu.png";
-import combo from "../../assets/images/combo.png";
-import Footer from "../Footer";
+import gimbap from "../../assets/images/gimbap.png";
+import Footer from "../../components/Footer";
 import Logo from "../../assets/images/esms 4.png";
 import LogoutIcon from "@mui/icons-material/Logout";
 import PersonIcon from "@mui/icons-material/Person";
@@ -23,7 +23,7 @@ const products = [
       "Made with San Marzano tomatoes, mozzarella cheese, and fresh basil.",
     price: "49.000 VND",
     image: Pizza,
-    category: "Food",
+    category: "Thực phẩm",
   },
   {
     id: 2,
@@ -31,23 +31,23 @@ const products = [
     description: "The Origin of Coca-Cola",
     price: "15.000 VND",
     image: Coca,
-    category: "Food",
+    category: "Nước giải khát",
   },
   {
     id: 3,
     name: "Chicken Nuggets",
-    description: "Fast Food",
+    description: "Fast Thực phẩm",
     price: "39.000 VND",
     image: nuggets,
-    category: "Food",
+    category: "Thực phẩm",
   },
   {
     id: 4,
     name: "Noodle",
-    description: "A food in the form of long",
+    description: "A Thực phẩm in the form of long",
     price: "29.000 VND",
     image: noodle,
-    category: "Food",
+    category: "Thực phẩm",
   },
   {
     id: 5,
@@ -55,15 +55,15 @@ const products = [
     description: "Where flavors create a harmonious symphony",
     price: "19.000 VND",
     image: tiramisu,
-    category: "Food",
+    category: "Thực phẩm",
   },
   {
     id: 6,
-    name: "Combo A",
+    name: "Gimbap",
     description: "1 Pizza + 1 Coca Cola",
     price: "45.000 VND",
-    image: combo,
-    category: "combo",
+    image: gimbap,
+    category: "Thực phẩm",
   },
 ];
 
@@ -74,54 +74,29 @@ const CartProduct = () => {
   return (
     <div>
       <div className="header ">
-        {/* <div className="navbar flex flex-row justify-between items-center px-20 py-4">
-          <div
-            className="nav-logo flex flex-row items-center gap-x-4"
-            style={{ width: "100px" }}
-          >
-            <img className="object-cover" loading="lazy" alt="" src={Logo} />
-          </div>
-
-          <div
-            className="flex flex-row justify-between items-center gap-x-10 h-menu"
-            style={{ fontFamily: "Fira Sans", fontSize: "20px" }}
-          >
-            <a href="#">
-              <button className="font-semibold">Product</button>
-            </a>
-            <a href="#">
-              <button className="font-semibold">Shop Order</button>
-            </a>
-            <a href="#">
-              <button className="font-semibold">Order</button>
-            </a>
-            <a href="#">
-              <button className="font-semibold">Setting</button>
-            </a>
-            <LogoutIcon />
-            <PersonIcon />
-          </div>
-        </div> */}
         <Navbar />
         <div className="flex flex-row py-4 justify-between relative">
-          <div className="h-bot flex flex-row items-center px-20 ">
-            <h1 className="">
+          <div className="h-bot flex flex-col items-start px-20">
+            <h1>
               <span className="h-title">
-                <p className="">{`Welcome to `}</p>
-                <p className="">FEV - SHOP</p>
+                <p
+                  style={{ fontFamily: "Poppins, sans-serif" }}
+                >{`CHÀO MỪNG ĐẾN VỚI `}</p>
+                <p className="mt-1">FEV - SHOP</p>
               </span>
             </h1>
-            <h3 className="h-content">Time to enjoy our delicious food.</h3>
-            <a href="/ListOrdered">
-              <button
-                className="bg-[#0adc5d] hover:bg-[#40b36e] text-white py-5 px-10 rounded-full tracking-widest"
-                style={{ fontSize: "24px" }}
-              >
-                <b>LIST ORDERED</b>
-              </button>
-            </a>
-            <button className="">
-              <div className="order-now">ORDER NOW</div>
+            <h3
+              className="h-content mt-3"
+              style={{ fontFamily: "Poppins, sans-serif" }}
+            >
+              Vị ngon trên từng hương vị.
+            </h3>
+            <button
+              className="bg-[#00AEFF] text-white py-5 px-10 rounded-full tracking-widest mt-8"
+              style={{ fontSize: "24px", marginRight: "475px" }}
+            >
+              <b>TẠO ĐƠN HÀNG</b>
+
             </button>
           </div>
           <div className="flex relative">
@@ -141,7 +116,7 @@ const CartProduct = () => {
           <div className="product-list ">
             <div className="flex justify-between w-full">
               <h3 className="mb-4 text-2xl font-bold product-name ">
-                PRODUCT SOLD
+                SẢN PHẨM ĐÃ BÁN
               </h3>
 
               <div className="w-ful ">
@@ -152,7 +127,7 @@ const CartProduct = () => {
                     startDate={startDate}
                     endDate={endDate}
                     onChange={(date) => setStartDate(date)}
-                    placeholderText="Select start date"
+                    placeholderText="Chọn ngày bắt đầu"
                     className="custom-date-picker z-50"
                   />
                   <DatePicker
@@ -162,7 +137,7 @@ const CartProduct = () => {
                     endDate={endDate}
                     onChange={(date) => setEndDate(date)}
                     minDate={startDate}
-                    placeholderText="Select end date"
+                    placeholderText="Chọn ngày kết thúc"
                     className="custom-date-picker z-50"
                   />
                 </div>
@@ -171,10 +146,10 @@ const CartProduct = () => {
           </div>
         </div>
 
-        <div className="flex justify-end text-xl text-[#0adc5d] font-bold   pr-36 pb-20">
-          <h3>TOTAL REVENUE: 119.000 VND</h3>
+        <div className="flex justify-end text-xl text-[#00AEFF] font-bold   pr-36 pb-20">
+          <h3>TỔNG DOANH THU: 119.000 VND</h3>
         </div>
-        <div className="table-container flex justify-center ">
+        <div className="table-container flex justify-center text-center ">
           <table className="product-table ">
             <thead>
               <tr>
@@ -182,11 +157,11 @@ const CartProduct = () => {
                   <input type="checkbox" />
                 </th>
                 <th>STT</th>
-                <th>Product Name</th>
-                <th>Image</th>
-                <th>Description</th>
-                <th>Category</th>
-                <th>Quantity</th>
+                <th>Tên sản phẩm</th>
+                <th>Hình ảnh</th>
+                <th>Thông tin chi tiết</th>
+                <th className="centered-column">Loại sản phẩm</th>
+                <th>Số lượng</th>
               </tr>
             </thead>
             <tbody>
@@ -201,7 +176,7 @@ const CartProduct = () => {
                     <img src={product.image} alt={product.name} />
                   </td>
                   <td>{product.description}</td>
-                  <td>{product.category}</td>
+                  <td className="centered-column">{product.category}</td>
                   <td>{product.quantity}</td>
                 </tr>
               ))}

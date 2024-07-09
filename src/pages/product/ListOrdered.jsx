@@ -5,8 +5,8 @@ import Pizza from "../../assets/images/Pizza.png";
 import noodle from "../../assets/images/noodle.png";
 import nuggets from "../../assets/images/nuggets.png";
 import tiramisu from "../../assets/images/tiramisu.png";
-import combo from "../../assets/images/combo.png";
-import Footer from "../Footer";
+import gimbap from "../../assets/images/gimbap.png";
+import Footer from "../../components/Footer";
 import Logo from "../../assets/images/esms 4.png";
 import LogoutIcon from "@mui/icons-material/Logout";
 import PersonIcon from "@mui/icons-material/Person";
@@ -60,11 +60,11 @@ const products = [
   },
   {
     id: 6,
-    name: "Combo A",
+    name: "Gimbap",
     description: "1 Pizza + 1 Coca Cola",
     price: "45.000 VND",
-    image: combo,
-    category: "combo",
+    image: gimbap,
+    category: "Food",
   },
 ];
 
@@ -79,22 +79,26 @@ const ListOrdered = () => {
       <div className="header ">
         <Navbar />
         <div className="flex flex-row py-4 justify-between relative">
-          <div className="h-bot flex flex-row items-center px-20 ">
-            <h1 className="">
+          <div className="h-bot flex flex-col items-start px-20">
+            <h1>
               <span className="h-title">
-                <p className="">{`Welcome to `}</p>
-                <p className="">FEV - SHOP</p>
+                <p
+                  style={{ fontFamily: "Poppins, sans-serif" }}
+                >{`CHÀO MỪNG ĐẾN VỚI `}</p>
+                <p className="mt-1">FEV - SHOP</p>
               </span>
             </h1>
-            <h3 className="h-content">Time to enjoy our delicious food.</h3>
-            <button className="">
-              <div className="order-now">ORDER NOW</div>
-            </button>
-            <button
-              className="bg-[#0adc5d] hover:bg-[#40b36e] text-white py-5 px-10 rounded-full tracking-widest"
-              style={{ fontSize: "24px" }}
+            <h3
+              className="h-content mt-3"
+              style={{ fontFamily: "Poppins, sans-serif" }}
             >
-              <b>ORDER NOW</b>
+              Vị ngon trên từng hương vị.
+            </h3>
+            <button
+              className="bg-[#00AEFF] text-white py-5 px-10 rounded-full tracking-widest mt-8"
+              style={{ fontSize: "24px", marginRight: "475px" }}
+            >
+              <b>TẠO ĐƠN HÀNG</b>
             </button>
           </div>
           <div className="flex relative">
@@ -114,7 +118,7 @@ const ListOrdered = () => {
           <div className="product-list ">
             <div className="flex justify-between w-full">
               <h3 className="mb-4 text-2xl font-bold product-name ">
-                List Order
+                Danh sách mua hàng
               </h3>
             </div>
           </div>
@@ -128,11 +132,11 @@ const ListOrdered = () => {
                   <input type="checkbox" />
                 </th>
                 <th>STT</th>
-                <th>Product Name</th>
-                <th>Image</th>
-                <th>Description</th>
-                <th>Category</th>
-                <th>Action</th>
+                <th>Tên sản phẩm</th>
+                <th>Hình ảnh</th>
+                <th>Thông tin chi tiết</th>
+                <th>Loại sản phẩm</th>
+                <th className="centered-column">Mở rộng</th>
               </tr>
             </thead>
             <tbody>
@@ -144,12 +148,21 @@ const ListOrdered = () => {
                   <td>{product.id}</td>
                   <td>{product.name}</td>
                   <td>
-                    <img src={product.image} alt={product.name} />
+                    <img
+                      className="centered-column"
+                      src={product.image}
+                      alt={product.name}
+                    />
                   </td>
                   <td>{product.description}</td>
                   <td>{product.category}</td>
                   <td>
-                    <button onClick={handleCreateProductClick}>View</button>
+                    <button
+                      onClick={handleCreateProductClick}
+                      className="centered-column"
+                    >
+                      View
+                    </button>
                   </td>
 
                   {/* Nút View */}
@@ -175,7 +188,7 @@ const ListOrdered = () => {
                       <th>Image</th>
                       <th>Description</th>
                       <th>Category</th>
-                      <th>Action</th>
+                      {/* <th>Action</th> */}
                     </tr>
                   </thead>
                   <tbody>
@@ -191,11 +204,11 @@ const ListOrdered = () => {
                         </td>
                         <td>{product.description}</td>
                         <td>{product.category}</td>
-                        <td>
+                        {/* <td>
                           <button onClick={handleCreateProductClick}>
                             View
                           </button>
-                        </td>
+                        </td> */}
 
                         {/* Nút View */}
                       </tr>

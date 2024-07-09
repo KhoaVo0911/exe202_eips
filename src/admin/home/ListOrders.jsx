@@ -8,7 +8,7 @@ import "./Homepage.scss";
 import slider from "../../assets/images/slider.png";
 import Navbar from "../Navbar";
 import SearchBar from "../Search";
-import Footer from "../../pages/Footer";
+import Footer from "../../components/Footer";
 import a_1 from "../../assets/images/a_1.png";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -26,100 +26,112 @@ const ListOrders = () => {
   const data = [
     {
       id: 1,
-      idNumber: "001",
+      username: "Nguyen Van A",
       cardId: "1234",
-      shopId: "5678",
+      shopId: "FEV-Shop",
       time: "20/05/2024",
       total: 5000000,
+      number: "0123456454",
     },
     {
       id: 2,
-      idNumber: "002",
+      username: "Nguyen Van A",
       cardId: "5678",
-      shopId: "9101",
+      shopId: "FEV-Shop",
       time: "21/05/2024",
       total: 1500000,
+      number: "0123456454",
     },
     {
       id: 3,
-      idNumber: "003",
+      username: "Nguyen Van A",
       cardId: "9101",
-      shopId: "1121",
+      shopId: "FEV-Shop",
       time: "22/05/2024",
       total: 2500000,
+      number: "0123456454",
     },
     // Thêm các hàng khác tương tự
     {
       id: 4,
-      idNumber: "004",
-      cardId: "1121",
-      shopId: "3141",
+      username: "Nguyen Van A",
+      cardId: "1222",
+      shopId: "FEV-Shop",
       time: "23/05/2024",
       total: 3500000,
+      number: "0123456454",
     },
     {
       id: 5,
-      idNumber: "005",
+      username: "Nguyen Van A",
       cardId: "3141",
-      shopId: "5161",
+      shopId: "FEV-Shop",
       time: "24/05/2024",
       total: 4500000,
+      number: "0123456454",
     },
     {
       id: 6,
-      idNumber: "006",
-      cardId: "5161",
-      shopId: "7181",
+      username: "Nguyen Van A",
+      cardId: "1231",
+      shopId: "FEV-Shop",
       time: "25/05/2024",
       total: 5500000,
+      number: "0123456454",
     },
     {
       id: 7,
-      idNumber: "007",
+      username: "Nguyen Van A",
       cardId: "7181",
-      shopId: "9202",
+      shopId: "FEV-Shop",
       time: "26/05/2024",
       total: 6500000,
+      number: "0123456454",
     },
     {
       id: 8,
-      idNumber: "008",
-      cardId: "9202",
-      shopId: "2232",
+      username: "Nguyen Van A",
+      cardId: "2133",
+      shopId: "FEV-Shop",
       time: "27/05/2024",
       total: 7500000,
+      number: "0123456454",
     },
     {
       id: 9,
-      idNumber: "009",
+      username: "Nguyen Van A",
       cardId: "2232",
-      shopId: "4252",
+      shopId: "FEV-Shop",
       time: "28/05/2024",
       total: 8500000,
+      number: "0123456454",
     },
     {
       id: 10,
-      idNumber: "010",
-      cardId: "4252",
-      shopId: "6272",
+      username: "Nguyen Van A",
+      cardId: "1221",
+      shopId: "FEV-Shop",
       time: "29/05/2024",
       total: 9500000,
+      number: "0123456454",
     },
     {
       id: 11,
-      idNumber: "011",
+      username: "Nguyen Van A",
       cardId: "6272",
-      shopId: "8292",
+      shopId: "FEV-Shop",
       time: "30/05/2024",
       total: 10500000,
+      number: "0123456454",
     },
     {
       id: 12,
-      idNumber: "012",
+      username: "Nguyen Van A",
       cardId: "8292",
-      shopId: "0314",
+      shopId: "FEV-Shop",
       time: "31/05/2024",
       total: 11500000,
+      number: "0123456454",
     },
   ];
 
@@ -283,17 +295,17 @@ const ListOrders = () => {
                     <strong>ID:</strong> 1
                   </p>
                   <p>
-                    <strong>Area:</strong> FPT Floor 2
+                    <strong>Khu vực:</strong> FPT Floor 2
                   </p>
                   <p>
-                    <strong>Description:</strong> Mừng tết đến xuân về trên đại
-                    học FPT
+                    <strong>Thông tin chi tiết:</strong> Mừng tết đến xuân về
+                    trên đại học FPT
                   </p>
                   <p>
-                    <strong>Begin Date:</strong> 20/01/2024
+                    <strong>Ngày bắt đầu:</strong> 20/01/2024
                   </p>
                   <p>
-                    <strong>End Date:</strong> 20/01/2024
+                    <strong>Ngày kết thúc:</strong> 20/01/2024
                   </p>
                 </div>
               </div>
@@ -304,14 +316,14 @@ const ListOrders = () => {
       <CreateEventSection onCreateEventClick={handleCreateEventClick} />
       <div className=" bg-slate-100 p-10 mt-10">
         <div className="flex space-x-10 ml-10 font-bold">
-          <a href="/ListShop">SHOP</a>
-          <a href="/ListCards">CARD</a>
-          <a href="/ListOrders">ORDER</a>
+          <a href="/ListShop">CỬA HÀNG</a>
+          <a href="/ListCards">THẺ</a>
+          <a href="/ListOrders">ĐẶT HÀNG</a>
         </div>
       </div>
       <div className="relative w-full mt-10 flex items-center mb-10">
         <div className="text-[#242565] text-left font-dmSansBold text-[40px] font-bold absolute left-[80px]  ">
-          List Order
+          Danh sách mua hàng
         </div>
       </div>
       <div className="flex justify-center  mx-auto p-4">
@@ -322,22 +334,22 @@ const ListOrders = () => {
                 <input type="checkbox" />
               </th>
               <th className="py-2 px-4 border border-gray-200 text-center">
-                #
+                STT
               </th>
               <th className="py-2 px-4 border border-gray-200 text-center">
-                ID Number
+                Tên khách hàng
               </th>
               <th className="py-2 px-4 border border-gray-200 text-center">
-                Card ID
+                Số điện thoại
               </th>
               <th className="py-2 px-4 border border-gray-200 text-center">
-                Shop ID
+                Tên Shop
               </th>
               <th className="py-2 px-4 border border-gray-200 text-center">
-                Time
+                Thời gian
               </th>
               <th className="py-2 px-4 border border-gray-200 text-center">
-                Total (VNĐ)
+                Tổng (VNĐ)
               </th>
             </tr>
           </thead>
@@ -350,12 +362,12 @@ const ListOrders = () => {
                 <td className="py-2 px-4 border border-gray-200">{row.id}</td>
                 <td className="py-2 px-4 border border-gray-200">
                   <span className="bg-gray-100 text-[#242565] px-2 py-1 rounded-full">
-                    {row.idNumber}
+                    {row.username}
                   </span>
                 </td>
                 <td className="py-2 px-4 border border-gray-200">
                   <span className="bg-green-500 text-white px-2 py-1 rounded-full">
-                    {row.cardId}
+                    {row.number}
                   </span>
                 </td>
                 <td className="py-2 px-4 border border-gray-200">
@@ -480,15 +492,13 @@ const ListOrders = () => {
 };
 const CreateEventSection = ({ onCreateEventClick }) => {
   return (
-    <div className="flex justify-center items-center bg-purple-100 p-10 mt-10 space-x-10">
+    <div className="flex justify-center items-center bg-[#C5E3FF] p-10 mt-10 space-x-10">
       <img className="h-64 w-80" src={a_1} alt="People sitting on a sofa" />
       <div>
         <h2 className="text-4xl font-bold font-DmSans text-gray-900 mb-4">
-          List Order
+          Danh sách mua hàng
         </h2>
-        <p className="text-xl text-gray-600 font-DmSans mb-6">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
+
         {/* <button
           className="bg-[#000080] text-white font-bold py-2 px-4 w-[182px] h-[60px] text-[16px] cursor-pointer rounded-full shadow-[0_10px_50px_rgba(61,55,241,0.25)] font-DmSans"
           onClick={onCreateEventClick}

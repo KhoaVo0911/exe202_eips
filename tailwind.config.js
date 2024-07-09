@@ -1,16 +1,24 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
+  ],
   theme: {
     extend: {
       backgroundImage: () => ({
         "login-background":
           "linear-gradient(rgba(0,0,0, 0.75), rgba(0,0,0, 0.75)), url('https://i.imgur.com/WErp8xb.jpeg')",
-        // 'user-background':
-        //   "linear-gradient(rgba(0,0,0, 0), rgba(0,0,0, 0)), url('https://vshare.amazingtech.vn/static/media/bg-body.85ea3fd6814234db8af1.jpg')",
       }),
       colors: {
+        "customHoverBg": '#d7f4e2',
         "custom-color": "#1d275f",
+        "brandPrimary": "#4CAF4F",
+        "neutralDGrey": "#4D4D4D",
+        "neutralGrey": "#717171",
+        "neutralSilver": "#F5F7FA",
+        "gray900": "#18191F",
+        "neutralBlack": "#263238",
       },
       fontFamily: {
         "dmsans-medium": ['"DmSans-Medium"', "sans-serif"],
@@ -28,5 +36,6 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin"),
+  ],
 };

@@ -8,7 +8,7 @@ import "./Homepage.scss";
 import slider from "../../assets/images/slider.png";
 import Navbar from "../Navbar";
 import SearchBar from "../Search";
-import Footer from "../../pages/Footer";
+import Footer from "../Footer";
 import a_1 from "../../assets/images/a_1.png";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -25,45 +25,41 @@ import CardList from "../Card/CardList";
 const ListShop = () => {
   const [startDate, setStartDate] = useState(null);
   const [place, setPlace] = useState("");
-  const [weekday, setWeekday] = useState("");
-  const [eventType, setEventType] = useState("");
+  const [shopType, setShopType] = useState("");
   const [category, setCategory] = useState("");
   const [showForm, setShowForm] = useState(false);
-  const [eventImage, setEventImage] = useState(null);
-  const [eventTitle, setEventTitle] = useState("");
-  const [eventDescription, setEventDescription] = useState("");
-  const [eventStartDate, setEventStartDate] = useState(null);
+  const [shopImage, setShopImage] = useState(null);
+  const [shopName, setShopName] = useState("");
+  const [shopDescription, setShopDescription] = useState("");
+  const [shopStartDate, setShopStartDate] = useState(null);
 
   const handlePlaceChange = (event) => {
     setPlace(event.target.value);
   };
 
-  const handleWeekdayChange = (event) => {
-    setWeekday(event.target.value);
-  };
-
-  const handleEventTypeChange = (event) => {
-    setEventType(event.target.value);
+  const handleShopTypeChange = (event) => {
+    setShopType(event.target.value);
   };
 
   const handleCategoryChange = (event) => {
     setCategory(event.target.value);
   };
 
-  const handleCreateEventClick = () => {
+  const handleCreateShopClick = () => {
     setShowForm(true);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Xử lý logic thêm sự kiện ở đây
+    // Handle logic for adding a shop here
     console.log("Form submitted!");
-    console.log("Event Image:", eventImage);
-    console.log("Event Title:", eventTitle);
-    console.log("Event Description:", eventDescription);
-    console.log("Event Start Date:", eventStartDate);
+    console.log("Shop Image:", shopImage);
+    console.log("Shop Name:", shopName);
+    console.log("Shop Description:", shopDescription);
+    console.log("Shop Start Date:", shopStartDate);
     setShowForm(false);
   };
+
   const defaultTheme = createTheme({
     components: {
       MuiSelect: {
@@ -201,8 +197,8 @@ const ListShop = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-      <CreateEventSection onCreateEventClick={handleCreateEventClick} />
-      <div className=" bg-slate-100 p-10 mt-10">
+      <CreateShopSection onCreateShopClick={handleCreateShopClick} />
+      <div className="bg-slate-100 p-10 mt-10">
         <div className="flex space-x-10 ml-10 font-bold">
           <a href="/ListShop">SHOP</a>
           <a href="/ListCards">CARD</a>
@@ -217,21 +213,18 @@ const ListShop = () => {
           <ThemeProvider theme={customTheme}>
             <Box sx={{ minWidth: 140 }}>
               <FormControl fullWidth>
-                <InputLabel id="weekday-select-label">Events</InputLabel>
+                <InputLabel id="shop-type-select-label">Shop Type</InputLabel>
                 <Select
-                  labelId="weekday-select-label"
-                  id="weekday-select"
-                  value={weekday}
-                  onChange={handleWeekdayChange}
-                  label="Weekdays"
+                  labelId="shop-type-select-label"
+                  id="shop-type-select"
+                  value={shopType}
+                  onChange={handleShopTypeChange}
+                  label="Shop Type"
                 >
-                  <MenuItem value={"Monday"}>Monday</MenuItem>
-                  <MenuItem value={"Tuesday"}>Tuesday</MenuItem>
-                  <MenuItem value={"Wednesday"}>Wednesday</MenuItem>
-                  <MenuItem value={"Thursday"}>Thursday</MenuItem>
-                  <MenuItem value={"Friday"}>Friday</MenuItem>
-                  <MenuItem value={"Saturday"}>Saturday</MenuItem>
-                  <MenuItem value={"Sunday"}>Sunday</MenuItem>
+                  <MenuItem value={"Clothing"}>Clothing</MenuItem>
+                  <MenuItem value={"Electronics"}>Electronics</MenuItem>
+                  <MenuItem value={"Food"}>Food</MenuItem>
+                  <MenuItem value={"Books"}>Books</MenuItem>
                 </Select>
               </FormControl>
             </Box>
@@ -239,26 +232,7 @@ const ListShop = () => {
           <ThemeProvider theme={customTheme}>
             <Box sx={{ minWidth: 150 }}>
               <FormControl fullWidth>
-                <InputLabel id="event-select-label">Area</InputLabel>
-                <Select
-                  labelId="event-select-label"
-                  id="event-select"
-                  value={eventType}
-                  onChange={handleEventTypeChange}
-                  label="Event Type"
-                >
-                  <MenuItem value={"Conference"}>Conference</MenuItem>
-                  <MenuItem value={"Workshop"}>Workshop</MenuItem>
-                  <MenuItem value={"Seminar"}>Seminar</MenuItem>
-                  <MenuItem value={"Webinar"}>Webinar</MenuItem>
-                </Select>
-              </FormControl>
-            </Box>
-          </ThemeProvider>
-          <ThemeProvider theme={customTheme}>
-            <Box sx={{ minWidth: 150 }}>
-              <FormControl fullWidth>
-                <InputLabel id="category-select-label">Any Category</InputLabel>
+                <InputLabel id="category-select-label">Category</InputLabel>
                 <Select
                   labelId="category-select-label"
                   id="category-select"
@@ -281,51 +255,51 @@ const ListShop = () => {
         <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50">
           <div className="bg-white p-6 rounded-lg shadow-lg w-1/3">
             <div className="p-6">
-              <h2 className="text-2xl font-semibold mb-4">Create Event</h2>
+              <h2 className="text-2xl font-semibold mb-4">Create Shop</h2>
               <form onSubmit={handleSubmit}>
                 <div className="mb-4 flex gap-5">
                   <label
-                    htmlFor="eventTitle"
+                    htmlFor="shopName"
                     className="flex items-center text-sm font-medium text-gray-700 w-1/4"
                   >
-                    Event Title
+                    Shop Name
                   </label>
                   <input
                     type="text"
-                    id="eventTitle"
-                    name="eventTitle"
-                    value={eventTitle}
-                    onChange={(e) => setEventTitle(e.target.value)}
+                    id="shopName"
+                    name="shopName"
+                    value={shopName}
+                    onChange={(e) => setShopName(e.target.value)}
                     className="mt-1 border border-gray-300 rounded-md w-full"
                     required
                   />
                 </div>
                 <div className="mb-4 flex gap-5">
                   <label
-                    htmlFor="eventDescription"
+                    htmlFor="shopDescription"
                     className="flex items-center text-sm font-medium text-gray-700 w-1/4"
                   >
-                    Event Description
+                    Shop Description
                   </label>
                   <textarea
-                    id="eventDescription"
-                    name="eventDescription"
-                    value={eventDescription}
-                    onChange={(e) => setEventDescription(e.target.value)}
+                    id="shopDescription"
+                    name="shopDescription"
+                    value={shopDescription}
+                    onChange={(e) => setShopDescription(e.target.value)}
                     className="mt-1 text-sm p-2 border border-gray-300 rounded-md w-full h-24 resize-none"
                     required
                   ></textarea>
                 </div>
                 <div className="mb-4 flex gap-5">
                   <label
-                    htmlFor="eventStartDate"
+                    htmlFor="shopStartDate"
                     className="flex items-center text-sm font-medium text-gray-700 w-1/4"
                   >
-                    Event Start Date
+                    Shop Start Date
                   </label>
                   <DatePicker
-                    selected={eventStartDate}
-                    onChange={(date) => setEventStartDate(date)}
+                    selected={shopStartDate}
+                    onChange={(date) => setShopStartDate(date)}
                     placeholderText="Select a date"
                     className="bg-transparent border-b border-[#000] text-black text-left font-DmSans font-bold text-[16px] w-full outline-none"
                     required
@@ -333,22 +307,22 @@ const ListShop = () => {
                 </div>
                 <div className="mb-4 flex gap-5">
                   <label
-                    htmlFor="eventImage"
+                    htmlFor="shopImage"
                     className="flex items-center text-sm font-medium text-gray-700 w-1/4"
                   >
-                    Event Image
+                    Shop Image
                   </label>
                   <input
                     type="file"
-                    id="eventImage"
-                    name="eventImage"
-                    onChange={(e) => setEventImage(e.target.files[0])}
+                    id="shopImage"
+                    name="shopImage"
+                    onChange={(e) => setShopImage(e.target.files[0])}
                     className="hidden"
                     accept="image/*"
                     required
                   />
                   <label
-                    htmlFor="eventImage"
+                    htmlFor="shopImage"
                     className="cursor-pointer p-2 border border-gray-300 rounded-md w-1/5"
                   >
                     <AddPhotoAlternateIcon />
@@ -379,7 +353,8 @@ const ListShop = () => {
     </div>
   );
 };
-const CreateEventSection = ({ onCreateEventClick }) => {
+
+const CreateShopSection = ({ onCreateShopClick }) => {
   return (
     <div className="flex justify-center items-center bg-purple-100 p-10 mt-10 space-x-10">
       <img className="h-64 w-80" src={a_1} alt="People sitting on a sofa" />
@@ -392,7 +367,7 @@ const CreateEventSection = ({ onCreateEventClick }) => {
         </p>
         <button
           className="bg-[#000080] text-white font-bold py-2 px-4 w-[182px] h-[60px] text-[16px] cursor-pointer rounded-full shadow-[0_10px_50px_rgba(61,55,241,0.25)] font-DmSans"
-          onClick={onCreateEventClick}
+          onClick={onCreateShopClick}
         >
           Create Shop
         </button>
@@ -400,4 +375,5 @@ const CreateEventSection = ({ onCreateEventClick }) => {
     </div>
   );
 };
+
 export default ListShop;

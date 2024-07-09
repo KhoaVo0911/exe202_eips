@@ -8,7 +8,7 @@ import "./Homepage.scss";
 import slider from "../../assets/images/slider.png";
 import Navbar from "../Navbar";
 import SearchBar from "../Search";
-import Footer from "../../pages/Footer";
+import Footer from "../../components/Footer";
 import a_1 from "../../assets/images/a_1.png";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -476,7 +476,7 @@ const ListCards = () => {
 };
 const CreateEventSection = ({ onCreateEventClick }) => {
   return (
-    <div className="flex justify-center items-center bg-purple-100 p-10 mt-10 space-x-10">
+    <div className="flex justify-center items-center bg-[#C5E3FF] p-10 mt-10 space-x-10">
       <img className="h-64 w-80" src={a_1} alt="People sitting on a sofa" />
       <div>
         <h2 className="text-4xl font-bold font-DmSans text-gray-900 mb-4">
@@ -487,13 +487,13 @@ const CreateEventSection = ({ onCreateEventClick }) => {
         </p>
         <div className="gap-5 flex">
           <button
-            className="bg-[#000080] text-white font-bold py-2 px-4 w-[182px] h-[60px] text-[16px] cursor-pointer rounded-full shadow-[0_10px_50px_rgba(61,55,241,0.25)] font-DmSans"
+            className="bg-[#4F4F4F] text-white font-bold py-2 px-4 w-[182px] h-[60px] text-[16px] cursor-pointer rounded-full shadow-[0_10px_50px_rgba(61,55,241,0.25)] font-DmSans"
             onClick={onCreateEventClick}
           >
             Create Card
           </button>
           <button
-            className="bg-[#000080] text-white font-bold py-2 px-4 w-[182px] h-[60px] text-[16px] cursor-pointer rounded-full shadow-[0_10px_50px_rgba(61,55,241,0.25)] font-DmSans"
+            className="bg-[#4F4F4F] text-white font-bold py-2 px-4 w-[182px] h-[60px] text-[16px] cursor-pointer rounded-full shadow-[0_10px_50px_rgba(61,55,241,0.25)] font-DmSans"
             onClick={onCreateEventClick}
           >
             Create 50 Cards
