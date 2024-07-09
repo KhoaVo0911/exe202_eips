@@ -96,6 +96,7 @@ const CartProduct = () => {
               style={{ fontSize: "24px", marginRight: "475px" }}
             >
               <b>TẠO ĐƠN HÀNG</b>
+
             </button>
           </div>
           <div className="flex relative">

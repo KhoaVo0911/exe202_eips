@@ -12,6 +12,7 @@ import PizzaHeader from "../../assets/images/margherita-pizza_3.png";
 import AddPhotoAlternateIcon from "@mui/icons-material/AddPhotoAlternate";
 import { RiEditCircleFill } from "react-icons/ri";
 
+
 const products = [
   {
     id: 1,

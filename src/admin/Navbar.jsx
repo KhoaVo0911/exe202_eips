@@ -190,6 +190,7 @@ export default function Navbar() {
           style={{ width: "100px" }}
         >
           <a href="/home">
+
             <img className="object-cover" loading="lazy" alt="" src={Logo} />
           </a>
         </div>
